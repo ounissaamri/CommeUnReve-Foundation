@@ -1,1 +1,22 @@
-<p>header works!</p>
+<mat-toolbar color="primary">
+  <div class="logo">
+    
+    <img src="assets/logo.png" alt="Logo" />
+  </div>
+  
+ 
+  <span class="spacer"></span>
+
+  <nav class="links">
+   
+    <a mat-button routerLink="/about">Qui sommes-nous?</a>
+    <a mat-button routerLink="/actions">Nos actions</a>
+    <a mat-button routerLink="/join">Agir avec nous</a>
+  </nav>
+
+
+  <div class="buttons">
+    <button mat-button color="accent" class="don-button">Faire un Don</button>
+    <button mat-button color="warn" class="don-button-alt">Faire un Don</button>
+  </div>
+</mat-toolbar>

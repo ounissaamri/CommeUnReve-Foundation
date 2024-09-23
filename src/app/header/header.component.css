@@ -1,0 +1,78 @@
+mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;  /* espace  */
+  background-color: #fff;  
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.118);  /*  ombre de la barre */
+}
+
+.logo img {
+  height: 40px;  
+}
+
+.spacer {
+  flex: 1;  
+}
+
+nav.links {
+  display: flex;
+  align-items: center;
+  
+  a {
+    margin: 0 16px;  /* espace entre  lien */
+    text-transform: uppercase;  /* txt en maj */
+    font-weight: 600;  /* semi-gras  */
+    color: #333;  
+    text-decoration: none;  /* suppremer soulignement */
+    
+    &:hover {
+      color: #EF20A9;  /* Color au survol */
+    }
+  }
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;  /* espace entre  btn */
+}
+
+.don-button, .don-button-alt {
+  padding: 8px 16px;  /* taille du btn */
+  border-radius: 10px;  /*  arrondi btn */
+  font-weight: bold;  
+  transition: transform 0.2s, box-shadow 0.2s;  
+
+  &:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);  /* ombre légere au survol */
+    transform: translateY(-2px);  /* légere elevation au survol */
+  }
+}
+
+.don-button {
+  background-color: #EF20A9;  
+  color: #2B5896;  
+}
+
+.don-button-alt {
+  background-color: #EFC71D;  
+  color: #2B5896;  
+}
+
+/* sur mobile */
+@media (max-width: 768px) {
+  mat-toolbar {
+    flex-direction: column; 
+    padding: 12px;  
+  }
+
+  nav.links {
+    flex-direction: column;  /* empiler les lien */
+    align-items: flex-start;  
+    margin-bottom: 12px;  /* espace entre lien et ls btn */
+  }
+
+  .buttons {
+    justify-content: flex-end;  /* btn aligne a droite */
+  }
+}
