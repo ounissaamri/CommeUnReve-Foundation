@@ -2,13 +2,15 @@ mat-toolbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 24px;  /* espace  */
-  background-color: #fff;  
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.118);  /*  ombre de la barre */
+  padding: 0 24px;  /* espace */
+  background-color: #ffffff;  
 }
 
 .logo img {
-  height: 40px;  
+  height: 180px; 
+  margin-top: 39px;
+  width: 280px; 
+  line-height: 45px;
 }
 
 .spacer {
@@ -18,61 +20,48 @@ mat-toolbar {
 nav.links {
   display: flex;
   align-items: center;
-  
-  a {
-    margin: 0 16px;  /* espace entre  lien */
-    text-transform: uppercase;  /* txt en maj */
-    font-weight: 600;  /* semi-gras  */
-    color: #333;  
-    text-decoration: none;  /* suppremer soulignement */
-    
-    &:hover {
-      color: #EF20A9;  /* Color au survol */
-    }
-  }
+}
+
+nav.links a {
+  margin: 0 16px;  /* espace entre lien */
+  text-transform: uppercase;  /* texte en majuscules */
+  font-weight: 600;  /* semi-gras */
+  text-decoration: none;  /* supprimer soulignement */
+  align-items: center;
+}
+
+nav.links a:hover {
+  color: #EF20A9;  /* couleur au survol */
 }
 
 .buttons {
   display: flex;
-  gap: 10px;  /* espace entre  btn */
+  gap: 10px;  /* espace entre boutons */
 }
 
 .don-button, .don-button-alt {
-  padding: 8px 16px;  /* taille du btn */
-  border-radius: 10px;  /*  arrondi btn */
-  font-weight: bold;  
-  transition: transform 0.2s, box-shadow 0.2s;  
+  padding: 6px 45px;  /* taille du bouton */
+  border-radius: 10px;  /* arrondi du bouton */
+  font-weight: 300px;
+}
 
-  &:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);  /* ombre légere au survol */
-    transform: translateY(-2px);  /* légere elevation au survol */
-  }
+.don-button:hover, .don-button-alt:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);  /* ombre légère au survol */
+  transform: translateY(-2px);  /* légère élévation au survol */
 }
 
 .don-button {
   background-color: #EF20A9;  
-  color: #2B5896;  
+  
 }
 
 .don-button-alt {
-  background-color: #EFC71D;  
-  color: #2B5896;  
+  background-color:#EFC71D;  
+
 }
-
-/* sur mobile */
-@media (max-width: 768px) {
-  mat-toolbar {
-    flex-direction: column; 
-    padding: 12px;  
-  }
-
-  nav.links {
-    flex-direction: column;  /* empiler les lien */
-    align-items: flex-start;  
-    margin-bottom: 12px;  /* espace entre lien et ls btn */
-  }
-
-  .buttons {
-    justify-content: flex-end;  /* btn aligne a droite */
-  }
+.don-button.mat-mdc-button:not(:disabled){
+  color: #ffffff;
+}
+.don-button-alt.mat-mdc-button:not(:disabled){
+  color: #2B5896;
 }
