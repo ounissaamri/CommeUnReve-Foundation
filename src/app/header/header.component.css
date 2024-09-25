@@ -1,0 +1,67 @@
+mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;  /* espace */
+  background-color: #ffffff;  
+}
+
+.logo img {
+  height: 180px; 
+  margin-top: 39px;
+  width: 280px; 
+  line-height: 45px;
+}
+
+.spacer {
+  flex: 1;  
+}
+
+nav.links {
+  display: flex;
+  align-items: center;
+}
+
+nav.links a {
+  margin: 0 16px;  /* espace entre lien */
+  text-transform: uppercase;  /* texte en majuscules */
+  font-weight: 600;  /* semi-gras */
+  text-decoration: none;  /* supprimer soulignement */
+  align-items: center;
+}
+
+nav.links a:hover {
+  color: #EF20A9;  /* couleur au survol */
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;  /* espace entre boutons */
+}
+
+.don-button, .don-button-alt {
+  padding: 6px 45px;  /* taille du bouton */
+  border-radius: 10px;  /* arrondi du bouton */
+  font-weight: 300px;
+}
+
+.don-button:hover, .don-button-alt:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);  /* ombre légère au survol */
+  transform: translateY(-2px);  /* légère élévation au survol */
+}
+
+.don-button {
+  background-color: #EF20A9;  
+  
+}
+
+.don-button-alt {
+  background-color:#EFC71D;  
+
+}
+.don-button.mat-mdc-button:not(:disabled){
+  color: #ffffff;
+}
+.don-button-alt.mat-mdc-button:not(:disabled){
+  color: #2B5896;
+}
