@@ -1,0 +1,25 @@
+
+.container {
+    position: relative;
+
+.image_home {
+    width: 100%;
+}
+.text_home {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color:white;
+    transform: translate(-50%, -50%); 
+    #title {
+        font-size: 64px;
+        font-family: 'Jakarta bold';
+
+    }
+    #description {
+        font-size: 24px;
+        text-align: center;
+        font-family: 'Jakarta regular';
+    }
+}
+}
