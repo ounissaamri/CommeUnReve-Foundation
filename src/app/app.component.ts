@@ -3,7 +3,6 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 
-import { HeaderComponent } from "./header/header.component";
 import { BlogComponent } from './blog/blog.component';
 import { FooterComponent} from './footer/footer.component';
 import { MissionsComponent } from './missions/missions.component';
@@ -17,12 +16,8 @@ import {QuiSommeNousComponent} from './qui-somme-nous/qui-somme-nous.component';
     RouterOutlet,
     HeaderComponent,
     HomeComponent,
-     BlogComponent,
+     QuiSommeNousComponent,
      FooterComponent,
-     MissionsComponent,
-     HerosectionComponent,
-     DonationComponent,
-     QuiSommeNousComponent
     ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
