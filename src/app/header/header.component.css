@@ -7,9 +7,9 @@ mat-toolbar {
 }
 
 .logo img {
-  height: 180px; 
-  margin-top: 39px;
-  width: 280px; 
+  height: 1Opx; 
+  margin-top: 25px;
+  width: 191px; 
   line-height: 45px;
 }
 
@@ -52,12 +52,9 @@ nav.links a:hover {
 
 .don-button {
   background-color: #EF20A9;  
-  
 }
-
 .don-button-alt {
   background-color:#EFC71D;  
-
 }
 .don-button.mat-mdc-button:not(:disabled){
   color: #ffffff;

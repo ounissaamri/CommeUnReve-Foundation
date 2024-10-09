@@ -1,0 +1,62 @@
+/* Style général de la section */
+.blog-section {
+    text-align: center;
+  }
+  
+  .blog-section h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Conteneur des articles */
+  .articles-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  /* Style pour chaque carte */
+  .article-card {
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .article-card img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .article-card h3 {
+    font-size: 1.5rem;
+    color: #555;
+    margin-top: 10px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Effet au survol des cartes */
+  .article-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .articles-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .article-card {
+      width: 80%;
+      margin-bottom: 20px;
+    }
+  }
+  
+  
+  
+  

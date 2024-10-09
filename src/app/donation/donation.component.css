@@ -16,6 +16,11 @@
     font-weight: bold; /* Applique une graisse de police épaisse */
     color: black; /* Définit la couleur du texte en noir */
     margin-bottom: 20px; /* Ajoute un espacement en dessous du titre */
+    background: linear-gradient(90deg, #EFC71D, #EF20A9 59.99%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    
   }
   
   /* Style du paragraphe */
