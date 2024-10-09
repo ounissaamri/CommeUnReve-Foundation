@@ -1,3 +1,4 @@
+import { UpperCasePipe } from '@angular/common';
 import { Component } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 
@@ -5,10 +6,11 @@ import { MatCardModule } from '@angular/material/card';
   selector: 'app-missions',
   standalone: true,
   imports: [
-    MatCardModule
+    MatCardModule,
+    UpperCasePipe
   ],
   templateUrl: './missions.component.html',
-  styleUrl: './missions.component.css'
+  styleUrl: './missions.component.scss'
 })
 export class MissionsComponent {
 
