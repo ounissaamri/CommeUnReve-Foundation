@@ -1,9 +1,9 @@
 import { UpperCasePipe } from '@angular/common';
 import { Component } from '@angular/core';
-import { BlogComponent } from '../../blog/blog.component';
-import { DonationComponent } from '../../donation/donation.component';
-import { HerosectionComponent } from '../../herosection/herosection.component';
-import { MissionsComponent } from '../../missions/missions.component';
+import { BlogComponent } from '../../shared/components/blog/blog.component';
+import { DonationComponent } from '../../shared/components/donation/donation.component';
+import { HerosectionComponent } from '../../shared/components/herosection/herosection.component';
+import { MissionsComponent } from '../../shared/components/missions/missions.component';
 
 @Component({
   selector: 'app-home',
