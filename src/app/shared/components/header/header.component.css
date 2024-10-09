@@ -4,6 +4,8 @@ mat-toolbar {
   align-items: center;
   padding: 0 24px;  /* espace */
   background-color: #ffffff;  
+  margin-bottom: 5rem;
+  padding-top: 2rem;
 }
 
 .logo img {
