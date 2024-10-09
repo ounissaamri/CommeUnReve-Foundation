@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '@fortawesome/fontawesome-free/css/all.css';
+@import 'mdb-angular-ui-kit/assets/scss/mdb.scss';
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@font-face {
+    font-family: 'Jakarta bold';
+    src: url('assets/fonts/jakarta/PlusJakartaSans-Bold.ttf');
+  }
+
+  @font-face {
+    font-family: 'Jakarta regular';
+    src: url('assets/fonts/jakarta/PlusJakartaSans-Regular.ttf');
+  }
