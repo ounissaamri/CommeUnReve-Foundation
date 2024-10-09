@@ -1,0 +1,112 @@
+/* Footer Styles */
+.footer {
+  position: relative; /* Fixe le footer en bas de la fenêtre */
+  left: 0; /* Aligne le footer à gauche */
+  bottom: 0; /* Colle le footer en bas */
+  right: 0; /* Aligne le footer à droite */
+  background-color: #222; 
+  color: #fff; /* White text */
+  padding: 30px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+
+body {
+  padding-bottom: 100px; /* Ajustez cette valeur en fonction de la hauteur de votre footer */
+}
+
+  
+  .footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Wrap items for smaller screens */
+    padding: 0 20px;
+  }
+  
+  /* Logo Section */
+  .footer .logo img {
+    max-width: 150px;
+    margin-left: -95%;
+   
+  }
+  
+  /* Links Section */
+  .footer-liens ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-liens ul li {
+    display: flex;
+    gap: 10px;  /* espace entre boutons */
+    flex-direction: column;
+    
+  }
+  
+  .footer-liens ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .footer-liens ul li a:hover {
+    color: #f1f1f1; /* Lighter hover effect */
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 10px;  /* espace entre boutons */
+    flex-direction: column;
+  }
+  
+  .don-button, .don-button-alt {
+    padding: 6px 45px;  /* taille du bouton */
+    border-radius: 10px;  /* arrondi du bouton */
+    font-weight: 300px;
+  }
+  
+  .don-button:hover, .don-button-alt:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);  /* ombre légère au survol */
+    transform: translateY(-2px);  /* légère élévation au survol */
+  }
+  
+  .don-button {
+    background-color: #EF20A9;  
+    
+  }
+  
+  .don-button-alt {
+    background-color:#EFC71D;  
+  
+  }
+  .don-button.mat-mdc-button:not(:disabled){
+    color: #ffffff;
+  }
+  .don-button-alt.mat-mdc-button:not(:disabled){
+    color: #2B5896;
+  }
+  
+  /* Social Media Section */
+  .footer .me-4 {
+    color: #fff;
+    margin-right: 15px;
+    font-size: 18px;
+    transition: color 0.3s ease;
+  }
+  
+  .footer .me-4:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Copyright Text */
+  .footer p {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #bbb;
+  }
+  
