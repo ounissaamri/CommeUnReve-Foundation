@@ -1,0 +1,14 @@
+<h1>Article de blog</h1>
+
+<div class="container-blog">
+    @for (article of articles; track article.id) {
+        <mat-card class="article-card">
+            <img mat-card-image src="assets/img/bbvv.png" alt="Veuves">
+            <mat-card-content class="mat-content">
+                <h6 class="article-title">{{article.title}}</h6>
+                <p class="article-description">{{article.description}}</p>
+            </mat-card-content>
+        </mat-card>
+    }
+
+</div>
