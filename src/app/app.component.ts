@@ -9,6 +9,8 @@ import { MissionsComponent } from './shared/components/missions/missions.compone
 import {HerosectionComponent} from './shared/components/herosection/herosection.component';
 import {DonationComponent } from './shared/components/donation/donation.component';
 import {QuiSommeNousComponent} from './pages/qui-somme-nous/qui-somme-nous.component';
+import { NosactionsComponent } from './pages/nosactions/nosactions.component';
+import { AgirAvecNousComponent } from './pages/agir-avec-nous/agir-avec-nous.component';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -18,6 +20,8 @@ import {QuiSommeNousComponent} from './pages/qui-somme-nous/qui-somme-nous.compo
     HomeComponent,
      QuiSommeNousComponent,
      FooterComponent,
+     NosactionsComponent,
+     AgirAvecNousComponent
     ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
