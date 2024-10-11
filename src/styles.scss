@@ -14,3 +14,15 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     font-family: 'Jakarta regular';
     src: url('assets/fonts/jakarta/PlusJakartaSans-Regular.ttf');
   }
+  @font-face {
+    font-family: 'jakarta medium';
+    src: url('assets/fonts/jakarta/PlusJakartaSans-Medium.ttf');
+  }
+  @font-face {
+    font-family: 'inter bold';
+    src: url('assets/fonts/inter/Inter_18pt-Bold.ttf');
+  }
+  @font-face {
+    font-family: 'inter semi bold';
+    src: url('assets/fonts/inter/Inter_18pt-SemiBold.ttf');
+  }

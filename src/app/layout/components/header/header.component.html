@@ -1,14 +1,18 @@
 <mat-toolbar>
-  <div class="logo"> 
+  <a routerLink="/">
+      <div class="logo"> 
     <img src="assets/img/logo.png" alt="Logo" />
   </div>
+  </a>
+
   
   <span class="spacer"></span>
 
   <nav class="links">
-    <a mat-button routerLink="/about">Qui sommes-nous?</a>
-    <a mat-button routerLink="/actions">Nos actions</a>
-    <a mat-button routerLink="/join">Agir avec nous</a>
+    <a mat-button routerLink="/qui-sommes-nous">Qui sommes-nous?</a>
+    <!-- <a mat-button (click)="naviguer()">Qui sommes-nous?</a> -->
+    <a mat-button routerLink="/nosactions">Nos actions</a>
+    <a mat-button routerLink="/agiravecnous">Agir avec nous</a>
   </nav>
 
   <div class="buttons">
