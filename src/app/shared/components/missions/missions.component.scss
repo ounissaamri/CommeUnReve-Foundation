@@ -1,66 +1,77 @@
-/* Style général de la section */
-.blog-section {
-    text-align: center;
-    margin-top: 10rem;
 
-  }
-
+   .all {
+    margin-top: 50px;
+  padding: 50px;
+  background-color: #f9f9f9;
   
-  .blog-section h2 {
-    font-size: 2.5rem;
+  
+  
+  h2 {
+    font-size: 42px;
     color: #333;
-    margin-bottom: 4rem;
     font-family: 'inter bold';
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    text-align: center;
+    }
+  
 
-  }
-  
-  /* Conteneur des articles */
-  .articles-container {
+  .section {
     display: flex;
-    justify-content: space-around;
-    gap: 20px;
     flex-wrap: wrap;
-  }
-  
-  /* Style pour chaque carte */
-  .article-card {
-    width: 300px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  
-  .article-card img {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-  }
-  
-  .article-card h3 {
-    font-size: 1.5rem;
-    color: #555;
-    margin-top: 10px;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  /* Effet au survol des cartes */
-  .article-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .articles-container {
+    justify-content: center;
+    gap: 70px;
+
+    .espace {
+      
+      border-radius: 8px;
+      padding: 0px 0px;
+      margin: 1px 1px;
+      
+      flex: 1;
+      min-width: 300px;
+      max-width: 22%; 
+      display:flex;
       flex-direction: column;
       align-items: center;
-    }
-  
-    .article-card {
-      width: 80%;
-      margin-bottom: 20px;
+      transition: transform 0.3s ease;
+
+     
+      h3 {
+        font-size: 32px;
+        font-family: 'inter bold';
+        color: #000000;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .image_home {
+        max-width: 200%;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 1rem;
+        color: #666;
+        line-height: 1.6;
+        text-align: justify;
+      }
     }
   }
-  
-  
-  
-  
+}
+
+
+@media (max-width: 768px) {
+  .all {
+    .section {
+      flex-direction: column;
+
+      .espace {
+        max-width: 100%;
+      }
+    }
+  } 
+}
+ 
