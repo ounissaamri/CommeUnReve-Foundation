@@ -1,15 +1,15 @@
 /* Section générale pour le blog */
 .blog-section {
-    text-align: center;
     margin: 40px auto;
     max-width: 1200px;
     padding: 0 15px;
   }
   
   .blog-section h2 {
-    font-size: 36px;
-    font-weight: bold;
-    color: #333;
+    text-align: center;
+    font-size: 32px;
+    font-family: 'inter bold';
+    color: #000000;
   }
   
   /* Grille des articles avec flexbox */
@@ -41,12 +41,13 @@
     border-radius: 10px 10px 10px 10px;
   }
   
-  mat-card-content h3 {
-    font-size: 15px;
-    font-weight: 400;
-    color: #333;
-    
+  mat-card-content h3 {  
+    font-size: 16px;
+    font-family: 'inter semi bold';
+    color: #000000;
   }
-  
+ mat-card-content{
+  padding: 0px 0px;
+ }
   
   

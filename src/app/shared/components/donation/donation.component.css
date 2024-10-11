@@ -3,16 +3,18 @@
    
     text-align: center; /* Centre le texte horizontalement */
     padding: 40px; /* Ajoute un espacement intérieur à la section */
+
     background-color: rgba(234, 224, 233, 0.848); /* Définit la couleur de fond en blanc */
     border-radius: 10px; /* Arrondit les coins de la section */
     width: 100%; /* Définit la largeur à 100% du parent */
     max-width: 800px; /* Limite la largeur maximale à 800px */
-    margin: 0 auto; /* Centre la section horizontalement dans la page */
+    margin: 50px auto; /* Centre la section horizontalement dans la page */
+    margin-top: 100px;
   }
   
   /* Style du titre de la section de don */
   .donation-section h2 {
-    font-size: 2rem; /* Définit la taille de la police à 2rem (relative à la taille de la police de base) */
+    font-size:48px; /* Définit la taille de la police à 2rem (relative à la taille de la police de base) */
     font-weight: bold; /* Applique une graisse de police épaisse */
     color: black; /* Définit la couleur du texte en noir */
     margin-bottom: 20px; /* Ajoute un espacement en dessous du titre */

@@ -23,5 +23,9 @@ export class HeaderComponent {
   naviguer() {
     this.router.navigate(['/qui-sommes-nous'])
   }
+  navigeurs() {
+    this.router.navigate(['/nosactions'])
+  }
+
 
 }

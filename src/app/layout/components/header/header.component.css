@@ -26,8 +26,8 @@ nav.links {
 
 nav.links a {
   margin: 0 16px;  /* espace entre lien */
-  text-transform: uppercase;  /* texte en majuscules */
-  font-weight: 600;  /* semi-gras */
+  font-family: 'jakarta medium';
+  font-size: 20px;  
   text-decoration: none;  /* supprimer soulignement */
   align-items: center;
 }
@@ -64,3 +64,5 @@ nav.links a:hover {
 .don-button-alt.mat-mdc-button:not(:disabled){
   color: #2B5896;
 }
+
+
