@@ -11,6 +11,7 @@ import { MatCardModule } from '@angular/material/card';
 export class ArticleBlogComponent {
   articles =
   [
+    
     {id:1,title:"Article 1", description:"Lorem ipsum dolor sit amet, consectetur sit et adipiscing elit, sed do eiusmod tempor ut labore et dolore magna aliqua."},
     {id:2,title:"Article 2", description:"Lorem ipsum dolor sit amet, consectetur sit et adipiscing elit, sed do eiusmod tempor ut labore et dolore magna aliqua."},
     {id:3,title:"Article 3", description:"Lorem ipsum dolor sit amet, consectetur sit et adipiscing elit, sed do eiusmod tempor ut labore et dolore magna aliqua."},
