@@ -11,6 +11,6 @@ import { Component, Input } from '@angular/core';
   styleUrl: './herosection.component.scss'
 })
 export class HerosectionComponent {
-@Input() titreb = 'Comme un rêve'
-@Input() descriptionb= 'le coeur de notre mission'
+@Input() titre! :string
+@Input() description! :string
 }

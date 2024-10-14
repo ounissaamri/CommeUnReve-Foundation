@@ -3,6 +3,7 @@ import { HomeComponent } from "./pages/home/home.component";
 import { QuiSommeNousComponent } from "./pages/qui-somme-nous/qui-somme-nous.component";
 import {NosactionsComponent} from "./pages/nosactions/nosactions.component";
 import {AgirAvecNousComponent} from "./pages/agir-avec-nous/agir-avec-nous.component";
+import { ArticleBlogComponent } from "./pages/article-blog/article-blog.component";
 
 
 export const routes: Routes = [
@@ -10,6 +11,7 @@ export const routes: Routes = [
     { path: 'qui-sommes-nous', component: QuiSommeNousComponent },
 
     // { path: '**', component: NotFoundComponent }
-    { path: 'nosactions', component: NosactionsComponent },
-    { path: 'agiravecnous', component: AgirAvecNousComponent},
+    { path: 'nos-actions', component: NosactionsComponent },
+    { path: 'agir-avec-nous', component: AgirAvecNousComponent},
+    { path: 'articles-blog', component: ArticleBlogComponent},
 ];
