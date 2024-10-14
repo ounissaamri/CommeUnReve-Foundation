@@ -1,10 +1,15 @@
 import { Component } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
+import { Router, RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-article-blog',
   standalone: true,
-  imports: [MatCardModule],
+  imports: [
+    MatCardModule,
+    RouterLink,
+    RouterOutlet,
+  ],
   templateUrl: './article-blog.component.html',
   styleUrl: './article-blog.component.css'
 })
