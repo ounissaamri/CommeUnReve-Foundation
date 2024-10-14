@@ -12,4 +12,5 @@ export const routes: Routes = [
     // { path: '**', component: NotFoundComponent }
     { path: 'nosactions', component: NosactionsComponent },
     { path: 'agiravecnous', component: AgirAvecNousComponent},
+
 ];

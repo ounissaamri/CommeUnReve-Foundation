@@ -11,6 +11,7 @@ import {DonationComponent } from './shared/components/donation/donation.componen
 import {QuiSommeNousComponent} from './pages/qui-somme-nous/qui-somme-nous.component';
 import { NosactionsComponent } from './pages/nosactions/nosactions.component';
 import { AgirAvecNousComponent } from './pages/agir-avec-nous/agir-avec-nous.component';
+import { ArticleBlogComponent } from './pages/article-blog/article-blog.component';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -21,7 +22,8 @@ import { AgirAvecNousComponent } from './pages/agir-avec-nous/agir-avec-nous.com
      QuiSommeNousComponent,
      FooterComponent,
      NosactionsComponent,
-     AgirAvecNousComponent
+     AgirAvecNousComponent,
+     ArticleBlogComponent
     ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
