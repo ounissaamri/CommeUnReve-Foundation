@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 
 @Component({
@@ -11,5 +11,7 @@ import { MatButtonModule } from '@angular/material/button';
   styleUrl: './donation.component.css'
 })
 export class DonationComponent {
-
+  @Input() titre! : string
+  @Input() text! : string
+  @Input() button!: string
 }

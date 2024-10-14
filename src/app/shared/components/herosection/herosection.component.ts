@@ -1,5 +1,5 @@
 import { UpperCasePipe } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-herosection',
@@ -11,5 +11,6 @@ import { Component } from '@angular/core';
   styleUrl: './herosection.component.scss'
 })
 export class HerosectionComponent {
-
+@Input() titre! :string
+@Input() description! :string
 }
