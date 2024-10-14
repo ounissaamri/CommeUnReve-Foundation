@@ -4,6 +4,7 @@ import { BlogComponent } from '../../shared/components/blog/blog.component';
 import { DonationComponent } from '../../shared/components/donation/donation.component';
 import { HerosectionComponent } from '../../shared/components/herosection/herosection.component';
 import { MissionsComponent } from '../../shared/components/missions/missions.component';
+import { ArticleBlogComponent } from '../article-blog/article-blog.component';
 
 @Component({
   selector: 'app-home',
@@ -13,6 +14,7 @@ import { MissionsComponent } from '../../shared/components/missions/missions.com
      MissionsComponent,
      HerosectionComponent,
      DonationComponent,
+     
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
