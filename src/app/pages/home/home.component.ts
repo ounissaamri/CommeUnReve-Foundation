@@ -19,9 +19,9 @@ import { MissionsComponent } from '../../shared/components/missions/missions.com
 })
 export class HomeComponent {
   
-  @Input() titre! : string
-  @Input() text! : string
-  @Input() button!: string 
-  @Input() titreb!:string 
-  @Input() descriptionb!: string
+   titre='Je fait un don '
+   text='fait un donfait un donfait un donfait un donfait un donfait un don'
+   button='Faire un don'
+   titreImage='Comme un rêve' 
+   descriptionImage='Le coeur de notre mission'
 }

@@ -16,7 +16,7 @@ export class NosactionsComponent {
  titreParent = 'JE DEVIENS BÉNÉVOLE'
  textParent = 'Rejoignez notre communauté de bénévoles et faites une différence dans la vie des autres. Que vous ayez quelques heures par semaine ou par mois, chaque geste compte et contribue à améliorer notre société.' 
  buttonParent ='Devenir Bénévole'
- @Input() titreb!:string 
- @Input() descriptionb!:string
+ titreImage ='Nos Actions' 
+ descriptionImage='Rejoignez notre communauté de bénévoles.'
 }
  
