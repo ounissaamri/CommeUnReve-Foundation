@@ -1,7 +1,7 @@
 import { UpperCasePipe } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { BlogComponent } from '../../shared/components/blog/blog.component';
-import { DonationComponent } from '../../shared/components/donation/donation.component';
+import { DonationCTAComponent } from '../../shared/components/donation-cta/donation-cta.component';
 import { HerosectionComponent } from '../../shared/components/herosection/herosection.component';
 import { MissionsComponent } from '../../shared/components/missions/missions.component';
 import { ArticleBlogComponent } from '../article-blog/article-blog.component';
@@ -13,7 +13,7 @@ import { ArticleBlogComponent } from '../article-blog/article-blog.component';
     BlogComponent,
      MissionsComponent,
      HerosectionComponent,
-     DonationComponent,
+     DonationCTAComponent,
      
   ],
   templateUrl: './home.component.html',

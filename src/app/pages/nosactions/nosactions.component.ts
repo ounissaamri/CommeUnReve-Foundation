@@ -1,13 +1,13 @@
 import { Component, Input } from '@angular/core';
 import { HerosectionComponent } from '../../shared/components/herosection/herosection.component';
-import { DonationComponent } from '../../shared/components/donation/donation.component';
+import { DonationCTAComponent } from '../../shared/components/donation-cta/donation-cta.component';
 
 @Component({
   selector: 'app-nosactions ',
   standalone: true,
   imports: [
     HerosectionComponent,
-    DonationComponent
+    DonationCTAComponent
   ],
   templateUrl: './nosactions.component.html',
   styleUrl: './nosactions.component.scss'
