@@ -1,0 +1,82 @@
+
+.sectionChoisDon, .sectionDon {
+  display: flex;
+  justify-content: left;
+  margin: 20px 20px;
+}
+
+mat-button-toggle-group {
+  display: flex;
+  gap: 10px;
+
+  mat-button-toggle {
+    border: 1px solid;
+    font-size: 16px;
+    padding: 10px 20px;
+    font-family: 'inter semi bold';
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+   
+  }
+}
+
+.free-amount {
+  margin: 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 10px;
+
+  mat-form-field {
+    width: 120px;
+    margin-right: 10px;
+
+    input {
+      text-align: center;
+      font-size: 16px;
+      color: #2B5896;
+    }
+  }
+
+  label {
+    font-size: 22px;
+    color: #2B5896;
+  }
+
+  span {
+    font-size: 22px;
+    color: #2B5896;
+  }
+}
+
+mat-toolbar {
+  border-radius: 12px 12px 2px 2px ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #EF20A9;
+  width: 39rem;
+  color: white;
+  font-family: 'inter bold';
+  padding: 1.7rem;
+  margin: 20px 20px;
+}
+
+
+
+
+
+
+
+
+
+.mat-button-toggle-standalone:not([class*=mat-elevation-z]), .mat-button-toggle-group:not([class*=mat-elevation-z]){
+  box-shadow: none;
+}
+.mat-pseudo-checkbox{
+  display: none !important;
+}
+.mat-button-toggle .mat-pseudo-checkbox{
+  margin-right: 0;
+}
