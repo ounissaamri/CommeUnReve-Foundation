@@ -1,0 +1,30 @@
+
+<div>
+  <mat-toolbar style="color: #f4f6f9; font-size:31px ;"> ❤ Mon Don</mat-toolbar>
+</div>
+<div class="sectionChoisDon">
+  <mat-button-toggle-group appearance="legacy" name="fontStyle1" aria-label="Font Style">
+    <mat-button-toggle (click)="changeColorA('bol')" [ngStyle]="{backgroundColor: elementActiveA === 'bol' ? '#2B5896' : 'white', color : elementActiveA === 'bol' ? 'white' : '#2B5896'}" value="bol">je donne une fois</mat-button-toggle>
+    <mat-button-toggle (click)="changeColorA('it')" [ngStyle]="{backgroundColor: elementActiveA === 'it' ? '#2B5896' : 'white', color : elementActiveA === 'it' ? 'white' : '#2B5896'}" value="it">partenaire je donne tout les mois</mat-button-toggle>
+  </mat-button-toggle-group>
+</div>
+
+<div class="sectionDon">
+  <mat-button-toggle-group appearance="legacy" name="fontStyle2" aria-label="Font Style">
+    <mat-button-toggle (click)="changeColor('bold')"[ngStyle]="{backgroundColor: elementActive === 'bold' ? '#2B5896' : 'white', color : elementActive === 'bold' ? 'white' : '#2B5896'}"  value="bold">20€</mat-button-toggle>
+    <mat-button-toggle (click)="changeColor('italic')" [ngStyle]="{backgroundColor: elementActive === 'italic' ? '#2B5896' : 'white', color : elementActive === 'italic' ? 'white' : '#2B5896'}" value="italic">50€</mat-button-toggle>
+    <mat-button-toggle (click)="changeColor('underline')" [ngStyle]="{backgroundColor: elementActive === 'underline' ? '#2B5896' : 'white', color : elementActive === 'underline' ? 'white' : '#2B5896'}" value="underline">100€</mat-button-toggle>
+    <mat-button-toggle (click)="changeColor('underlin')" [ngStyle]="{backgroundColor: elementActive === 'underlin' ? '#2B5896' : 'white', color : elementActive === 'underlin' ? 'white' : '#2B5896'}" value="underlin">250€</mat-button-toggle>
+  </mat-button-toggle-group>
+  
+</div>
+
+<div class="free-amount">
+  <label style="color: #2B5896; font-size:22px ;">Montant libre</label>
+  <mat-form-field appearance="outline">
+    <input  matInput  placeholder="--,--">
+  </mat-form-field>
+  <span style="color: #2B5896; font-size:22px ;">€</span>
+</div>
+
+<!-- ngclass ngstyle -->

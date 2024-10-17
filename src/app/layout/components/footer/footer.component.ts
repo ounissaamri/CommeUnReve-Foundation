@@ -1,6 +1,7 @@
 
 import { Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
+import { RouterLink } from '@angular/router';
 
 
 @Component({
@@ -8,8 +9,7 @@ import { MatButtonModule } from '@angular/material/button';
   standalone: true,
   imports: [
     MatButtonModule,
-   
-    
+    RouterLink
   ],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.css'
