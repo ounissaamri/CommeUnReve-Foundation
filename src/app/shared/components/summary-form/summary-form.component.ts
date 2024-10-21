@@ -18,7 +18,7 @@ import { MatToolbar } from '@angular/material/toolbar';
     MatToolbar
   ],
   templateUrl: './summary-form.component.html',
-  styleUrl: './summary-form.component.css'
+  styleUrl: './summary-form.component.scss'
 })
 export class SummaryFormComponent {
 

@@ -1,0 +1,84 @@
+mat-toolbar {
+    border-radius: 12px 12px 12px 12px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EF20A9;
+    width: 39rem;
+    color: white;
+    font-family: 'inter bold';
+    padding: 1.7rem;
+    margin: 20px 20px;
+  }
+
+.summary-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 16px;
+  }
+  .bloc{
+    width: 100%;
+    margin-left: 125px;
+  }
+  .heart {
+    font-size: 42px;
+    color: #ffffff; /* Couleur de l'icône coeur */
+    text-align: center;
+    background-color:#2B5896 ;
+    border-radius: 23px 23px 23px 23px ;
+    height: 50px;
+    width: 50px;
+    // margin-left: 197px;
+   
+  }
+  .heart-icon{
+    margin-left: 168px;
+  }
+  
+  .terms {
+    margin: 10px 0;
+    font-family: 'inter semi bold';
+    font-size: 1.5 rem  ;
+  }
+  
+  .mandatory-fields {
+    margin-top: 8px;
+    color: red;
+    font-size: 12px;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .payers {
+    background-color: #2B5896;
+    color: #ffffff;
+    font-family: 'inter bold';
+    font-size: 18px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  .payment-icons img {
+    width: 50px;
+    margin: 0 8px;
+  }
+
+  h3{
+    color: #2B5896;
+    font-family: 'inter bold';
+    font-size: 25px ;
+  }
+
+  p{
+    font-family:'inter semi bold' ;
+    font-size:10px ;
+    color: #817E7E;
+
+  }
+ 
