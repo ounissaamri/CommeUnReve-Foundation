@@ -1,0 +1,59 @@
+mat-toolbar {
+    border-radius: 12px 12px 12px 12px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EF20A9;
+    width: 39rem;
+    color: white;
+    font-family: 'inter bold';
+    padding: 1.7rem;
+    margin: 20px 20px;
+  }
+.summary-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 16px;
+  }
+  
+  
+  
+  .total {
+    margin: 16px 0;
+    text-align: center;
+  }
+  
+  .heart-icon {
+    display: flex;
+    justify-content: center;
+    margin: 16px 0;
+  }
+  
+  .heart {
+    font-size: 48px;
+    color: #3f51b5; /* Couleur de l'icône coeur */
+  }
+  
+  .terms {
+    margin: 16px 0;
+  }
+  
+  .mandatory-fields {
+    margin-top: 8px;
+    color: red;
+    font-size: 12px;
+  }
+  
+  .payment-security {
+    text-align: center;
+    margin-top: 32px;
+  }
+  
+  .payment-icons img {
+    width: 50px;
+    margin: 0 8px;
+  }
+  h3{
+    color: #3f51b5;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
