@@ -12,3 +12,4 @@ export const routes: Routes = [
     // { path: '**', component: NotFoundComponent }
     { path: 'donation-forms', component: DonationComponent},
 ];
+
