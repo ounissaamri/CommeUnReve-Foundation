@@ -1,11 +1,19 @@
 
-<h1>donation works OUI!</h1>
 
-<form [formGroup]="paymentForm">
-    <pre>{{paymentForm.value | json }}</pre>
-<app-donation-form></app-donation-form>
-<app-summary-form></app-summary-form>
-<app-personal-info-form></app-personal-info-form>
+<h1>Je fais un don pour soutenir Comme Un Rêve</h1>
+    <div class="donation-container">
 
-</form>
+    <form [formGroup]="paymentForm">
+        <!-- <pre>{{paymentForm.value | json }}</pre> -->
+    <div class="donation-column">   
+        <app-donation-form></app-donation-form>
+    </div> 
+    <div class="personal-info-column">
+        <app-summary-form></app-summary-form>
+    </div>
+    <div class="summary-column">
+        <app-personal-info-form></app-personal-info-form>
+    </div>
+    </form>
 
+</div>

@@ -1,3 +1,24 @@
+mat-toolbar {
+  border-radius: 12px 12px 12px 12px ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #EF20A9;
+  width: 29rem;
+  color: white;
+  font-family: 'inter bold';
+  padding: 1.7rem;
+  margin: 20px 20px;
+}
+.bloc{
+  display: flex;
+  flex-direction: column;
+  padding:1rem;
+  border: 1px solid #EF20A9;
+  border-radius: 8px;
+  width: 55%;
+  margin: 40px 20px;
+}
 
 .sectionChoisDon, .sectionDon {
   display: flex;
@@ -23,47 +44,37 @@ mat-button-toggle-group {
 }
 
 .free-amount {
-  margin: 20px 20px;
   display: flex;
   align-items: center;
-  justify-content: left;
-  gap: 10px;
-  align-items: baseline;
+  margin-top: 20px;
 
-  mat-form-field { 
-    width: 120px;
+  label {
+    font-size: 18px;
+    color: #2B5896;
+    font-family: 'inter semi bold';
     margin-right: 10px;
-    input {
-      text-align: center;
-      font-size: 16px;
-      color: #2B5896;
+    margin: 20px ;
+  }
+
+  input.form-control {
+    width: 100px;
+    padding: 5px;
+    border: 1px solid #2B5896;
+    border-radius: 4px;
+    margin-right: 5px;
+
+    &:focus {
+      border-color:#2B5896;
+      outline: none;
     }
   }
 
-  label {
-    font-size: 22px;
-    color: #2B5896;
-  }
-
   span {
-    font-size: 22px;
     color: #2B5896;
+    font-size: 16px;
+    font-family: 'inter semi bold';
   }
 }
-
-mat-toolbar {
-  border-radius: 12px 12px 12px 12px ;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #EF20A9;
-  width: 39rem;
-  color: white;
-  font-family: 'inter bold';
-  padding: 1.7rem;
-  margin: 20px 20px;
-}
-
 
 
 
