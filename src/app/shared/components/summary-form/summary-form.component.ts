@@ -7,8 +7,9 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatToolbar } from '@angular/material/toolbar';
 import { MatTableDataSource , MatTableModule } from '@angular/material/table';
 
-import { ControlContainer, FormGroupDirective } from '@angular/forms';
+import { ControlContainer, FormGroupDirective, FormsModule } from '@angular/forms';
 import { distinctUntilChanged, tap } from 'rxjs';
+import { MatFormFieldModule } from '@angular/material/form-field';
 @Component({
   selector: 'app-summary-form',
   standalone: true,
@@ -20,10 +21,11 @@ import { distinctUntilChanged, tap } from 'rxjs';
     MatIconModule,
     MatGridListModule,
     MatToolbar,
-    MatTableModule
+    MatTableModule,
+    
   ],
   templateUrl: './summary-form.component.html',
-  styleUrl: './summary-form.component.css',
+  styleUrl: './summary-form.component.scss',
   viewProviders: [{ provide: ControlContainer, useExisting: FormGroupDirective }]
 })
 export class SummaryFormComponent implements OnInit {

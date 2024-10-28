@@ -1,0 +1,11 @@
+h1 {
+    text-align: center;
+    margin:1rem;
+    font-size:48px; /* Définit la taille de la police à 2rem (relative à la taille de la police de base) */
+    font-family:'inter bold'; 
+    background: linear-gradient(90deg, #EF20A9 29.99%,#2B5896 59.99%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    
+  }

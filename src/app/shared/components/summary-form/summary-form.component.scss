@@ -4,7 +4,7 @@ mat-toolbar {
     justify-content: center;
     align-items: center;
     background-color: #EF20A9;
-    width: 39rem;
+    width: 29rem;
     color: white;
     font-family: 'inter bold';
     padding: 1.7rem;
@@ -15,10 +15,12 @@ mat-toolbar {
     max-width: 400px;
     margin: 0 auto;
     padding: 16px;
+    width: 29%;
+    justify-content: center;
   }
   .bloc{
     width: 100%;
-    margin-left: 125px;
+    border: 1px solid #2B5896;
   }
   .heart {
     font-size: 42px;
@@ -43,8 +45,9 @@ mat-toolbar {
   
   .mandatory-fields {
     margin-top: 8px;
-    color: red;
+    color:red;
     font-size: 12px;
+    
   }
   
   .buttons {
@@ -99,6 +102,7 @@ mat-toolbar {
     padding: 8px;
     border-top: 1px solid #5b0606;
     font-weight: bold;
+    
   }
   
  
