@@ -31,17 +31,17 @@ constructor(private fb:FormBuilder){
     }),
     personalInfoFormGroup: this.fb.group({
       isCompany:[false],
-      firstname:[null, Validators.required],
-      lastName: [null, Validators.required],
-      email: [null, Validators.required],
-      confirmEmail: [null, Validators.required],
-      address: [null],
-      postalCode: [null],
-      city: [null],
-      country: [null],
-      Raisonsociale : [null, Validators.required],
-      sirenSiret: [null, Validators.required],
-      formeJuridique: [null, Validators.required]
+      firstname:[null,Validators.required],
+      lastName: [null,Validators.required],
+      email: [null,Validators.required],
+      confirmEmail: [null,[Validators.required, Validators.email]],
+      address: [null,[Validators.required, Validators.email]],
+      postalCode: [null,Validators.required],
+      city: [null,Validators.required],
+      country: [null,Validators.required],
+      Raisonsociale : [null,Validators.required],
+      sirenSiret: [null,Validators.required],
+      formeJuridique: [null,Validators.required]
     }),
     
   })
