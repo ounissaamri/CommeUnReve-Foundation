@@ -12,17 +12,17 @@
       @if (showForm){
         <mat-form-field appearance="outline">
           <mat-label for="raisonsociale" >Raison sociale </mat-label>
-        <input id="raisonsociale" matInput formControlName="raisonsociale" >
+        <input id="raisonsociale" matInput formControlName="raisonsociale" required>
         </mat-form-field>
 
         <mat-form-field appearance="outline">
           <mat-label for="SIRENSIRET" >SIREN SIRET</mat-label>
-        <input id="SIRENSIRET" matInput formControlName="SIRENSIRET" >
+        <input id="SIRENSIRET" matInput formControlName="SIRENSIRET" required>
         </mat-form-field>
 
         <mat-form-field appearance="outline">
           <mat-label for="formejuridique" >Forme juridique</mat-label>
-        <input id="formejuridique" matInput formControlName="formejuridique" >
+        <input id="formejuridique" matInput formControlName="formejuridique" required>
         </mat-form-field>
       }
 
@@ -30,46 +30,46 @@
     <div class="first_field">
        <mat-form-field appearance="outline" class="field">
       <mat-label (click)="toggleForm()" for="prenom">{{changeToggleprenom()}}</mat-label>
-      <input id="prenom" formControlName="firstname" matInput>
+      <input id="prenom" formControlName="firstname" matInput required>
       </mat-form-field>
 
       <mat-form-field appearance="outline">
         <mat-label (click)="toggleForm()" for="nom">{{changeTogglenom()}}</mat-label>
-      <input id="nom" matInput formControlName="lastName">
+      <input id="nom" matInput formControlName="lastName"required>
       </mat-form-field>
     </div>
   
       <mat-form-field appearance="outline">
         <mat-label for="email"> Email</mat-label>
-      <input id="email" matInput formControlName="email" >
+      <input id="email" matInput formControlName="email" required>
       </mat-form-field>
 
       <mat-form-field appearance="outline">
         <mat-label for="confirmEmail">Confirmation Email</mat-label>
-      <input id="confirmEmail" matInput formControlName="confirmEmail" >
+      <input id="confirmEmail" matInput formControlName="confirmEmail" required>
       </mat-form-field>
 
       <mat-form-field appearance="outline">
         <mat-label for="adresse">Adresse</mat-label>
-      <input id="adresse" matInput formControlName="address" >
+      <input id="adresse" matInput formControlName="address" required>
       </mat-form-field>
 
     
     <div class="first_field">
       <mat-form-field appearance="outline">
         <mat-label for="codePostal" >Code postal</mat-label>
-      <input id="codePostal" matInput formControlName="postalCode" >
+      <input id="codePostal" matInput formControlName="postalCode" required>
       </mat-form-field>
       
       <mat-form-field appearance="outline">
         <mat-label for="ville">Ville</mat-label>
-      <input id="ville" matInput formControlName="city" >
+      <input id="ville" matInput formControlName="city" required>
       </mat-form-field>
     </div>
 
       <mat-form-field appearance="outline">
         <mat-label for="pays" >Pays</mat-label>
-      <input id="pays" matInput formControlName="country"  >
+      <input id="pays" matInput formControlName="country"  required>
       </mat-form-field> 
 
   <p>* Champs obligatoires</p>
