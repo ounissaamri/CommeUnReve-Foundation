@@ -23,7 +23,7 @@ import { distinctUntilChanged, tap } from 'rxjs';
     MatTableModule
   ],
   templateUrl: './summary-form.component.html',
-  styleUrl: './summary-form.component.css',
+  styleUrl: './summary-form.component.scss',
   viewProviders: [{ provide: ControlContainer, useExisting: FormGroupDirective }]
 })
 export class SummaryFormComponent implements OnInit {

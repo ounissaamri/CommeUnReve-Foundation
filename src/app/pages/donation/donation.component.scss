@@ -1,0 +1,25 @@
+.container_forms {
+display: flex;           /* Active Flexbox */
+justify-content: space-around;  /* Espacement égal entre les blocs */
+gap: 10px;               /* Espace entre chaque bloc (si besoin) */
+padding: 5rem;           /* Un peu de padding global */
+width: 100%;             /* Occuper tout l'espace horizontal */
+box-sizing: border-box; 
+      
+}
+.container_form {
+
+    flex: 0 0 30%;           /* Les blocs prennent chacun 30% de la largeur */
+    padding: 10px;           /* Espace interne */
+    background-color: #ffff; /* Couleur de fond */
+    box-sizing: border-box;  /* Inclure le padding dans la taille totale */
+  
+}
+
+input, button{
+    width: 100%;             /* Prendre toute la largeur disponible */
+    box-sizing: border-box;  /* Empêcher de dépasser la largeur */
+    margin-bottom: 10px;     /* Espacement vertical entre les éléments */
+    padding: 8px;            /* Padding interne */
+    font-size: 1em;
+}

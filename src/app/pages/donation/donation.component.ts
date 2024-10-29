@@ -16,7 +16,7 @@ import { JsonPipe } from '@angular/common';
     JsonPipe
   ],
   templateUrl: './donation.component.html',
-  styleUrl: './donation.component.css'
+  styleUrl: './donation.component.scss'
 })
 export class DonationComponent {
   paymentForm!:FormGroup
@@ -27,8 +27,8 @@ constructor(private fb:FormBuilder){
   this.paymentForm = this.fb.group({
 
     donationFormGroup: this.fb.group({
-      amount:[''],
-      type: [''],
+      amount:[null],
+      type: [null],
     }),
     personalInfoFormGroup: this.fb.group({
       isCompany:[false],
