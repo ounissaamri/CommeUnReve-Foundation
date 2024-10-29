@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { DonationFormComponent } from '../../shared/components/donation-form/donation-form.component';
 import { SummaryFormComponent } from '../../shared/components/summary-form/summary-form.component';
 import { PersonalInfoFormComponent } from '../../shared/components/personal-info-form/personal-info-form.component';
-import { FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormGroup, NgModel, ReactiveFormsModule, Validators } from '@angular/forms';
 import {FormBuilder} from '@angular/forms';
 import { JsonPipe } from '@angular/common';
 @Component({
@@ -13,32 +13,41 @@ import { JsonPipe } from '@angular/common';
     SummaryFormComponent,
     PersonalInfoFormComponent,
     ReactiveFormsModule,
-    JsonPipe
+    JsonPipe,
+    ReactiveFormsModule
   ],
   templateUrl: './donation.component.html',
   styleUrl: './donation.component.scss'
 })
 export class DonationComponent {
-  paymentForm!:FormGroup
+  paymentForm!:FormGroup;
   
 
 constructor(private fb:FormBuilder){
-
   this.paymentForm = this.fb.group({
-
     donationFormGroup: this.fb.group({
       amount:[null],
       type: [null],
     }),
     personalInfoFormGroup: this.fb.group({
       isCompany:[false],
-      firstname:[null]
-
+      firstname:[null,Validators.required],
+      lastName: [null,Validators.required],
+      email: [null,Validators.required],
+      confirmEmail: [null,[Validators.required, Validators.email]],
+      address: [null,[Validators.required, Validators.email]],
+      postalCode: [null,Validators.required],
+      city: [null,Validators.required],
+      country: [null,Validators.required],
+      Raisonsociale : [null,Validators.required],
+      sirenSiret: [null,Validators.required],
+      formeJuridique: [null,Validators.required]
     }),
-    paymentFormGroup : this.fb.group({
-      acceptCgu:[false],
-    })
+    
   })
+  
+}
 
 }
-}
+
+
