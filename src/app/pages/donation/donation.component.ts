@@ -26,23 +26,26 @@ export class DonationComponent {
 constructor(private fb:FormBuilder){
   this.paymentForm = this.fb.group({
     donationFormGroup: this.fb.group({
-      amount:[null],
-      type: [null],
+      amount:[null, Validators.required],
+      type: [null, Validators.required],
     }),
-    personalInfoFormGroup: this.fb.group({
-      isCompany:[false],
-      firstname:[null,Validators.required],
-      lastName: [null,Validators.required],
-      email: [null,Validators.required],
-      confirmEmail: [null,[Validators.required, Validators.email]],
-      address: [null,[Validators.required, Validators.email]],
-      postalCode: [null,Validators.required],
-      city: [null,Validators.required],
-      country: [null,Validators.required],
-      Raisonsociale : [null,Validators.required],
-      sirenSiret: [null,Validators.required],
-      formeJuridique: [null,Validators.required]
+    summaryFormGroup: this.fb.group({
+      cgu:[null, Validators.requiredTrue],
     }),
+    // personalInfoFormGroup: this.fb.group({
+    //   isCompany:[false],
+    //   firstname:[null,Validators.required],
+    //   lastName: [null,Validators.required],
+    //   email: [null,Validators.required],
+    //   confirmEmail: [null,[Validators.required, Validators.email]],
+    //   address: [null,[Validators.required, Validators.email]],
+    //   postalCode: [null,Validators.required],
+    //   city: [null,Validators.required],
+    //   country: [null,Validators.required],
+    //   Raisonsociale : [null,Validators.required],
+    //   sirenSiret: [null,Validators.required],
+    //   formeJuridique: [null,Validators.required]
+    // }),
     
   })
   
