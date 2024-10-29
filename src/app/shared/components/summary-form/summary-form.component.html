@@ -5,16 +5,16 @@
   
   
   
-<div class="bloc">
+<div class="bloc" formGroupName="summaryFormGroup">
 
   <div class="heart-icon">
   </div>
   <div class="total_section">Total</div>
-  <div class="total_section">0 €</div>
+  <div class="total_section">{{totalAmount}} €</div>
   
   <mat-icon class="heart"> ❤ </mat-icon>
-  <div class="terms">
-    <mat-checkbox>
+      <div class="terms" >
+    <mat-checkbox formControlName="cgu">
       J'accepte les <a href="#">Conditions Générales d'Utilisation</a> du service et j'ai lu la <a href="#">charte de confidentialité</a>. *
     </mat-checkbox>
     <div class="mandatory-fields">
@@ -22,8 +22,12 @@
     </div>
   </div>
 
+
+
+
+
     <div class="buttons">
-      <button mat-button class="payers">Payer</button>
+      <button mat-button class="payers"  [disabled]="statusForm === 'INVALID'">Payer</button>
     </div>
 
     <div class="payment-security">
@@ -35,5 +39,5 @@
         <img src="assets/img/CB.jpeg" alt="Carte Bancaire">
       </div>
     </div>
-<!-- </div> -->
+</div>
 <!-- </div> -->

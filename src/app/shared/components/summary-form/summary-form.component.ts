@@ -7,7 +7,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatToolbar } from '@angular/material/toolbar';
 import { MatTableDataSource , MatTableModule } from '@angular/material/table';
 
-import { ControlContainer, FormGroupDirective, FormsModule } from '@angular/forms';
+import { ControlContainer, FormGroupDirective, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { distinctUntilChanged, tap } from 'rxjs';
 import { MatFormFieldModule } from '@angular/material/form-field';
 @Component({
@@ -22,6 +22,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatGridListModule,
     MatToolbar,
     MatTableModule,
+    ReactiveFormsModule,
+    FormsModule
+
     
   ],
   templateUrl: './summary-form.component.html',
@@ -31,8 +34,20 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 export class SummaryFormComponent implements OnInit {
   formDirective =  inject(FormGroupDirective)
   totalAmount: number = 0;
+  statusForm: any =  'INVALID'
+
   ngOnInit(): void {
+
+    console.log(this.formDirective)
     const amount = this.formDirective.form.controls?.['donationFormGroup']?.get('amount');
+
+    this.formDirective.form.statusChanges.pipe(
+      tap(console.log),
+      distinctUntilChanged()
+    ).subscribe((status)=> {
+      this.statusForm = status;
+    })
+
     amount?.valueChanges
     .pipe(
       tap(console.log),
