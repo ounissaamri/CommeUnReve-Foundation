@@ -1,83 +1,46 @@
-
-.sectionChoisDon, .sectionDon {
-  display: flex;
-  justify-content: left;
-  margin: 20px 20px;
+mat-form-field {
+  margin: 0 10px;
 }
 
-mat-button-toggle-group {
-  
-  display: flex;
-  gap: 10px;
-
-  mat-button-toggle {
-    border: 1px solid;
-    font-size: 16px;
-    padding: 10px 20px;
-    font-family: 'inter semi bold';
-    cursor: pointer;
-    transition: all 0.3s ease;
-
-   
-  }
+.label {
+  color: #2B5896;
+  font-size:16px;
+  font-family: 'inter semi bold';
 }
 
-.free-amount {
-  margin: 20px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: left;
-  gap: 10px;
-  align-items: baseline;
-
-  mat-form-field { 
-    width: 120px;
-    margin-right: 10px;
-    input {
-      text-align: center;
-      font-size: 16px;
-      color: #2B5896;
-    }
-  }
-
-  label {
-    font-size: 22px;
-    color: #2B5896;
-  }
-
-  span {
-    font-size: 22px;
-    color: #2B5896;
-  }
+.section_amount {
+  padding-left: 5px;
 }
 
-mat-toolbar {
-  border-radius: 12px 12px 12px 12px ;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #EF20A9;
-  width: 39rem;
-  color: white;
-  font-family: 'inter bold';
-  padding: 1.7rem;
-  margin: 20px 20px;
+.containerAmount {
+  // padding-left: 20px;
 }
 
 
 
-
-
-
-
-
-
-.mat-button-toggle-standalone:not([class*=mat-elevation-z]), .mat-button-toggle-group:not([class*=mat-elevation-z]){
-  box-shadow: none;
+/* Pour Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+  /* Pour Chrome et Safari */
+&::-webkit-inner-spin-button, 
+&::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
-.mat-pseudo-checkbox{
-  display: none !important;
 }
-.mat-button-toggle .mat-pseudo-checkbox{
-  margin-right: 0;
+
+
+mat-form-field {
+  --mdc-outlined-text-field-outline-color: #2B5896;; /* Bordure par défaut */
+  --mdc-outlined-text-field-hover-outline-color: #2B5896; /* Bordure en survol */
+  --mdc-outlined-text-field-focused-outline-color: #0044cc; /* Bordure en focus */
 }
+
+
+// form_content {
+//   width: 100%;             /* Prendre toute la largeur disponible */
+//   box-sizing: border-box;  /* Empêcher de dépasser la largeur */
+//   margin-bottom: 10px;     /* Espacement vertical entre les éléments */
+//   padding: 8px;            /* Padding interne */
+//   font-size: 1em; 
+// }

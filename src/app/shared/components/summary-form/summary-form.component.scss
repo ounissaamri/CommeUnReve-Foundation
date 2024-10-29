@@ -1,4 +1,4 @@
-mat-toolbar {
+ .toolbar {
     border-radius: 12px 12px 12px 12px ;
     display: flex;
     justify-content: center;
@@ -9,42 +9,56 @@ mat-toolbar {
     font-family: 'inter bold';
     padding: 1.7rem;
     margin: 20px 20px;
+    color: #f4f6f9; 
+    font-size:31px ;
   }
+  .total_section{
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:15px 0;
+    border-color: #2B5896;
+
+  }
+
 
 .summary-form {
     max-width: 400px;
     margin: 0 auto;
     padding: 16px;
   }
-  .bloc{
-    width: 100%;
-    margin-left: 125px;
-  }
+
   .heart {
-    font-size: 42px;
-    color: #ffffff; /* Couleur de l'icône coeur */
+    font-size: 40px;
+    color: #ffffff; 
     text-align: center;
     background-color:#2B5896 ;
-    border-radius: 23px 23px 23px 23px ;
+    border-radius: 25px;
     height: 50px;
     width: 50px;
-    // margin-left: 197px;
+    position: relative;
+    top: 10px;
+    left: 50%;
+    margin: 10px 0px;
+}
+
+.payment-security{
+  padding: 3rem 1rem;
+}
    
-  }
-  .heart-icon{
-    margin-left: 168px;
-  }
-  
   .terms {
     margin: 10px 0;
     font-family: 'inter semi bold';
     font-size: 1.5 rem  ;
+    color: #003479;
   }
   
   .mandatory-fields {
-    margin-top: 8px;
+    margin-top: 10px;
     color: red;
     font-size: 12px;
+    margin-bottom: 35px;
   }
   
   .buttons {
@@ -62,14 +76,15 @@ mat-toolbar {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    padding: 30px 0px;
   }
 
   .payment-icons img {
-    width: 50px;
-    margin: 0 8px;
+    width: 3rem;
+    margin-right: 10px;
   }
 
-  h3{
+  h2{
     color: #2B5896;
     font-family: 'inter bold';
     font-size: 25px ;

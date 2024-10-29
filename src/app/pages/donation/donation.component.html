@@ -1,11 +1,24 @@
 
-<h1>donation works OUI!</h1>
+<!-- <h1>donation works OUI!</h1> -->
 
 <form [formGroup]="paymentForm">
-    <pre>{{paymentForm.value | json }}</pre>
-<app-donation-form></app-donation-form>
-<app-summary-form></app-summary-form>
-<app-personal-info-form></app-personal-info-form>
+    <div class="container_forms">
 
+        <!-- <pre>{{paymentForm.value | json }}</pre> -->
+    <div class="container_form">
+        <app-donation-form></app-donation-form>
+        <!-- <input type="text" placeholder="Champ 3" />
+    <button>Button 3</button> -->
+    </div> 
+    <div class="container_form">
+        <!-- <app-donation-form></app-donation-form> -->
+
+    </div> 
+    <div class="container_form">
+        <app-summary-form></app-summary-form>
+    </div> 
+
+
+    </div>
 </form>
 
