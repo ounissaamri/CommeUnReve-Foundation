@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { ControlContainer, FormGroupDirective, NgModel } from '@angular/forms';
+import { Component, inject, OnInit } from '@angular/core';
+import { ControlContainer, FormGroup, FormGroupDirective, NgModel } from '@angular/forms';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -20,28 +20,25 @@ import { MatToolbar } from '@angular/material/toolbar';
     MatFormFieldModule,
     
   ],
-    
-  
   templateUrl: './personal-info-form.component.html',
   styleUrl: './personal-info-form.component.scss',
   viewProviders: [{ provide: ControlContainer, useExisting: FormGroupDirective }]
 
 })
-export class PersonalInfoFormComponent  {
+export class PersonalInfoFormComponent implements OnInit  {
+  formDirective =  inject(FormGroupDirective)
+  isCompany = false
 
-  showForm:boolean = false;
+ formParent!: FormGroup;
+
   
-  toggleForm(){
-    this.showForm = !this.showForm;
+  ngOnInit(){
+    this.formDirective?.form.get('personalInfoFormGroup')?.get('isCompany')?.valueChanges.subscribe(value => {
+      this.isCompany = value
+    })
+
   }
-  changeTogglecheckbox(){
-    return this.showForm ? 'Payer en tant que entrepise ;)' : 'Payer en tant que entrepise' ; 
-  }
-  changeToggleprenom(){
-    return this.showForm ? 'Prénom  du contact' : 'Prénom' ; 
-  }
-  changeTogglenom(){
-    return this.showForm ? 'nom du contanct' : 'nom' ; 
-}
+
+  
 
 }
