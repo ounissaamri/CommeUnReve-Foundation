@@ -6,11 +6,11 @@ mat-toolbar {
     justify-content: center;
     align-items: center;
     background-color:#ffffff;
-    width: 29rem;
+    width: 30rem;
     color:  #EF20A9;
     font-family: 'inter bold';
     padding: 1.7rem;
-    margin: 20px 20px;
+    margin: 0px 20px;
   }
 
  /* Variables for colors to match the design */
@@ -26,8 +26,8 @@ $text-color: #2B5896;
   background-color: $background-color;
   border: 1px solid $secondary-color;
   border-radius: 8px;
-  width: 29%;
-  margin: 40px 20px;
+  width: 100%;
+  margin: 20px 10px;
 
   mat-checkbox {
     margin-bottom: 1rem;
@@ -80,3 +80,18 @@ mat-form-field {
 
 
 
+/* Pour Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+  /* Pour Chrome et Safari */
+&::-webkit-inner-spin-button, 
+&::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+}
+
+.error {
+  color: red;
+  font-size: 16px;
+}
