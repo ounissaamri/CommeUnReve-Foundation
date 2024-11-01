@@ -27,7 +27,7 @@
 
 
     <div class="buttons">
-      <button mat-button class="payers"  [disabled]="statusForm === 'INVALID'">Payer</button>
+      <button mat-button class="payers"  [disabled]="statusForm === 'INVALID'" (click)="makeDonation()">Payer</button>
     </div>
 
     <div class="payment-security">
