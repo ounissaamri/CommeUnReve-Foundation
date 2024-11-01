@@ -9,7 +9,7 @@ import { MatTableDataSource , MatTableModule } from '@angular/material/table';
 
 import { ControlContainer, FormGroupDirective, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { distinctUntilChanged, tap } from 'rxjs';
-import { MatFormFieldModule } from '@angular/material/form-field';
+import { PaymentDonationService } from '../../services/payment-donation.service';
 @Component({
   selector: 'app-summary-form',
   standalone: true,
@@ -36,6 +36,8 @@ export class SummaryFormComponent implements OnInit {
   totalAmount: number = 0;
   statusForm: any =  'INVALID'
 
+  constructor(private paymentDonationService:PaymentDonationService ){}
+
   ngOnInit(): void {
 
     console.log(this.formDirective)
@@ -60,5 +62,9 @@ export class SummaryFormComponent implements OnInit {
 
   updateTotalAmount(amount: string) {
     this.totalAmount = +amount;
+  }
+
+  makeDonation() {
+    //this.paymentDonationService.makeDonation()
   }
 }
