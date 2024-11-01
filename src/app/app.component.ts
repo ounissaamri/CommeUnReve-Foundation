@@ -2,16 +2,12 @@ import { HeaderComponent } from './layout/components/header/header.component';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
-
-import { BlogComponent } from './shared/components/blog/blog.component';
 import { FooterComponent} from './layout/components/footer/footer.component';
-import { MissionsComponent } from './shared/components/missions/missions.component';
-import {HerosectionComponent} from './shared/components/herosection/herosection.component';
-import {DonationComponent } from './shared/components/donation/donation.component';
 import {QuiSommeNousComponent} from './pages/qui-somme-nous/qui-somme-nous.component';
 import { NosactionsComponent } from './pages/nosactions/nosactions.component';
 import { AgirAvecNousComponent } from './pages/agir-avec-nous/agir-avec-nous.component';
 import {ArticleBlogComponent} from './pages/article-blog/article-blog.component';
+import { DonationComponent } from './pages/donation/donation.component';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -23,7 +19,8 @@ import {ArticleBlogComponent} from './pages/article-blog/article-blog.component'
      FooterComponent,
      NosactionsComponent,
      AgirAvecNousComponent,
-     ArticleBlogComponent
+     ArticleBlogComponent,
+     DonationComponent
     ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
