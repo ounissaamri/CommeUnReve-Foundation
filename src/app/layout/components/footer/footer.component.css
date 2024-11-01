@@ -1,12 +1,12 @@
 /* Footer Styles */
 .footer {
   position: relative; /* Fixe le footer en bas de la fenêtre */
-  left: 0; /* Aligne le footer à gauche */
-  bottom: 0; /* Colle le footer en bas */
-  right: 0; /* Aligne le footer à droite */
+  left: 0px; /* Aligne le footer à gauche */
+  bottom: 0px; /* Colle le footer en bas */
+  right: 0px; /* Aligne le footer à droite */
   background-color: #222; 
   color: #fff; /* White text */
-  padding: 30px 0;
+  padding: 30px 0px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -24,7 +24,7 @@ body {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap; /* Wrap items for smaller screens */
-    padding: 0 20px;
+    padding: 0 0px;
   }
   
   /* Logo Section */
@@ -54,9 +54,7 @@ body {
     font-size: 16px;
   }
   
-  .footer-liens ul li a:hover {
-    color: #f1f1f1; /* Lighter hover effect */
-  }
+ 
   
   .buttons {
     display: flex;
@@ -105,8 +103,8 @@ body {
   
   /* Copyright Text */
   .footer p {
-    margin-top: 20px;
-    font-size: 14px;
+    margin-top: 10px;
+    font-size: 12px;
     color: #bbb;
   }
   
