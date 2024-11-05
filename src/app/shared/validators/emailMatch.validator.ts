@@ -1,16 +1,15 @@
 import { AbstractControl, ValidationErrors, ValidatorFn } from '@angular/forms';
 
-export function emailMatchValidator(): ValidatorFn {
+export function emailMatchValidator(path?:string): ValidatorFn {
   return (control: AbstractControl): ValidationErrors | null => {
-    const email = control.get('personalInfoFormGroup.email')?.value;
-    const confirmEmail = control.get('personalInfoFormGroup.confirmEmail')?.value;
+    const email = control.get(path ?? 'email')?.value;
+    const confirmEmail = control.get(path ?? 'confirmEmail')?.value;
     console.log(email, confirmEmail)
 
     if (email && confirmEmail && email !== confirmEmail) {
       
-      // return { emailMismatch: true };
-      control.get('personalInfoFormGroup.confirmEmail')?.setErrors({ emailMismatch: true })
-      return {}
+      control.get(path ?? 'confirmEmail')?.setErrors({ emailMismatch: true })
+      return {emailMismatch: true}
 
     }
     return null;
