@@ -1,0 +1,172 @@
+
+<form [formGroup]="partenaireForm" (ngSubmit)="sendForm($event)">
+
+
+  <mat-checkbox formControlName="isCompany">
+    Je suis une entreprise
+  </mat-checkbox> 
+<br>
+
+      @if (partenaireForm.controls['isCompany'].value){
+         <mat-form-field appearance="outline">
+          <mat-label for="raisonSociale" >Raison sociale </mat-label>
+        <input id="raisonSociale" matInput formControlName="raisonSociale" type="text">
+        @if(partenaireForm.get('raisonSociale')?.errors && partenaireForm.get('raisonSociale')?.errors?.['required']){
+          <mat-error> Ce champ est obligatoire </mat-error>
+          }@else {
+          <mat-error class="error">Le format est incorrect</mat-error>
+         }
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" style="display: flex; flex-direction: column;">
+          <mat-label for="sirenSiret" >Siren/Siret</mat-label>
+        <input id="sirenSiret" matInput formControlName="sirenSiret" type="text">
+          @if(partenaireForm.get('sirenSiret')?.errors && partenaireForm.get('sirenSiret')?.errors?.['required']){
+          <mat-error> Ce champ est obligatoire </mat-error>
+          }@else {
+          <mat-error class="error">Numero de Siret doit contenir entre 9 et 14 chiffres</mat-error>
+         }
+
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label for="formeJuridique" >Forme juridique</mat-label>
+        <input id="formeJuridique" matInput formControlName="formeJuridique" type="text">
+        @if(partenaireForm.get('formeJuridique')?.errors && partenaireForm.get('formeJuridique')?.errors?.['required']){
+          <mat-error> Ce champ est obligatoire </mat-error>
+          }@else {
+          <mat-error class="error">Le format est incorrect</mat-error>
+         }
+        </mat-form-field>
+      }
+
+
+    <div class="first_field">
+       <mat-form-field appearance="outline" class="field">
+      <mat-label  for="prenom">{{ partenaireForm.controls['isCompany'].value ? 'Prenom du contact': 'Prenom' }}</mat-label>
+      <input id="prenom" formControlName="firstname" matInput type="text">
+      @if(partenaireForm.get('firstname')?.errors && partenaireForm.get('firstname')?.errors?.['required']){
+        <mat-error> Ce champ est obligatoire </mat-error>
+      }@else {
+        <mat-error class="error">Le format est incorrect</mat-error>
+        
+      }
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label for="nom">{{ partenaireForm.controls['isCompany'].value ? 'Nom du contact': 'Nom' }}</mat-label>
+      <input id="nom" matInput formControlName="lastName" type="text">
+      @if(partenaireForm.get('lastName')?.errors && partenaireForm.get('lastName')?.errors?.['required']){
+        <mat-error> Ce champ est obligatoire </mat-error>
+      }@else {
+        <mat-error class="error">Le format est incorrect</mat-error>
+        
+      }
+      </mat-form-field>
+    </div>
+   
+
+      <mat-form-field appearance="outline">
+        <mat-label for="email"> Email</mat-label>
+        <input id="email" matInput formControlName="email" type="email">
+        
+        @if(partenaireForm.get('email')?.errors && partenaireForm.get('email')?.errors?.['required']){
+          <mat-error> Ce champ est obligatoire </mat-error>
+        }@else if(partenaireForm.get('email')?.errors && partenaireForm.get('email')?.errors?.['email']) {
+          <mat-error class="error">Le format est incorrect</mat-error>
+          
+        }
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label for="confirmEmail">Confirmation Email</mat-label>
+      <input id="confirmEmail" matInput formControlName="confirmEmail"  type="email">
+      @if(partenaireForm.get('confirmEmail')?.errors && partenaireForm.get('confirmEmail')?.errors?.['required']){
+        <mat-error> Ce champ est obligatoire </mat-error>
+      } @else if(partenaireForm.get('confirmEmail')?.errors && partenaireForm.get('confirmEmail')?.errors?.['email']) {
+        <mat-error class="error">Le format est incorrect</mat-error>
+      } @else if(partenaireForm.get('confirmEmail')?.errors && partenaireForm.get('confirmEmail')?.errors?.['emailMismatch']) {
+        <mat-error class="error">L'email n'est pas identique a celui renseigné précédemment</mat-error>
+      }
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label for="adresse">Adresse</mat-label>
+      <input id="adresse" matInput formControlName="address" type="text" >
+      @if(partenaireForm.get('adresse')?.errors && partenaireForm.get('adresse')?.errors?.['required']){
+        <mat-error> Ce champ est obligatoire </mat-error>
+      }@else {
+        <mat-error class="error">Le format est incorrect</mat-error>
+        
+      }
+      </mat-form-field>
+
+    
+    <div class="first_field">
+      <mat-form-field appearance="outline">
+        <mat-label for="codePostal" >Code postal</mat-label>
+      <input id="codePostal" matInput formControlName="postalCode"  type="text">
+      @if(partenaireForm.get('postalCode')?.errors && partenaireForm.get('postalCode')?.errors?.['required']){
+        <mat-error> Ce champ est obligatoire </mat-error>
+      }@else {
+        <mat-error class="error">Le format est incorrect</mat-error>
+        
+      }
+      </mat-form-field>
+      
+      <mat-form-field appearance="outline">
+        <mat-label for="ville">Ville</mat-label>
+      <input id="ville" matInput formControlName="city"  type="text">
+      @if(partenaireForm.get('city')?.errors && partenaireForm.get('city')?.errors?.['required']){
+        <mat-error> Ce champ est obligatoire </mat-error>
+      }@else {
+        <mat-error class="error">Le format est incorrect</mat-error>
+        
+      }
+
+      </mat-form-field>
+    </div>
+
+      <mat-form-field appearance="outline">
+        <mat-label for="pays" >Pays</mat-label>
+      <input id="pays" matInput formControlName="country"  type="text" >
+      @if(partenaireForm.get('country')?.errors && partenaireForm.get('country')?.errors?.['required']){
+        <mat-error> Ce champ est obligatoire </mat-error>
+      }@else {
+        <mat-error class="error">Le format est incorrect</mat-error>
+        
+      }
+
+      </mat-form-field>
+
+
+        <mat-form-field appearance="fill">
+          <mat-label>Quelle type de partenariat souhaitez-vous ?</mat-label>
+          <mat-select formControlName="typePartenariat">
+            @for(option of options; track option.id){
+              <mat-option [value]="option.id">
+                {{ option.label }}
+              </mat-option>
+            }
+          </mat-select>
+          <mat-error>
+            Ce champ est obligatoire
+          </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Commentaire</mat-label>
+        <textarea
+          matInput
+          formControlName="comment"
+          placeholder="Écrivez ici votre commentaire"
+          rows="5"
+        ></textarea>
+      </mat-form-field>
+
+  <p>* Champs obligatoires</p>
+
+  <button type="submit" mat-button [disabled]="partenaireForm.invalid">Soumettre</button>
+
+</form>
+
