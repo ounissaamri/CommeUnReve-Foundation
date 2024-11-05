@@ -1,0 +1,115 @@
+.container_forms {
+    display: flex;           
+    justify-content: space-around;  
+    gap: 10px;               
+    padding: 5rem;          
+    width: 100%;     
+    box-sizing: border-box; 
+          
+    }
+    .container_form {
+    
+        flex: 0 0 30%;        
+        padding: 10px;       
+        background-color: #ffff; 
+        box-sizing: border-box; 
+      
+    }
+    
+    input, button{
+        width: 100%;            
+        box-sizing: border-box;  
+        margin-bottom: 10px;    
+        padding: 8px;       
+        font-size: 1em;
+    }
+
+    
+
+
+mat-toolbar {
+    border-radius: 8px 8px 8px 8px;
+    border: 1px solid #EF20A9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#ffffff;
+    width: 30rem;
+    color:  #EF20A9;
+    font-family: 'inter bold';
+    padding: 1.7rem;
+    margin: 0px 20px;
+  }
+
+ /* Variables for colors to match the design */
+$primary-color: #EF20A9; 
+$secondary-color: #2B5896; 
+$background-color: #ffffff; 
+$text-color: #2B5896; 
+
+.containerForm {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: $background-color;
+  border-radius: 8px;
+  width: 100%;
+  margin: 20px 10px;
+
+  mat-checkbox {
+    margin-bottom: 1rem;
+  }
+
+  .first_field {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+
+    mat-form-field {
+      width: 48%;
+    }
+  }
+
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 1rem;
+
+    mat-label {
+      color: $secondary-color;
+      font-size: 16px;
+      font-family: 'inter semi bold';
+    }
+
+  
+  }
+
+  p {
+    color: red;
+    font-size: 16px;
+    font-family: 'inter semi bold';
+  }
+}
+mat-form-field {
+  --mdc-outlined-text-field-outline-color:#2B5896;; /* Bordure par défaut */
+  --mdc-outlined-text-field-hover-outline-color:#2B5896; /* Bordure en survol */
+  --mdc-outlined-text-field-focused-outline-color:#2B5896; /* Bordure en focus */
+  --mdc-outlined-text-field-input-text-color:#2B5896;
+}
+.mat-mdc-checkbox{
+  --mat-checkbox-label-text-color:#2B5896 ;
+  --mat-checkbox-label-text-font:'inter semi bold' ;
+  --mat-checkbox-label-text-size:19px;
+}
+
+
+
+/* Pour Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+  /* Pour Chrome et Safari */
+&::-webkit-inner-spin-button, 
+&::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+}

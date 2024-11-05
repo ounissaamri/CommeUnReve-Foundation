@@ -1,0 +1,41 @@
+.redirection{
+    color: #2B5896;
+    /* text-align: center; */
+    justify-content: space-evenly;
+    border-radius: 16px 16px 16px 16px;
+    background-color: #EFC71D;
+    font-family: "inter bold";
+    font-size: 25px;
+    margin: 0 14px;
+    padding: 0px 10rem;
+    &.other{
+        background-color: #EF20A9; 
+        color: white !important; 
+    }
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 11rem; 
+    padding-top: 5rem; 
+    a{
+        color: #2B5896;
+        padding: 0 5rem;
+        &.autre{
+            color: white;
+        }
+    }
+}
+
+.router-link-active {
+    color:reds
+}
+
+h1{
+    text-align: center;
+    font-family: "inter bold";
+    font-size: 45px;
+
+}
