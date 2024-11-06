@@ -5,6 +5,7 @@ import { ArticleBlogComponent } from './pages/article-blog/article-blog.componen
 import { DonationComponent } from './pages/donation/donation.component';
 import { MentionslegalesComponent } from './pages/mentionslegales/mentionslegales.component';
 import { PolitiqueDeConfidentialiteComponent } from './pages/politique-de-confidentialite/politique-de-confidentialite.component';
+import { BenevoleComponent } from './pages/benevole/benevole.component';
 import { PartenaireComponent } from './pages/partenaire/partenaire.component';
 import { ChoicePartenaireComponent } from './pages/choice-partenaire/choice-partenaire.component';
 import { AgirAvecNousComponent } from './pages/agir-avec-nous/agir-avec-nous.component';
@@ -22,6 +23,7 @@ export const routes: Routes = [
     { path: 'donation-forms', component: DonationComponent},
     { path: 'mentions-legales', component: MentionslegalesComponent},
     { path: 'Politique-De-Confidentialite', component: PolitiqueDeConfidentialiteComponent},
+    { path: 'devenir-benevole', component: BenevoleComponent },
     // { path: '**', component: NotFoundComponent }
 ];
 
