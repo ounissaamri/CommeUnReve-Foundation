@@ -62,24 +62,27 @@ body {
     flex-direction: column;
   }
   
-  .don-button, .don-button-alt {
+  .don-button, .don-button-alt, .don-button-alts {
     padding: 6px 45px;  /* taille du bouton */
     border-radius: 10px;  /* arrondi du bouton */
     font-weight: 300px;
   }
   
-  .don-button:hover, .don-button-alt:hover {
+  .don-button:hover, .don-button-alt:hover, .don-button-alts:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);  /* ombre légère au survol */
     transform: translateY(-2px);  /* légère élévation au survol */
   }
   
   .don-button {
     background-color: #EF20A9;  
-    
   }
   
   .don-button-alt {
     background-color:#EFC71D;  
+  
+  }
+  .don-button-alts {
+    background-color:#2B5896;  
   
   }
   .don-button.mat-mdc-button:not(:disabled){
@@ -87,6 +90,9 @@ body {
   }
   .don-button-alt.mat-mdc-button:not(:disabled){
     color: #2B5896;
+  }
+  .don-button-alts.mat-mdc-button:not(:disabled){
+    color:#ffffff;
   }
   
   /* Social Media Section */
