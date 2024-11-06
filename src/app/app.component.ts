@@ -8,6 +8,7 @@ import { NosactionsComponent } from './pages/nosactions/nosactions.component';
 import { AgirAvecNousComponent } from './pages/agir-avec-nous/agir-avec-nous.component';
 import {ArticleBlogComponent} from './pages/article-blog/article-blog.component';
 import { DonationComponent } from './pages/donation/donation.component';
+import { BenevoleComponent } from './pages/benevole/benevole.component';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -20,7 +21,8 @@ import { DonationComponent } from './pages/donation/donation.component';
      NosactionsComponent,
      AgirAvecNousComponent,
      ArticleBlogComponent,
-     DonationComponent
+     DonationComponent,
+     BenevoleComponent
     ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

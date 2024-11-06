@@ -6,6 +6,7 @@
     max-width: 80rem; 
     margin: 20px auto; 
     padding: 20px 150px;
+    margin-bottom: 6rem;
 }
 h2{
     font-size: 45px;
@@ -22,7 +23,9 @@ h1{
     width: 30rem;
     
 }
-
+p{
+    font-size: 16px;
+}
 
 
 a{
