@@ -41,13 +41,13 @@ export class PersonalInfoFormComponent implements OnInit  {
   }
 
   addValidatorControl(){
-    this.formDirective?.form.get('personalInfoFormGroup.raisonSociale')?.addValidators(Validators.required);
+    this.formDirective?.form.get('personalInfoFormGroup.raisonSociale')?.addValidators([Validators.required, Validators.pattern(/^[a-zA-ZÀ-ÖØ-öø-ÿ]+([ '-][a-zA-ZÀ-ÖØ-öø-ÿ]+)*$/)]);;
     this.formDirective?.form.get('personalInfoFormGroup.raisonSociale')?.updateValueAndValidity()
 
     this.formDirective?.form.get('personalInfoFormGroup.sirenSiret')?.addValidators([Validators.required, Validators.pattern(/^[0-9]{9,14}$/)]);
     this.formDirective?.form.get('personalInfoFormGroup.sirenSiret')?.updateValueAndValidity();
 
-    this.formDirective?.form.get('personalInfoFormGroup.formeJuridique')?.addValidators(Validators.required);
+    this.formDirective?.form.get('personalInfoFormGroup.formeJuridique')?.addValidators([Validators.required, Validators.pattern(/^[a-zA-ZÀ-ÖØ-öø-ÿ]+([ '-][a-zA-ZÀ-ÖØ-öø-ÿ]+)*$/)]);;
     this.formDirective?.form.get('personalInfoFormGroup.formeJuridique')?.updateValueAndValidity();
   }
 
@@ -61,6 +61,7 @@ export class PersonalInfoFormComponent implements OnInit  {
     this.formDirective?.form.get('personalInfoFormGroup.formeJuridique')?.clearValidators();
     this.formDirective?.form.get('personalInfoFormGroup.formeJuridique')?.updateValueAndValidity();
   }
+
 
   
 
