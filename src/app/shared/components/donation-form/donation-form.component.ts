@@ -36,6 +36,7 @@ import { debounceTime, distinctUntilChanged } from 'rxjs';
 })
 export class DonationFormComponent {
   formDirective = inject(FormGroupDirective)
+
   @ViewChild('inputRef') inputRef!: ElementRef;
 
   listAmount = [{id:1, value:20},{id:2, value:50},{id:3, value:100}]
@@ -62,6 +63,9 @@ export class DonationFormComponent {
         this.inputRef.nativeElement.value = null
       }
     })
+
+    
+
   }
 
    changeColorA(element:string) {
