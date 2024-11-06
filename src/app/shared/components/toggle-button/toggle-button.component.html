@@ -1,7 +1,7 @@
 <div class="container_group">
     <mat-button-toggle-group appearance="legacy" name="fontStyle2" aria-label="Font Style">
         @for(button of buttons; track button.id) {
-            <mat-button-toggle class="button button-{{button.id}}" (click)="setValue(button.value)" [ngClass]="{active: button.value === value,}" >{{ button.value }}€</mat-button-toggle>
+            <mat-button-toggle class="button button-{{button.id}}" (click)="setValue(button.id)" [ngClass]="{active: button.id === value,}" >{{ button.value }}€</mat-button-toggle>
         } 
    </mat-button-toggle-group>
 </div>
