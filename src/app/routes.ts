@@ -7,6 +7,7 @@ import { ArticleBlogComponent } from "./pages/article-blog/article-blog.componen
 import { DonationComponent } from "./pages/donation/donation.component";
 import { MentionslegalesComponent } from "./pages/mentionslegales/mentionslegales.component";
 import { PolitiqueDeConfidentialiteComponent } from "./pages/politique-de-confidentialite/politique-de-confidentialite.component";
+import { BenevoleComponent } from "./pages/benevole/benevole.component";
 
 
 export const routes: Routes = [
@@ -20,4 +21,5 @@ export const routes: Routes = [
     { path: 'donation-forms', component: DonationComponent},
     { path: 'mentions-legales', component: MentionslegalesComponent},
     { path: 'Politique-De-Confidentialite', component: PolitiqueDeConfidentialiteComponent},
+    { path: 'devenir-benevole', component: BenevoleComponent },
 ];
