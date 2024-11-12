@@ -43,7 +43,6 @@ export class SummaryFormComponent implements OnInit {
 
   ngOnInit(): void {
 
-    console.log(this.formDirective)
     const amount = this.formDirective.form.controls?.['donationFormGroup']?.get('amount');
     const amountOptions = this.formDirective.form.controls?.['donationFormGroup']?.get('amountOptions');
     const type = this.formDirective.form.get('donationFormGroup.type');
