@@ -1,23 +1,56 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
-import { catchError } from 'rxjs/operators';
+import { Stripe, loadStripe } from '@stripe/stripe-js';
+import { environment } from './../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PaymentDonationService {
   private apiUrl = 'https://api.example.com/payement'; 
-
-  constructor(private http: HttpClient) {}
-
-  // Effectuer le payement
-  makeDonation(): Observable<any[]> {
-    return this.http.post<any[]>(`${this.apiUrl}/donation`,{})
-      .pipe(
-        catchError(this.handleError)
-      );
+  private stripe: Stripe | null = null;
+  
+  constructor(private http: HttpClient) {
+    this.loadStripe();
+    console.log(environment)
   }
+
+
+  async loadStripe(){
+    this.stripe = await loadStripe('pk_test_irnXMxSZo8TQfwkiJsy1hrZn00KsIuoNxK')
+
+  }
+
+  createCheckoutSession(lineItems: any) {
+    return this.http.post<{ sessionId: string }>('http://localhost:3000/create-checkout-session', {
+      lineItems: lineItems,
+      successUrl: 'http://localhost:4200/complete',
+      cancelUrl: 'http://localhost:4200/cancel'
+    });
+  }
+
+  createSubscriptionSession(customerEmail: string, priceId: string) {
+    return this.http.post<{ sessionId: string }>('http://localhost:3000/create-subscription-session', {
+      customerEmail: customerEmail,
+      priceId: 'priceId', // celui renseigner dans la backend
+      successUrl: 'http://localhost:4200/complete',
+      cancelUrl: 'http://localhost:4200/cancel'
+    });
+  }
+
+  cancelSubscription(subscriptionId: string) {
+    return this.http.post<{ message: string }>(`${this.apiUrl}/cancel-subscription`, { subscriptionId });
+  }
+
+  async redirectToCheckout(sessionId: string) {
+    if (this.stripe) {
+      await this.stripe.redirectToCheckout({ sessionId });
+    }
+  }
+
+  
+
 
   private handleError(error: HttpErrorResponse): Observable<never> {
     let errorMessage = 'An error occurred';
@@ -29,4 +62,7 @@ export class PaymentDonationService {
     console.error(errorMessage);
     return throwError(() => new Error(errorMessage));
   }
+
+
+
 }

@@ -7,6 +7,10 @@ import {FormBuilder} from '@angular/forms';
 import { JsonPipe } from '@angular/common';
 import { emailMatchValidator } from '../../shared/validators/emailMatch.validator';
 import { ActivatedRoute } from '@angular/router';
+import { PaymentDonationService } from '../../shared/services/payment-donation.service';
+import { AmountPaymentContantes, TypePaymentContantes } from "./../../shared/constantes/toggle-button-option";
+import { log } from 'console';
+
 @Component({
   selector: 'app-donation',
   standalone: true,
@@ -37,11 +41,13 @@ export class DonationComponent {
   }
 
 
-constructor(private fb:FormBuilder){
+
+constructor(private fb:FormBuilder, private paymentDonationService:PaymentDonationService){
 
   this.paymentForm = this.fb.group({
     donationFormGroup: this.fb.group({
       amount:[null, Validators.required],
+      amountOptions:[null, Validators.required],
       type: [null, Validators.required],
     }),
     summaryFormGroup: this.fb.group({
@@ -63,20 +69,88 @@ constructor(private fb:FormBuilder){
     }),
     
   },{validators:emailMatchValidator('paymentForm.personalInfoFormGroup')})
-}
 
-ngOnInit(){
-  this.activatedRoute.queryParams.subscribe(
-    (data)=> {
-        data ? this.paymentForm.get('donationFormGroup')?.patchValue({type: +data['type'] }) :
-        this.paymentForm.get('donationFormGroup')?.patchValue({type:null})
+  // this.paymentForm = this.fb.group({
+  //   donationFormGroup: this.fb.group({
+  //     amount: [null],
+  //     type: [null],
+  //   }),
+  //   summaryFormGroup: this.fb.group({
+  //     cgu: [null],
+  //   }),
+  //   personalInfoFormGroup: this.fb.group({
+  //     isCompany: [false],
+  //     postalCode: [null],
+  //     sirenSiret: [null],
+  //     firstname: [null],
+  //     lastName: [null],
+  //     email: [null],
+  //     confirmEmail: [null],
+  //     address: [null],
+  //     city: [null],
+  //     country: [null],
+  //     raisonSociale: [null],
+  //     formeJuridique: [null],
+  //   })
+  // });
   
-    }
-  )
-
 }
 
+ ngOnInit(){
+  const subscription = this.activatedRoute.snapshot.queryParamMap.get('subscription');
+  if(subscription) {
+    this.paymentForm.get('donationFormGroup.type')?.setValue({id:1,type: TypePaymentContantes.TYPE_PAYMENT.SUBSCRIPTION, libelle: TypePaymentContantes.LIBELLE.EVERY_MONTH})
+  }
+ }
 
+ initPayment() {
+  const lineItems = [
+    {
+      price_data: {
+        currency: 'EUR',
+        product_data: {
+          name: 'Produit Exemple',
+        },
+        unit_amount: 5000, // En cents (50$)
+      },
+      quantity: 1,
+    },
+  ];
+
+  this.paymentDonationService.createCheckoutSession(lineItems).subscribe({
+    next: (res) => {
+      if (res.sessionId) {
+        this.paymentDonationService.redirectToCheckout(res.sessionId);
+      }
+    },
+    error: (err) => console.error('Erreur de création de session:', err),
+  });
+}
+
+initSubscription() {
+  // const email = this.paymentForm.controls?.['personalInfoFormGroup.email'].value
+  // const price = this.paymentForm.controls?.['personalInfoFormGroup.price'].value
+
+  this.paymentDonationService.createSubscriptionSession('burdy.gou@gmail.com', 'price').subscribe({
+    next: (res:any) => {
+      if (res.sessionId) {
+        this.paymentDonationService.redirectToCheckout(res.sessionId);
+      }
+    },
+    error: (err:any) => console.error('Erreur de création de session:', err),
+  });
+}
+
+// cancelSubscription() {
+//   this.subscriptionService.cancelSubscription(this.subscriptionId).subscribe({
+//     next: (response) => {
+//       console.log(response.message);  // Message de succès
+//     },
+//     error: (error) => {
+//       console.error('Erreur lors de l\'annulation de l\'abonnement', error);
+//     },
+//   });
+// }
 
 }
 

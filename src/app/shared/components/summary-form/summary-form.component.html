@@ -23,12 +23,10 @@
   </div>
 
 
-
-
-
     <div class="buttons">
-      <button mat-button class="payers"  [disabled]="statusForm === 'INVALID'" (click)="makeDonation()">Payer</button>
+      <button mat-button class="payers"  [disabled]="statusForm === 'INVALID'" (click)="makeDonation()">{{ isOneTimePayment === false ?  'Souscrire' :'Donner' }} </button>
     </div>
+    
 
     <div class="payment-security">
       <h2>Plateforme de paiement 100% sécurisée</h2>

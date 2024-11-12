@@ -2,7 +2,7 @@ import { CurrencyPipe, NgClass, NgFor, NgStyle } from '@angular/common';
 import { Component, Input, forwardRef, inject } from '@angular/core';
 import { FormGroupDirective, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
-import { tap, distinctUntilChanged, debounceTime } from 'rxjs';
+import { toggleButtonOption } from '../../interfaces/toggle-button-options';
 
 @Component({
   selector: 'app-toggle-button',
@@ -20,26 +20,12 @@ import { tap, distinctUntilChanged, debounceTime } from 'rxjs';
 })
 export class ToggleButtonComponent{
 
-    formDirective =  inject(FormGroupDirective)
-  @Input() buttons!: {id:number, value:any}[];
-  value!: number;  
+  formDirective =  inject(FormGroupDirective)
+  @Input() options!: toggleButtonOption[];
+  value!: any;  
 
   elementActive: number|null = null
 
-
-  ngOnInit(): void {
-    const amount = this.formDirective.form.controls?.['donationFormGroup']?.get('amount');
-    amount?.valueChanges
-    .pipe(
-      debounceTime(800),
-      distinctUntilChanged()
-    )
-    .subscribe((amount:string)=> {
-      if(typeof this.value === 'number') {
-        this.writeValue(amount)
-      }
-    })
-  }
   
   // Les fonctions qui seront appelées par Angular
   onChange = (value: any) => {};
@@ -61,7 +47,7 @@ export class ToggleButtonComponent{
   }
 
   // Gérer le changement de valeur lorsque l'utilisateur clique sur un bouton
-  setValue(option: number) {
+  setValue(option: any) {
     this.value = option;
     this.onChange(option);
     this.onTouched();
