@@ -4,10 +4,10 @@
 
 <div class="containerAmount" formGroupName="donationFormGroup">
   
-<app-toggle-button [buttons]="listTypeDonation" formControlName="type"></app-toggle-button>
+<app-toggle-button [options]="listTypeDonation" formControlName="type"></app-toggle-button>
 <div class="section_amount">
-  <app-toggle-button [buttons]="listAmount" formControlName="amount"></app-toggle-button>
-</div>
+  <app-toggle-button [options]="listAmount" formControlName="amountOptions"></app-toggle-button>
+</div> 
   <label class="label">Montant libre</label>
   <mat-form-field id="inputField" appearance="outline">
     <input  formControlName="amount" id="amount" #inputRef  matInput type="number"  placeholder="">
