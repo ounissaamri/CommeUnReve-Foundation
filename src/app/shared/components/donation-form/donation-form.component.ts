@@ -59,9 +59,9 @@ export class DonationFormComponent {
       distinctUntilChanged()
     )
     .subscribe((amount)=> {
-      if(amount !==  Number(this.inputRef.nativeElement.value)) {
-        this.inputRef.nativeElement.value = null
-      }
+      // if(amount.value !==  Number(this.inputRef.nativeElement.value)) {
+      //   this.inputRef.nativeElement.value = null
+      // }
     })
 
     
