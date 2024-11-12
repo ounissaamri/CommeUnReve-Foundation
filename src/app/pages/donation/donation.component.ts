@@ -8,8 +8,8 @@ import { JsonPipe } from '@angular/common';
 import { emailMatchValidator } from '../../shared/validators/emailMatch.validator';
 import { ActivatedRoute } from '@angular/router';
 import { PaymentDonationService } from '../../shared/services/payment-donation.service';
-import { AmountPaymentContantes, TypePaymentContantes } from "./../../shared/constantes/toggle-button-option";
-import { log } from 'console';
+import { TypePaymentContantes } from "./../../shared/constantes/toggle-button-option";
+import { delay, filter, take } from 'rxjs';
 
 @Component({
   selector: 'app-donation',
@@ -97,10 +97,17 @@ constructor(private fb:FormBuilder, private paymentDonationService:PaymentDonati
 }
 
  ngOnInit(){
-  const subscription = this.activatedRoute.snapshot.queryParamMap.get('subscription');
-  if(subscription) {
-    this.paymentForm.get('donationFormGroup.type')?.setValue({id:1,type: TypePaymentContantes.TYPE_PAYMENT.SUBSCRIPTION, libelle: TypePaymentContantes.LIBELLE.EVERY_MONTH})
-  }
+
+  this.activatedRoute.queryParams.pipe(
+    filter(params=> params['subscription']),
+    delay(100),
+    take(1),
+  ).subscribe(param => {
+    const subscription = param['subscription'];
+    this.paymentForm.get('donationFormGroup.type')?.setValue({id:1,type: TypePaymentContantes.TYPE_PAYMENT.SUBSCRIPTION, libelle: TypePaymentContantes.LIBELLE.EVERY_MONTH});
+    this.paymentForm.get('donationFormGroup.type')?.updateValueAndValidity()
+  })
+
  }
 
  initPayment() {

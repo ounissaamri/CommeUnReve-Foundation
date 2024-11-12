@@ -31,7 +31,6 @@ import { AmountPaymentContantes, TypePaymentContantes } from "./../../constantes
     MatToolbar,
     ReactiveFormsModule,
     ToggleButtonComponent
-    
   ],
   templateUrl: './donation-form.component.html',
   styleUrl: './donation-form.component.scss',
