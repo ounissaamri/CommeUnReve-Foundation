@@ -39,27 +39,22 @@ import { AmountPaymentContantes, TypePaymentContantes } from "./../../constantes
 })
 export class DonationFormComponent {
   formDirective = inject(FormGroupDirective)
-
   @ViewChild('inputRef') inputRef!: ElementRef;
-
-  // listAmount = [{id:1, value:20},{id:2, value:50},{id:3, value:100}]
-  // listTypeDonation = [{id:1, value: 'Une fois'},{id:2, value:"Donner tous les mois"}]
 
   listTypeDonation : toggleButtonOption[] = [
     {id:1,type: TypePaymentContantes.TYPE_PAYMENT.SUBSCRIPTION, libelle: TypePaymentContantes.LIBELLE.EVERY_MONTH},
      {id:2,type: TypePaymentContantes.TYPE_PAYMENT.PAYMENT, libelle: TypePaymentContantes.LIBELLE.ONE_TIME}
     ]
+
   listAmount : toggleButtonOption[] = [
     { id:1,libelle: AmountPaymentContantes.LIBELLE.TWENTY},
     { id:2,libelle: AmountPaymentContantes.LIBELLE.FIFTY},
     {id:3,libelle: AmountPaymentContantes.LIBELLE.HUNDRED}
   ]
 
-  // faire que les toggle button retrtr pas en collision
-  // rendre pas obligatoire le champs de montant libre
+
   // Faire api stripe pour le paiement
   // faire api stripe pour abonnement
-  //
 
   elementActive: string|null = null
   elementActiveA: string|null = null
@@ -71,10 +66,8 @@ export class DonationFormComponent {
 
 
   ngOnInit(): void {
-
     const amount = this.formDirective.form.controls?.['donationFormGroup']?.get('amount')
     const amountOptions = this.formDirective.form.controls?.['donationFormGroup']?.get('amountOptions')
-
     
     amount?.valueChanges
     .pipe(
@@ -88,10 +81,6 @@ export class DonationFormComponent {
         amountOptions?.updateValueAndValidity();
         amount.addValidators(Validators.required);
         amount.updateValueAndValidity()
-
-
-
-
     })
 
 
@@ -107,10 +96,6 @@ export class DonationFormComponent {
       amount?.updateValueAndValidity();
       amountOptions.addValidators(Validators.required);
       amountOptions.updateValueAndValidity();
-
-
-
-
     })
   }
 
