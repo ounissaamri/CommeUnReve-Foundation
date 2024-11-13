@@ -9,6 +9,8 @@ import { AgirAvecNousComponent } from './pages/agir-avec-nous/agir-avec-nous.com
 import {ArticleBlogComponent} from './pages/article-blog/article-blog.component';
 import { DonationComponent } from './pages/donation/donation.component';
 import { BenevoleComponent } from './pages/benevole/benevole.component';
+import { environment } from './../environments/environment';
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -29,4 +31,9 @@ import { BenevoleComponent } from './pages/benevole/benevole.component';
 })
 export class AppComponent {
   title = 'CommeUnReve-Back-';
+  constructor(){
+    console.log(environment)
+
+  }
+
 }

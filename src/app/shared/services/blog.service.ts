@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
+import { environment } from '../../../environments/environment';
 
 export interface BlogArticle {
   id: number;
@@ -15,7 +16,7 @@ export interface BlogArticle {
   providedIn: 'root'
 })
 export class BlogService {
-  private apiUrl = 'https://api.example.com/blog'; // Remplacez par l'URL réelle de l'API
+  private apiUrl = environment.apiUrl; // Remplacez par l'URL réelle de l'API
 
   constructor(private http: HttpClient) {}
 

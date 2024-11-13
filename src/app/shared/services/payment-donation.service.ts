@@ -8,34 +8,34 @@ import { environment } from './../../../environments/environment';
   providedIn: 'root'
 })
 export class PaymentDonationService {
-  private apiUrl = 'https://api.example.com/payement'; 
+  private apiUrl = environment.apiUrl; 
+  private hostUrl = environment.hostUrl; 
+
   private stripe: Stripe | null = null;
   
   constructor(private http: HttpClient) {
     this.loadStripe();
-    console.log(environment)
   }
 
 
   async loadStripe(){
-    this.stripe = await loadStripe('pk_test_irnXMxSZo8TQfwkiJsy1hrZn00KsIuoNxK')
-
+    this.stripe = await loadStripe(environment.stripePubKey)
   }
-
+                      
   createCheckoutSession(lineItems: any) {
-    return this.http.post<{ sessionId: string }>('http://localhost:3000/create-checkout-session', {
+    return this.http.post<{ sessionId: string }>(`${this.apiUrl}/create-checkout-session`, {
       lineItems: lineItems,
-      successUrl: 'http://localhost:4200/complete',
-      cancelUrl: 'http://localhost:4200/cancel'
+      successUrl:`${this.hostUrl}/complete`,
+      cancelUrl:`${this.hostUrl}/cancel`
     });
-  }
-
+  }  
+          
   createSubscriptionSession(customerEmail: string, priceId: string) {
-    return this.http.post<{ sessionId: string }>('http://localhost:3000/create-subscription-session', {
+    return this.http.post<{ sessionId: string }>(`${this.apiUrl}/create-subscription-session`, {
       customerEmail: customerEmail,
       priceId: 'priceId', // celui renseigner dans la backend
-      successUrl: 'http://localhost:4200/complete',
-      cancelUrl: 'http://localhost:4200/cancel'
+      successUrl:`${this.hostUrl}/complete`,
+      cancelUrl:`${this.hostUrl}/cancel`
     });
   }
 

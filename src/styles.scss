@@ -3,9 +3,9 @@
 
 @import 'mdb-angular-ui-kit/assets/scss/mdb.scss';
 
-@import 'toggle-button-global.scss';
-@import 'form-section.scss';
-@import 'page-form.scss';
+@import 'styles/toggle-button-global.scss';
+@import 'styles/form-section.scss';
+@import 'styles/page-form.scss';
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

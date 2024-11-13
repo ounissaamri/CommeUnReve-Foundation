@@ -12,6 +12,7 @@ import { AgirAvecNousComponent } from './pages/agir-avec-nous/agir-avec-nous.com
 import { NosactionsComponent } from './pages/nosactions/nosactions.component';
 import { CompleteCheckoutComponent } from './pages/complete-checkout/complete-checkout.component';
 import { CancelCheckoutComponent } from './pages/cancel-checkout/cancel-checkout.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -29,6 +30,6 @@ export const routes: Routes = [
     { path: 'Politique-De-Confidentialite',  loadComponent: ()=> PolitiqueDeConfidentialiteComponent},
     { path: 'devenir-benevole',  loadComponent: ()=> BenevoleComponent },
     {path:'complete',  loadComponent: ()=> CompleteCheckoutComponent},
-    // { path: '**', component: NotFoundComponent }
+    { path: '**', component: NotFoundComponent }
 ];
 
