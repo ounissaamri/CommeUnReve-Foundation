@@ -71,7 +71,6 @@ sendForm(event:any){
   this.partenaireForm.get('comment')?.patchValue(this.sanitizeInput(this.partenaireForm.get('comment')?.value))
   //map typePartenariat field
   this.partenaireForm.get('typePartenariat')?.patchValue(this.options.find(el=> el.id === this.partenaireForm.get('typePartenariat')?.value))
-  console.log('send data', this.partenaireForm.value)
 }
 
 

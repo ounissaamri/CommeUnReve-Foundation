@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "node scripts/env-config.js && ng build --prod",
+    "build": "node scripts/env-config.js && ng build --configuration=production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:CommeUnReve-Back-": "node dist/comme-un-reve-back-/server/server.mjs"

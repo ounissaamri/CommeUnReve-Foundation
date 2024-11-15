@@ -1,9 +1,10 @@
 const fs = require('fs');
-const targetPath = './../src/environments/environment.prod.ts';
+const targetPath = './src/environments/environment.prod.ts';
 const envConfigFile = `
 export const environment = {
-    stripePubKey: '${process.env.stripePubKey}'
-    apiUrl: '${process.env.apiUrl}'
+    production: true,
+    stripePubKey: '${process.env.stripePubKey}',
+    apiUrl: '${process.env.apiUrl}',
     hostUrl: '${process.env.hostUrl}'
 
 };

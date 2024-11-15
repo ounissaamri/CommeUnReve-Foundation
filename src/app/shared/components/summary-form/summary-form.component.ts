@@ -47,7 +47,6 @@ export class SummaryFormComponent implements OnInit {
     const amountOptions = this.formDirective.form.controls?.['donationFormGroup']?.get('amountOptions');
     const type = this.formDirective.form.get('donationFormGroup.type');
 
-    console.log(type)
 
     type?.valueChanges.subscribe(value => {
       value.type === TypePaymentContantes.TYPE_PAYMENT.SUBSCRIPTION ? this.isOneTimePayment = false :  this.isOneTimePayment = true;
