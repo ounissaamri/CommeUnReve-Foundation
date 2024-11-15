@@ -19,8 +19,6 @@ import { DomSanitizer } from '@angular/platform-browser';
     ReactiveFormsModule,
     MatToolbar,
     MatCheckboxModule,
-    FormsModule,
-    MatFormFieldModule,
     JsonPipe,
     MatSelectModule
     

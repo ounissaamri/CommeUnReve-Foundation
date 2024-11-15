@@ -3,6 +3,7 @@
   mat-button-toggle-group {
     display: flex;
     gap: 10px;
+
     mat-button-toggle {
       border: 2px solid;
       font-family: 'inter semi bold';
@@ -12,6 +13,7 @@
       font-size: 13px;
       padding: 20px 0px;
       }
+
     mat-button-toggle.small {
     border: 55px solid;
     font-family: 'inter semi bold';
@@ -26,13 +28,12 @@
   .mat-button-toggle-standalone:not([class*=mat-elevation-z]), .mat-button-toggle-group:not([class*=mat-elevation-z]){
     box-shadow: none !important;
   }
-  .mat-pseudo-checkbox{
-    //style pour check
-    //  display: none !important;
-  }
+  
   .mat-button-toggle .mat-pseudo-checkbox{
     margin-right: 5px;
   }
+
+  
 }
 
 

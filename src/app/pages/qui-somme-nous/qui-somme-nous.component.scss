@@ -7,10 +7,8 @@
   margin: 20px auto; 
   padding: 20px 150px; 
 }
-.section{
-  padding-top: 48px;
-  
-}
+.section{ padding-top: 48px; }
+
 h1{
   font-size: 64px;
   padding-top: 40px;
@@ -19,6 +17,7 @@ h1{
 
 }
 .espace{
+  
   margin-bottom: 50px;
   &.last {
     margin-bottom: 10rem;
@@ -36,4 +35,10 @@ p{
   font-size: 16px;
   text-align: left;
   color: black;
+}
+@media (max-width: 480px) {
+  .all { padding: 10px; }
+  h1 { font-size: 28px; }
+  h3 { font-size: 20px; }
+  p, ul li { font-size: 10px; }
 }

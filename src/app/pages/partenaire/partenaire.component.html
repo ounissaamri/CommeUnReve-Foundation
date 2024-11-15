@@ -3,8 +3,10 @@
   <h1>Rejoignez notre Partenariat</h1>
   <div class="container">
       <img src="./../../../assets/img/image_acceuil.png" class="image_home"/>
-      <div class="container_form">
-        <form [formGroup]="partenaireForm" (ngSubmit)="sendForm($event)">
+
+    <div class="container_form">
+
+      <form [formGroup]="partenaireForm" (ngSubmit)="sendForm($event)">
 
         <mat-checkbox formControlName="isCompany">
         Je suis une entreprise
@@ -149,7 +151,7 @@
           </mat-form-field>
 
 
-          <mat-form-field appearance="fill">
+          <mat-form-field appearance="outline">
             <mat-label>Quelle type de partenariat souhaitez-vous ?</mat-label>
             <mat-select formControlName="typePartenariat">
               @for(option of options; track option.id){
@@ -163,7 +165,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field appearance="fill">
+          <mat-form-field appearance="outline">
             <mat-label>Commentaire</mat-label>
             <textarea
               matInput

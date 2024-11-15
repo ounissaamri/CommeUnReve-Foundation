@@ -1,9 +1,11 @@
-import { Component } from '@angular/core';
-import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { DomSanitizer } from '@angular/platform-browser';
+
 
 @Component({
   selector: 'app-benevole',
@@ -11,11 +13,9 @@ import { MatInputModule } from '@angular/material/input';
   imports: [
     MatFormFieldModule, 
     MatInputModule, 
-    FormsModule, 
     ReactiveFormsModule,
     MatCheckboxModule,
     FormsModule,
-    MatFormFieldModule,
     MatButtonModule
   ],
   templateUrl: './benevole.component.html',
@@ -25,3 +25,5 @@ import { MatInputModule } from '@angular/material/input';
 export class BenevoleComponent {
 contactForm!: FormGroup;
 }
+
+
