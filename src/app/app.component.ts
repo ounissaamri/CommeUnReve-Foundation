@@ -33,7 +33,6 @@ export class AppComponent {
   title = 'CommeUnReve-Back-';
   constructor(){
     console.log(environment)
-
   }
 
 }
