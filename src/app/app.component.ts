@@ -9,7 +9,7 @@ import { AgirAvecNousComponent } from './pages/agir-avec-nous/agir-avec-nous.com
 import {ArticleBlogComponent} from './pages/article-blog/article-blog.component';
 import { DonationComponent } from './pages/donation/donation.component';
 import { BenevoleComponent } from './pages/benevole/benevole.component';
-import { environment } from './../environments/environment';
+import { environment } from './environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -30,7 +30,6 @@ import { environment } from './../environments/environment';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'CommeUnReve-Back-';
   constructor(){
     console.log(environment)
   }
