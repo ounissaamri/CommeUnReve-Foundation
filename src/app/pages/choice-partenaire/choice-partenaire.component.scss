@@ -1,6 +1,5 @@
 .redirection{
     color: #2B5896;
-    /* text-align: center; */
     justify-content: space-evenly;
     border-radius: 16px 16px 16px 16px;
     background-color: #EFC71D;
@@ -10,17 +9,16 @@
     padding: 0px 10rem;
     &.other{
         background-color: #EF20A9; 
-        color: white !important; 
-    
+        color: white !important;
     }
 }
-
 .container {
     display: flex;
     align-items: center;
     justify-content: center;
     padding-bottom: 11rem; 
-    padding-top: 5rem; 
+    min-height: 100vh;
+    flex: 1;
     a{
         color: #2B5896;
         padding: 0 5rem;
@@ -29,14 +27,21 @@
         }
     }
 }
-
-.router-link-active {
-    color:reds
-}
-
 h1{
     text-align: center;
     font-family: "inter bold";
     font-size: 45px;
-
 }
+.container {
+    @media (max-width: 768px) {
+        padding: 2rem;
+        a {
+            padding: 1rem 2rem;
+        }
+        .redirection {
+            font-size: 1.2rem;
+            padding: 1rem 5rem;
+        }
+    }
+}
+

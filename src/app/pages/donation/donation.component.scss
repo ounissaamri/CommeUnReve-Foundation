@@ -1,25 +1,52 @@
 .container_forms {
-display: flex;           /* Active Flexbox */
-justify-content: space-around;  /* Espacement égal entre les blocs */
-gap: 10px;               /* Espace entre chaque bloc (si besoin) */
-padding: 5rem;           /* Un peu de padding global */
-width: 100%;             /* Occuper tout l'espace horizontal */
-box-sizing: border-box; 
-      
+    display: flex;               /* Active Flexbox */
+    flex-direction: column;      /* Par défaut, les blocs sont empilés en colonne */
+    justify-content: flex-start; /* Aligner les blocs au début (en haut) */
+    gap: 20px;                   /* Espacement entre chaque bloc */
+    padding: 2rem;               /* Padding global */
+    width: 100%;                 /* Occuper tout l'espace horizontal */
+    box-sizing: border-box;
 }
+
 .container_form {
-
-    flex: 0 0 30%;           /* Les blocs prennent chacun 30% de la largeur */
-    padding: 10px;           /* Espace interne */
-    background-color: #ffff; /* Couleur de fond */
-    box-sizing: border-box;  /* Inclure le padding dans la taille totale */
-  
+    flex: 0 0 auto;              /* Chaque bloc occupe la place nécessaire */
+    padding: 10px;               /* Espace interne */
+    background-color: #fff;     /* Couleur de fond blanche */
+    box-sizing: border-box;      /* Inclure le padding dans la taille totale */
+    transition: all 0.3s ease;   /* Animation douce pour les transitions */
+    max-width: 400px;            /* Limiter la largeur maximale des blocs */
+    margin: 0 auto;              /* Centrer les blocs sur l'écran */
 }
 
-input, button{
-    width: 100%;             /* Prendre toute la largeur disponible */
-    box-sizing: border-box;  /* Empêcher de dépasser la largeur */
-    margin-bottom: 10px;     /* Espacement vertical entre les éléments */
-    padding: 8px;            /* Padding interne */
-    font-size: 1em;
+input, button {
+    width: 100%;                 /* Prendre toute la largeur disponible */
+    box-sizing: border-box;      /* Empêcher de dépasser la largeur */
+    margin-bottom: 10px;         /* Espacement vertical entre les éléments */
+    padding: 8px;                /* Padding interne */
+    font-size: 1em;              /* Taille de police standard */
+}
+
+/* Media Query pour les écrans plus larges que 768px */
+@media (min-width: 768px) {
+    .container_forms {
+        flex-direction: row;      /* Sur les grands écrans, les blocs sont disposés en ligne */
+        justify-content: space-between; /* Espacement égal entre les blocs */
+        padding: 2rem;            /* Padding global pour les grands écrans */
+    }
+
+    .container_form {
+        flex: 0 0 30%;            /* Les blocs prennent 30% de la largeur */
+        max-width: none;          /* Enlever la largeur maximale sur les grands écrans */
+    }
+
+    input, button {
+        font-size: 1em;           /* Taille de police normale sur les grands écrans */
+    }
+}
+
+/* Media Query pour les écrans plus petits que 768px */
+@media (max-width: 768px) {
+    .container_form {
+        max-width: 90%;           /* Réduire la taille des blocs sur les petits écrans */
+    }
 }

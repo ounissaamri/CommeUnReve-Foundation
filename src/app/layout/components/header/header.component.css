@@ -2,7 +2,6 @@ mat-toolbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 24px;  /* espace */
   background-color: #ffffff;  
   margin-bottom: 5rem;
   padding-top: 2rem;
@@ -25,9 +24,9 @@ nav.links {
 }
 
 nav.links a {
-  margin: 0 16px;  /* espace entre lien */
+  margin: 0 1px;  /* espace entre lien */
   font-family: 'jakarta medium';
-  font-size: 20px;  
+  font-size: 16px;  
   text-decoration: none;  /* supprimer soulignement */
   align-items: center;
 }
@@ -42,9 +41,10 @@ nav.links a:hover {
 }
 
 .don-button, .don-button-alt , .don-button-alts{
-  padding: 6px 45px;  /* taille du bouton */
+  padding: 6px 35px ;  /* taille du bouton */
   border-radius: 10px;  /* arrondi du bouton */
   font-weight: 300px;
+  
 }
 
 .don-button:hover, .don-button-alt:hover, .don-button-alts:hover {
@@ -69,6 +69,33 @@ nav.links a:hover {
 }
 .don-button-alts.mat-mdc-button:not(:disabled){
   color:  #ffffff;
+}
+
+
+@media (max-width: 768px) {
+  .logo img {
+    height: 100px; /* Scale the logo appropriately */
+    width: auto;
+  }
+  nav.links {
+    display: none; /* Hide navigation links on smaller screens */
+  }
+  .buttons {
+    flex-direction: row; /* Stack buttons vertically */
+    font-size: small;
+  }
+  .don-button, .don-button-alt, .don-button-alts {
+    padding: 6px 20px; /* Reduce button size */
+  }
+  mat-toolbar .buttons button[mat-button] {
+    font-size: 8px; 
+    
+  }
+}
+@media (min-width: 768px) {
+  nav.links {
+    display: flex;
+  }
 }
 
 
