@@ -10,20 +10,26 @@ import { PartenaireComponent } from './pages/partenaire/partenaire.component';
 import { ChoicePartenaireComponent } from './pages/choice-partenaire/choice-partenaire.component';
 import { AgirAvecNousComponent } from './pages/agir-avec-nous/agir-avec-nous.component';
 import { NosactionsComponent } from './pages/nosactions/nosactions.component';
+import { CompleteCheckoutComponent } from './pages/complete-checkout/complete-checkout.component';
+import { CancelCheckoutComponent } from './pages/cancel-checkout/cancel-checkout.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'home', component: HomeComponent },
-    { path: 'qui-sommes-nous', component: QuiSommeNousComponent },
-    { path: 'choice-partenaire', component: ChoicePartenaireComponent},
-    { path: 'partenaire', component: PartenaireComponent},
-    { path: 'nos-actions', component: NosactionsComponent },
-    { path: 'agir-avec-nous', component: AgirAvecNousComponent},
-    { path: 'articles-blog', component: ArticleBlogComponent},
-    { path: 'donation-forms', component: DonationComponent},
-    { path: 'mentions-legales', component: MentionslegalesComponent},
-    { path: 'Politique-De-Confidentialite', component: PolitiqueDeConfidentialiteComponent},
-    { path: 'devenir-benevole', component: BenevoleComponent },
-    // { path: '**', component: NotFoundComponent }
+    // lazy loading with loadComponent()
+    { path: 'qui-sommes-nous', loadComponent: ()=> QuiSommeNousComponent },
+    {path:'cancel',loadComponent: ()=> CancelCheckoutComponent},
+    { path: 'choice-partenaire', loadComponent: ()=> ChoicePartenaireComponent},
+    { path: 'partenaire', loadComponent: ()=> PartenaireComponent},
+    { path: 'nos-actions',  loadComponent: ()=> NosactionsComponent },
+    { path: 'agir-avec-nous',  loadComponent: ()=> AgirAvecNousComponent},
+    { path: 'articles-blog',  loadComponent: ()=> ArticleBlogComponent},
+    { path: 'donation-forms',  loadComponent: ()=> DonationComponent},
+    { path: 'mentions-legales',  loadComponent: ()=> MentionslegalesComponent},
+    { path: 'Politique-De-Confidentialite',  loadComponent: ()=> PolitiqueDeConfidentialiteComponent},
+    { path: 'devenir-benevole',  loadComponent: ()=> BenevoleComponent },
+    {path:'complete',  loadComponent: ()=> CompleteCheckoutComponent},
+    { path: '**', component: NotFoundComponent }
 ];
 

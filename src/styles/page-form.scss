@@ -1,0 +1,85 @@
+#page_form{
+    h1{
+        text-align: center;
+        color:  #2B5896;
+        font-family: 'bold';
+        font-size: 4rem;
+    }
+    .container{
+    
+        display: flex;
+        justify-content: space-between;
+        background-color: #ffffff;
+        margin-bottom: 60px;
+    
+     /* Variables for colors to match the design */
+    $primary-color: #EF20A9; 
+    $secondary-color: #2B5896; 
+    $background-color: #ffffff; 
+    $text-color: #2B5896; 
+    
+    .container_form {
+      display: flex;
+      flex-direction: column;
+      padding: 2rem;
+      background-color: $background-color;
+      
+      border-radius: 8px;
+      width: 45%;
+      
+       
+      
+    }
+    img.image_home{
+    
+      
+      width: 35%;
+      border-radius: 100px;
+      padding: 2rem;
+      
+      
+    }
+    
+      .first_field {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+    
+        mat-form-field {
+          width: 48%;
+        }
+      }
+    
+    
+      mat-form-field {
+        width: 100%;
+        margin-bottom: 1rem;
+    
+        mat-label {
+          color: $secondary-color;
+          font-size: 16px;
+          font-family: 'inter semi bold';
+        }
+    
+      
+      }
+      .container_btn{
+        display: flex;
+        justify-content: end;
+        .btn{
+          background-color: #2B5896;
+          color: #ffffff;
+          padding: 6px 46px;
+          border-radius: 8px;
+        }
+      }
+    }
+    }
+      
+    
+     
+    
+    
+    
+    
+    

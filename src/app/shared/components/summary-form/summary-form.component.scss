@@ -1,5 +1,17 @@
- 
-  
+ .toolbar {
+    border-radius: 12px 12px 12px 12px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EF20A9;
+    width: 29rem;
+    color: white;
+    font-family: 'inter bold';
+    padding: 1.7rem;
+    margin: 20px 20px;
+    color: #f4f6f9; 
+    font-size:31px ;
+  }
   .total_section{
     border: 1px solid black;
     display: flex;
@@ -109,4 +121,3 @@
  button.mat-mdc-button-disabled{
   background-color: lightslategray;
  }
- 

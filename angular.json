@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/comme-un-reve-back-",
+            "outputPath": "dist/comme-un-reve-front",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -27,12 +27,6 @@
               "@angular/material/prebuilt-themes/azure-blue.css",
               "src/styles.scss"
             ],
-            "scripts": [
-              "node_modules/chart.js/dist/chart.js"
-            ],
-            "scripts": [
-              "node_modules/chart.js/dist/chart.js"
-            ],
             "server": "src/main.server.ts",
             "prerender": true,
             "ssr": {
@@ -41,11 +35,17 @@
           },
           "configurations": {
             "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumWarning": "900kB",
+                  "maximumError": "2MB"
                 },
                 {
                   "type": "anyComponentStyle",
