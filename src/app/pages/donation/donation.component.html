@@ -1,6 +1,5 @@
 
 <form [formGroup]="paymentForm">
-    <!-- {{ paymentForm.value| json }} -->
     <div class="container_forms">
         <div class="container_form">
             <app-donation-form></app-donation-form>
@@ -12,7 +11,7 @@
         </div> 
 
         <div class="container_form">
-            <app-summary-form (initPayment)="initSubscription()"></app-summary-form>
+            <app-summary-form></app-summary-form>
         </div>
         
 

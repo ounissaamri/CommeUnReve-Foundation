@@ -35,3 +35,13 @@ mat-form-field {
   --mdc-outlined-text-field-hover-outline-color: #2B5896; /* Bordure en survol */
   --mdc-outlined-text-field-focused-outline-color: #0044cc; /* Bordure en focus */
 }
+
+@media (max-width: 768px) {
+  .label {
+    color: #2B5896;
+    font-size:13px;
+    font-family: 'inter semi bold';
+  }
+
+}
+ 

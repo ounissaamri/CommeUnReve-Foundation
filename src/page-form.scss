@@ -1,0 +1,122 @@
+#page_form{
+    h1{
+        text-align: center;
+        color:  #2B5896;
+        font-family: 'bold';
+        font-size: 4rem;
+    }
+    .container{
+    
+        display: flex;
+        justify-content: space-between;
+        background-color: #ffffff;
+        margin-bottom: 60px;
+    
+    $primary-color: #EF20A9; 
+    $secondary-color: #2B5896; 
+    $background-color: #ffffff; 
+    $text-color: #2B5896; 
+    
+    .container_form {
+      display: flex;
+      flex-direction: column;
+      padding: 2rem;
+      background-color: $background-color;
+      border-radius: 8px;
+      width: 45%;
+       
+    }
+    img.image_home{
+    
+      width: 35%;
+      border-radius: 100px;
+      padding: 2rem;
+      
+      
+    }
+    
+      .first_field {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+    
+        mat-form-field {
+          width: 48%;
+        }
+      }
+    
+    
+      mat-form-field {
+        width: 100%;
+        margin-bottom: 1rem;
+    
+        mat-label {
+          color: $secondary-color;
+          font-size: 16px;
+          font-family: 'inter semi bold';
+        }
+    
+      
+      }
+      .container_btn{
+        display: flex;
+        justify-content: end;
+        .btn{
+          background-color: #2B5896;
+          color: #ffffff;
+          padding: 6px 46px;
+          border-radius: 8px;
+        }
+      }
+    }
+    .mat-internal-form-field>label {
+      color:#2B5896;
+      font-size: 16px;
+      font-family:'inter semi bold';
+    }
+    }
+      
+
+    
+    @media (max-width: 768px) {
+      #page_form h1, #page_form .h1 {
+        text-align: center;
+        color: #2B5896;
+        font-family: "bold";
+        font-size: 2rem;
+    }
+  
+      .container {
+        flex-direction: column; 
+        align-items: center; 
+      }
+  
+    
+      #page_form .container .container_form {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        background-color: #ffffff;
+        border-radius: 8px;
+        width: 100%;
+    }
+      #page_form .container img.image_home {
+        width: 100%;
+        border-radius: 100px;
+        padding: 1rem;
+        border-radius: 20px;
+    }
+  
+      .first_field {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+  
+      mat-form-field {
+        width: 100%;
+      }
+    }
+  
+    
+    
