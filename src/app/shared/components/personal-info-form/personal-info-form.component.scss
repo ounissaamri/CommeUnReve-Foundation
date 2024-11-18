@@ -74,7 +74,6 @@ mat-form-field {
 }
 
 
-
 /* Pour Firefox */
 input[type="number"] {
   -moz-appearance: textfield;
@@ -84,4 +83,25 @@ input[type="number"] {
   -webkit-appearance: none;
   margin: 0;
 }
+}
+@media (max-width: 768px) {
+  mat-toolbar {
+    border-radius: 8px 8px 8px 8px;
+    border: 1px solid #EF20A9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#ffffff;
+    width: 20rem;
+    color:  #EF20A9;
+    font-family: 'inter bold';
+    margin: 0px;
+    
+  }
+  .first_field {
+    flex-direction: row;
+    align-items: center;
+   
+  }
+  
 }

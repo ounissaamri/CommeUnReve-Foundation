@@ -74,7 +74,7 @@ nav.links a:hover {
 
 @media (max-width: 768px) {
   .logo img {
-    height: 100px; /* Scale the logo appropriately */
+    height: 80px; /* Scale the logo appropriately */
     width: auto;
   }
   nav.links {
@@ -85,7 +85,7 @@ nav.links a:hover {
     font-size: small;
   }
   .don-button, .don-button-alt, .don-button-alts {
-    padding: 6px 20px; /* Reduce button size */
+    padding: 6px 10px; /* Reduce button size */
   }
   mat-toolbar .buttons button[mat-button] {
     font-size: 8px; 
