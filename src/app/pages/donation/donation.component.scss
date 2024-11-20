@@ -1,52 +1,53 @@
 .container_forms {
-    display: flex;               /* Active Flexbox */
-    flex-direction: column;      /* Par défaut, les blocs sont empilés en colonne */
-    justify-content: flex-start; /* Aligner les blocs au début (en haut) */
-    gap: 20px;                   /* Espacement entre chaque bloc */
-    padding: 2rem;               /* Padding global */
-    width: 100%;                 /* Occuper tout l'espace horizontal */
+    display: flex;             
+    flex-direction: column;      
+    justify-content: flex-start; 
+    gap: 20px;                  
+    padding: 2rem;               
+    width: 100%;                
     box-sizing: border-box;
 }
 
 .container_form {
-    flex: 0 0 auto;              /* Chaque bloc occupe la place nécessaire */
-    padding: 10px;               /* Espace interne */
-    background-color: #fff;     /* Couleur de fond blanche */
-    box-sizing: border-box;      /* Inclure le padding dans la taille totale */
-    transition: all 0.3s ease;   /* Animation douce pour les transitions */
-    max-width: 400px;            /* Limiter la largeur maximale des blocs */
-    margin: 0 auto;              /* Centrer les blocs sur l'écran */
+    flex: 0 0 auto;             
+    padding: 10px;               
+    background-color: #fff;    
+    box-sizing: border-box;     
+    transition: all 0.3s ease;  
+    max-width: 400px;           
+    margin: 0 auto;              
 }
 
 input, button {
-    width: 100%;                 /* Prendre toute la largeur disponible */
-    box-sizing: border-box;      /* Empêcher de dépasser la largeur */
-    margin-bottom: 10px;         /* Espacement vertical entre les éléments */
-    padding: 8px;                /* Padding interne */
-    font-size: 1em;              /* Taille de police standard */
+    width: 100%;                 
+    box-sizing: border-box;      
+    margin-bottom: 10px;         
+    padding: 8px;                
+    font-size: 1em;              
 }
 
-/* Media Query pour les écrans plus larges que 768px */
+ 
 @media (min-width: 768px) {
     .container_forms {
-        flex-direction: row;      /* Sur les grands écrans, les blocs sont disposés en ligne */
-        justify-content: space-between; /* Espacement égal entre les blocs */
-        padding: 2rem;            /* Padding global pour les grands écrans */
+        flex-direction: row;       
+        justify-content: space-between;        
+        padding: 2rem;           
+        
     }
 
     .container_form {
-        flex: 0 0 30%;            /* Les blocs prennent 30% de la largeur */
-        max-width: none;          /* Enlever la largeur maximale sur les grands écrans */
+        flex: 0 0 30%;                 
+        max-width: none;               
     }
 
     input, button {
-        font-size: 1em;           /* Taille de police normale sur les grands écrans */
+        font-size: 1em;              
     }
 }
 
-/* Media Query pour les écrans plus petits que 768px */
+
 @media (max-width: 768px) {
     .container_form {
-        max-width: 90%;           /* Réduire la taille des blocs sur les petits écrans */
+        max-width: 90%;      
     }
 }

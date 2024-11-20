@@ -16,19 +16,15 @@
     $primary-color: #EF20A9; 
     $secondary-color: #2B5896; 
     $background-color: #ffffff; 
-    $text-color: #2B5896; 
+    $text-color: #020202; 
     
     .container_form {
       display: flex;
       flex-direction: column;
       padding: 2rem;
       background-color: $background-color;
-      
       border-radius: 8px;
       width: 45%;
-      
-       
-      
     }
     img.image_home{
     
@@ -76,7 +72,25 @@
     }
     }
       
-    
+@media (max-width: 768px) {
+  img.image_home{
+    display :none;        
+  }
+  #page_form .container .container_form {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    width:90%;
+}
+#page_form h1{
+  text-align: center;
+  color:  #2B5896;
+  font-family: 'bold';
+  font-size: 3rem;
+}
+} 
      
     
     

@@ -93,8 +93,30 @@ nav.links a:hover {
   }
 }
 @media (min-width: 768px) {
+  .logo img {
+    height: 80px; /* Scale the logo appropriately */
+    width: auto;
+  }
   nav.links {
     display: flex;
+  }
+  .buttons {
+    flex-direction: row; /* Stack buttons vertically */
+    font-size: small;
+  }
+  .don-button, .don-button-alt, .don-button-alts {
+    padding: 6px 10px; /* Reduce button size */
+  }
+  mat-toolbar .buttons button[mat-button] {
+    font-size: 8px; 
+    
+  }
+  nav.links a {
+    margin: 0 1px;  /* espace entre lien */
+    font-family: 'jakarta medium';
+    font-size: 10px;  
+    text-decoration: none;  /* supprimer soulignement */
+    align-items: center;
   }
 }
 
