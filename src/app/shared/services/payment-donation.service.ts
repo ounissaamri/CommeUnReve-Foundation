@@ -23,7 +23,7 @@ export class PaymentDonationService {
   }
 
   createCheckoutSession(lineItems: any) {
-    return this.http.post<{ sessionId: string }>('http://localhost:3000/create-checkout-session', {
+    return this.http.post<{ sessionId: string }>('http://localhost:3000/api/create-checkout-session', {
       lineItems: lineItems,
       successUrl: 'http://localhost:4200/complete',
       cancelUrl: 'http://localhost:4200/cancel'
@@ -31,7 +31,7 @@ export class PaymentDonationService {
   }
 
   createSubscriptionSession(customerEmail: string, priceId: string) {
-    return this.http.post<{ sessionId: string }>('http://localhost:3000/create-subscription-session', {
+    return this.http.post<{ sessionId: string }>('http://localhost:3000/api/create-subscription-session', {
       customerEmail: customerEmail,
       priceId: 'priceId', // celui renseigner dans la backend
       successUrl: 'http://localhost:4200/complete',
