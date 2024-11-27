@@ -16,13 +16,16 @@ export interface BlogArticle {
   providedIn: 'root'
 })
 export class BlogService {
+  getBlogService(BlogService: BlogService) {
+    throw new Error('Method not implemented.');
+  }
   private apiUrl = environment.apiUrl; // Remplacez par l'URL réelle de l'API
 
   constructor(private http: HttpClient) {}
 
   // Récupérer tous les articles de blog
   getArticles(): Observable<BlogArticle[]> {
-    return this.http.get<BlogArticle[]>(`${this.apiUrl}/articles`)
+    return this.http.get<BlogArticle[]>(`${this.apiUrl}api/blog/blogs`)
       .pipe(
         catchError(this.handleError)
       );
@@ -30,24 +33,15 @@ export class BlogService {
 
   // Récupérer un article spécifique par son ID
   getArticleById(id: number): Observable<BlogArticle> {
-    return this.http.get<BlogArticle>(`${this.apiUrl}/articles/${id}`)
+    return this.http.get<BlogArticle>(`${this.apiUrl}api/blog/blog/${id}`)
       .pipe(
         catchError(this.handleError)
       );
   }
 
-  // Gestion des erreurs
+  //Gestion des erreurs
   private handleError(error: HttpErrorResponse): Observable<never> {
-    // Vous pouvez personnaliser ici le traitement des erreurs
-    let errorMessage = 'An error occurred';
-    if (error.error instanceof ErrorEvent) {
-      // Erreur côté client
-      errorMessage = `Erreur côté client : ${error.error.message}`;
-    } else {
-      // Erreur côté serveur
-      errorMessage = `Erreur serveur : ${error.status}, message : ${error.message}`;
-    }
-    console.error(errorMessage);
-    return throwError(() => new Error(errorMessage));
+    //Vous pouvez personnaliser ici le traitement des erreurs
+    return throwError(() => new Error());
   }
 }

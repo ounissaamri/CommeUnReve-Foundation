@@ -1,15 +1,16 @@
 import { UpperCasePipe } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { BlogComponent } from '../../shared/components/blog/blog.component';
 import { DonationCTAComponent } from '../../shared/components/donation-cta/donation-cta.component';
 import { HerosectionComponent } from '../../shared/components/herosection/herosection.component';
 import { MissionsComponent } from '../../shared/components/missions/missions.component';
-import { ArticleBlogComponent } from '../article-blog/article-blog.component';
+import {  BlogService } from '../../shared/services/blog.service.js';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [UpperCasePipe,
+  imports: [
+    UpperCasePipe,
     BlogComponent,
      MissionsComponent,
      HerosectionComponent,
@@ -19,11 +20,34 @@ import { ArticleBlogComponent } from '../article-blog/article-blog.component';
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit{
   
+
    titre='Je fait un don '
    text='fait un donfait un donfait un donfait un donfait un donfait un don'
    button='Faire un don'
    titreImage='Comme un rêve' 
    descriptionImage='Le coeur de notre mission'
+
+   articles: any[] = [];
+
+
+constructor(private blogService: BlogService) {}
+
+ngOnInit(): void {
+  this.blogService.getArticles().subscribe(
+    (data) => { 
+      this.articles = data;
+      console.log(data);
+});
 }
+
+}
+
+
+
+
+
+
+
+

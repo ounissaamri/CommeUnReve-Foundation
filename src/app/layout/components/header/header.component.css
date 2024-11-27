@@ -37,6 +37,7 @@ nav.links a:hover {
 
 .buttons {
   display: flex;
+  
   gap: 10px;  /* espace entre boutons */
 }
 
@@ -74,18 +75,18 @@ nav.links a:hover {
 
 @media (max-width: 768px) {
   .logo img {
-    height: 80px; /* Scale the logo appropriately */
+    height: 80px;
     width: auto;
   }
   nav.links {
-    display: none; /* Hide navigation links on smaller screens */
+    display: none;
   }
   .buttons {
-    flex-direction: row; /* Stack buttons vertically */
+    flex-direction: row; 
     font-size: small;
   }
   .don-button, .don-button-alt, .don-button-alts {
-    padding: 6px 10px; /* Reduce button size */
+    padding: 6px 10px; 
   }
   mat-toolbar .buttons button[mat-button] {
     font-size: 8px; 
@@ -94,25 +95,25 @@ nav.links a:hover {
 }
 @media (min-width: 768px) {
   .logo img {
-    height: 80px; /* Scale the logo appropriately */
+    height: 80px; 
     width: auto;
   }
   nav.links {
     display: flex;
   }
   .buttons {
-    flex-direction: row; /* Stack buttons vertically */
+    flex-direction: row; 
     font-size: small;
   }
   .don-button, .don-button-alt, .don-button-alts {
-    padding: 6px 10px; /* Reduce button size */
+    padding: 6px 10px;
   }
   mat-toolbar .buttons button[mat-button] {
     font-size: 8px; 
     
   }
   nav.links a {
-    margin: 0 1px;  /* espace entre lien */
+    margin: 0 1px;  
     font-family: 'jakarta medium';
     font-size: 10px;  
     text-decoration: none;  /* supprimer soulignement */

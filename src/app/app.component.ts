@@ -10,6 +10,7 @@ import {ArticleBlogComponent} from './pages/article-blog/article-blog.component'
 import { DonationComponent } from './pages/donation/donation.component';
 import { BenevoleComponent } from './pages/benevole/benevole.component';
 import { environment } from '../environments/environment';
+import { BlogComponent } from './shared/components/blog/blog.component';
 
 @Component({
   selector: 'app-root',
@@ -24,7 +25,9 @@ import { environment } from '../environments/environment';
      AgirAvecNousComponent,
      ArticleBlogComponent,
      DonationComponent,
-     BenevoleComponent
+     BenevoleComponent,
+     BlogComponent ,
+     
     ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
