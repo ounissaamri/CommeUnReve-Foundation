@@ -1,13 +1,19 @@
 import { NgIf } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { Stripe, loadStripe } from '@stripe/stripe-js';
 
 
 @Component({
   selector: 'app-complete-checkout',
   standalone: true,
-  imports: [NgIf],
+  imports: [
+    NgIf,
+    RouterModule
+
+  ],
   templateUrl: './complete-checkout.component.html',
+  styleUrl: './complete-checkout.component.scss'
 })
 export class CompleteCheckoutComponent implements OnInit {
 

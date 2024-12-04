@@ -8,7 +8,8 @@ mat-toolbar {
 }
 
 .logo img {
-  height: 1Opx; 
+   
+  height: 100px !important;
   margin-top: 25px;
   width: 191px; 
   line-height: 45px;

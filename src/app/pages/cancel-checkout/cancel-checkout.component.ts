@@ -6,7 +6,7 @@ import { RouterModule } from '@angular/router';
   standalone: true,
   imports: [RouterModule],
   templateUrl: './cancel-checkout.component.html',
-  styleUrl: './cancel-checkout.component.css'
+  styleUrl: './cancel-checkout.component.scss'
 })
 export class CancelCheckoutComponent {
 
