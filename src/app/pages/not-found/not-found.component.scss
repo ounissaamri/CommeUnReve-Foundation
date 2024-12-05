@@ -1,0 +1,47 @@
+/* payment-confirmation.component.scss */
+$primary-color: #EFC71D;
+$secondary-color:  #EF20A9;
+$background-color: #f3f4f6;
+
+.confirmation-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height:50vh;
+  //background: linear-gradient(to right, $primary-color, $secondary-color);
+}
+
+.confirmation-content {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+h1 {
+  margin-bottom: 1rem;
+  font-size: 3.7rem;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+
+
+.dashboard-button {
+  background: linear-gradient(to right, $primary-color, $secondary-color);
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
