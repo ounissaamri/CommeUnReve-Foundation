@@ -71,8 +71,9 @@ constructor(private fb:FormBuilder, private paymentDonationService:PaymentDonati
 
   this.paymentForm = this.fb.group({
     donationFormGroup: this.fb.group({
-      amount: [null],
-      type: [null],
+      amount:[null, Validators.required],
+          amountOptions:[null, Validators.required],
+          type: [null, Validators.required],
     }),
     summaryFormGroup: this.fb.group({
       cgu: [null],
@@ -106,10 +107,12 @@ constructor(private fb:FormBuilder, private paymentDonationService:PaymentDonati
     this.paymentForm.get('donationFormGroup.type')?.setValue({id:1,type: TypePaymentContantes.TYPE_PAYMENT.SUBSCRIPTION, libelle: TypePaymentContantes.LIBELLE.EVERY_MONTH});
     this.paymentForm.get('donationFormGroup.type')?.updateValueAndValidity()
   })
-
  }
 
  initPayment() {
+  const amount = this.paymentForm.get('donationFormGroup.amount')?.value ?? this.paymentForm.get('donationFormGroup.amountOptions')?.value?.libelle;
+  const unit_amount_convert = amount * 100;
+  console.log(unit_amount_convert)
   const lineItems = [
     {
       price_data: {
@@ -117,7 +120,7 @@ constructor(private fb:FormBuilder, private paymentDonationService:PaymentDonati
         product_data: {
           name: 'Produit Exemple',
         },
-        unit_amount: 50, // En cents (50$)
+        unit_amount: unit_amount_convert
       },
       quantity: 1,
     },
@@ -132,31 +135,6 @@ constructor(private fb:FormBuilder, private paymentDonationService:PaymentDonati
     error: (err) => console.error('Erreur de création de session:', err),
   });
 }
-
-initSubscription() {
-  // const email = this.paymentForm.controls?.['personalInfoFormGroup.email'].value
-  // const price = this.paymentForm.controls?.['personalInfoFormGroup.price'].value
-
-  this.paymentDonationService.createSubscriptionSession('burdy.gou@gmail.com', 'price').subscribe({
-    next: (res:any) => {
-      if (res.sessionId) {
-        this.paymentDonationService.redirectToCheckout(res.sessionId);
-      }
-    },
-    error: (err:any) => console.error('Erreur de création de session:', err),
-  });
-}
-
-// cancelSubscription() {
-//   this.subscriptionService.cancelSubscription(this.subscriptionId).subscribe({
-//     next: (response) => {
-//       console.log(response.message);  // Message de succès
-//     },
-//     error: (error) => {
-//       console.error('Erreur lors de l\'annulation de l\'abonnement', error);
-//     },
-//   });
-// }
 
 }
 
