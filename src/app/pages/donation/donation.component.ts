@@ -117,7 +117,7 @@ constructor(private fb:FormBuilder, private paymentDonationService:PaymentDonati
         product_data: {
           name: 'Produit Exemple',
         },
-        unit_amount: 5000, // En cents (50$)
+        unit_amount: 50, // En cents (50$)
       },
       quantity: 1,
     },
