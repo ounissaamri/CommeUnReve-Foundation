@@ -9,8 +9,8 @@ import { MatTableModule } from '@angular/material/table';
 
 import { ControlContainer, FormGroupDirective, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { distinctUntilChanged, filter, map, tap } from 'rxjs';
-import { toggleButtonOption } from '../../interfaces/toggle-button-options';
-import { TypePaymentContantes } from "./../../constantes/toggle-button-option";
+import { toggleButtonOption } from '../../models/toggle-button-options';
+import { TypePaymentContantes } from "../../models/constantes/toggle-button-option";
 
 @Component({
   selector: 'app-summary-form',

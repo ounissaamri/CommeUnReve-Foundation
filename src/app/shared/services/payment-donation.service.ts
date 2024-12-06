@@ -23,10 +23,10 @@ export class PaymentDonationService {
   }
                       
   createCheckoutSession(lineItems: any) {
-    return this.http.post<{ sessionId: string }>(`${this.apiUrl}/create-checkout-session`, {
+    return this.http.post<{ sessionId: string }>(`${this.apiUrl}api/create-checkout-session`, {
       lineItems: lineItems,
-      successUrl:`${this.hostUrl}/complete`,
-      cancelUrl:`${this.hostUrl}/cancel`
+      successUrl:`${this.hostUrl}complete`,
+      cancelUrl:`${this.hostUrl}cancel`
     });
   }  
           

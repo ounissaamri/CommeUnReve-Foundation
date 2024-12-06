@@ -2,7 +2,7 @@ import { CurrencyPipe, NgClass, NgFor, NgStyle } from '@angular/common';
 import { Component, Input, forwardRef, inject } from '@angular/core';
 import { FormGroupDirective, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
-import { toggleButtonOption } from '../../interfaces/toggle-button-options';
+import { toggleButtonOption } from '../../models/toggle-button-options';
 
 @Component({
   selector: 'app-toggle-button',

@@ -11,8 +11,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatToolbar } from '@angular/material/toolbar';
 import { ToggleButtonComponent } from '../toggle-button/toggle-button.component';
 import { debounceTime, distinctUntilChanged, filter } from 'rxjs';
-import { toggleButtonOption } from '../../interfaces/toggle-button-options';
-import { AmountPaymentContantes, TypePaymentContantes } from "./../../constantes/toggle-button-option";
+import { toggleButtonOption } from '../../models/toggle-button-options';
+import { AmountPaymentContantes, TypePaymentContantes } from "../../models/constantes/toggle-button-option";
 
 @Component({
   selector: 'app-donation-form',

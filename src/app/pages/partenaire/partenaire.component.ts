@@ -72,7 +72,6 @@ sendForm(event:any){
   console.log('send data', this.partenaireForm.value)
 }
 
-
 sanitizeInput(content: string): string {
   return this.sanitizer.sanitize(SecurityContext.HTML, content) || '';
 }

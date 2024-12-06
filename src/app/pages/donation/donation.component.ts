@@ -8,7 +8,7 @@ import { JsonPipe } from '@angular/common';
 import { emailMatchValidator } from '../../shared/validators/emailMatch.validator';
 import { ActivatedRoute } from '@angular/router';
 import { PaymentDonationService } from '../../shared/services/payment-donation.service';
-import { TypePaymentContantes } from "./../../shared/constantes/toggle-button-option";
+import { TypePaymentContantes } from "../../shared/models/constantes/toggle-button-option";
 import { delay, filter, take } from 'rxjs';
 
 @Component({
@@ -20,7 +20,6 @@ import { delay, filter, take } from 'rxjs';
     PersonalInfoFormComponent,
     ReactiveFormsModule,
     JsonPipe,
-    ReactiveFormsModule
   ],
   templateUrl: './donation.component.html',
   styleUrl: './donation.component.scss'
@@ -44,55 +43,55 @@ export class DonationComponent {
 
 constructor(private fb:FormBuilder, private paymentDonationService:PaymentDonationService){
 
-  this.paymentForm = this.fb.group({
-    donationFormGroup: this.fb.group({
-      amount:[null, Validators.required],
-      amountOptions:[null, Validators.required],
-      type: [null, Validators.required],
-    }),
-    summaryFormGroup: this.fb.group({
-      cgu:[null, Validators.requiredTrue],
-    }),
-    personalInfoFormGroup: this.fb.group({
-      isCompany:[false,{validators:Validators.required}],
-      postalCode: [null,{validators:[Validators.required, Validators.pattern(/^[0-9]{2,5}$/)], updateOn:'blur'}],
-      sirenSiret: this.fieldNotRequired,
-      firstname:this.validatorRequiredAndPattern,
-      lastName: this.validatorRequiredAndPattern,
-      email: this.validatorRequiredAndEmail,
-      confirmEmail: this.validatorRequiredAndEmail,
-      address: [null,{validators:Validators.required}],
-      city: this.validatorRequiredAndPattern,
-      country: this.validatorRequiredAndPattern,
-      raisonSociale : this.fieldNotRequired,
-      formeJuridique: this.fieldNotRequired,
-    }),
-    
-  },{validators:emailMatchValidator('paymentForm.personalInfoFormGroup')})
-
   // this.paymentForm = this.fb.group({
   //   donationFormGroup: this.fb.group({
-  //     amount: [null],
-  //     type: [null],
+  //     amount:[null, Validators.required],
+  //     amountOptions:[null, Validators.required],
+  //     type: [null, Validators.required],
   //   }),
   //   summaryFormGroup: this.fb.group({
-  //     cgu: [null],
+  //     cgu:[null, Validators.requiredTrue],
   //   }),
   //   personalInfoFormGroup: this.fb.group({
-  //     isCompany: [false],
-  //     postalCode: [null],
-  //     sirenSiret: [null],
-  //     firstname: [null],
-  //     lastName: [null],
-  //     email: [null],
-  //     confirmEmail: [null],
-  //     address: [null],
-  //     city: [null],
-  //     country: [null],
-  //     raisonSociale: [null],
-  //     formeJuridique: [null],
-  //   })
-  // });
+  //     isCompany:[false,{validators:Validators.required}],
+  //     postalCode: [null,{validators:[Validators.required, Validators.pattern(/^[0-9]{2,5}$/)], updateOn:'blur'}],
+  //     sirenSiret: this.fieldNotRequired,
+  //     firstname:this.validatorRequiredAndPattern,
+  //     lastName: this.validatorRequiredAndPattern,
+  //     email: this.validatorRequiredAndEmail,
+  //     confirmEmail: this.validatorRequiredAndEmail,
+  //     address: [null,{validators:Validators.required}],
+  //     city: this.validatorRequiredAndPattern,
+  //     country: this.validatorRequiredAndPattern,
+  //     raisonSociale : this.fieldNotRequired,
+  //     formeJuridique: this.fieldNotRequired,
+  //   }),
+    
+  // },{validators:emailMatchValidator('paymentForm.personalInfoFormGroup')})
+
+  this.paymentForm = this.fb.group({
+    donationFormGroup: this.fb.group({
+      amount: [null],
+      type: [null],
+    }),
+    summaryFormGroup: this.fb.group({
+      cgu: [null],
+    }),
+    personalInfoFormGroup: this.fb.group({
+      isCompany: [false],
+      postalCode: [null],
+      sirenSiret: [null],
+      firstname: [null],
+      lastName: [null],
+      email: [null],
+      confirmEmail: [null],
+      address: [null],
+      city: [null],
+      country: [null],
+      raisonSociale: [null],
+      formeJuridique: [null],
+    })
+  });
   
 }
 

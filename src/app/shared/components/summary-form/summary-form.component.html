@@ -22,9 +22,8 @@
     </div>
   </div>
 
-
     <div class="buttons">
-      <button mat-button class="payers"  [disabled]="statusForm === 'INVALID'" (click)="makeDonation()">{{ isOneTimePayment === false ?  'Souscrire' :'Donner' }} </button>
+      <button mat-button class="payers"  [disabled]="statusForm === 'VALID'" (click)="makeDonation()">{{ isOneTimePayment === false ?  'Souscrire' :'Donner' }} </button>
     </div>
     
 

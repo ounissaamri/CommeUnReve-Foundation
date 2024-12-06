@@ -10,4 +10,4 @@ export const environment = {
 };
 `;
 fs.writeFileSync(targetPath, envConfigFile);
-console.log(`Environment variables written to ${targetPath}`);
+

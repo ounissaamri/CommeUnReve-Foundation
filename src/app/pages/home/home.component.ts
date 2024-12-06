@@ -1,10 +1,10 @@
+import { BlogService } from './../../shared/services/blog.service';
 import { UpperCasePipe } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { BlogComponent } from '../../shared/components/blog/blog.component';
 import { DonationCTAComponent } from '../../shared/components/donation-cta/donation-cta.component';
 import { HerosectionComponent } from '../../shared/components/herosection/herosection.component';
 import { MissionsComponent } from '../../shared/components/missions/missions.component';
-import {  BlogService } from '../../shared/services/blog.service.js';
 
 @Component({
   selector: 'app-home',
@@ -40,6 +40,7 @@ ngOnInit(): void {
       this.articles = data;
       console.log(data);
 });
+
 }
 
 }

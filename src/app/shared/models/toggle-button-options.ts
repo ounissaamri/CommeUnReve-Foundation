@@ -1,4 +1,4 @@
-import { AmountPaymentContantes, TypePaymentContantes } from "../constantes/toggle-button-option";
+import { AmountPaymentContantes, TypePaymentContantes } from "./constantes/toggle-button-option";
 
 export interface toggleButtonOption{
 id?:number,

@@ -1,6 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
 
-
 @import 'mdb-angular-ui-kit/assets/scss/mdb.scss';
 
 @import 'styles/toggle-button-global.scss';
@@ -10,7 +9,7 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-@font-face {
+  @font-face {
     font-family: 'Jakarta bold';
     src: url('assets/fonts/jakarta/PlusJakartaSans-Bold.ttf');
   }
