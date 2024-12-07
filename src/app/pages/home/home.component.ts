@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit{
   
 
    titre='Je fait un don '
-   text='fait un donfait un donfait un donfait un donfait un donfait un don'
+   text='Faire un don pour soutenir notre cause'
    button='Faire un don'
    titreImage='Comme un rêve' 
    descriptionImage='Le coeur de notre mission'
