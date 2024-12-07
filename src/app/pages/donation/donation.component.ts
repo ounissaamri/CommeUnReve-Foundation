@@ -43,70 +43,71 @@ export class DonationComponent {
 
 constructor(private fb:FormBuilder, private paymentDonationService:PaymentDonationService){
 
-  // this.paymentForm = this.fb.group({
-  //   donationFormGroup: this.fb.group({
-  //     amount:[null, Validators.required],
-  //     amountOptions:[null, Validators.required],
-  //     type: [null, Validators.required],
-  //   }),
-  //   summaryFormGroup: this.fb.group({
-  //     cgu:[null, Validators.requiredTrue],
-  //   }),
-  //   personalInfoFormGroup: this.fb.group({
-  //     isCompany:[false,{validators:Validators.required}],
-  //     postalCode: [null,{validators:[Validators.required, Validators.pattern(/^[0-9]{2,5}$/)], updateOn:'blur'}],
-  //     sirenSiret: this.fieldNotRequired,
-  //     firstname:this.validatorRequiredAndPattern,
-  //     lastName: this.validatorRequiredAndPattern,
-  //     email: this.validatorRequiredAndEmail,
-  //     confirmEmail: this.validatorRequiredAndEmail,
-  //     address: [null,{validators:Validators.required}],
-  //     city: this.validatorRequiredAndPattern,
-  //     country: this.validatorRequiredAndPattern,
-  //     raisonSociale : this.fieldNotRequired,
-  //     formeJuridique: this.fieldNotRequired,
-  //   }),
-    
-  // },{validators:emailMatchValidator('paymentForm.personalInfoFormGroup')})
-
   this.paymentForm = this.fb.group({
     donationFormGroup: this.fb.group({
       amount:[null, Validators.required],
-          amountOptions:[null, Validators.required],
-          type: [null, Validators.required],
+      amountOptions:[null, Validators.required],
+      // type: [TypePaymentContantes.LIBELLE.ONE_TIME, Validators.required],
     }),
     summaryFormGroup: this.fb.group({
-      cgu: [null],
+      cgu:[null, Validators.requiredTrue],
     }),
     personalInfoFormGroup: this.fb.group({
-      isCompany: [false],
-      postalCode: [null],
-      sirenSiret: [null],
-      firstname: [null],
-      lastName: [null],
-      email: [null],
-      confirmEmail: [null],
-      address: [null],
-      city: [null],
-      country: [null],
-      raisonSociale: [null],
-      formeJuridique: [null],
-    })
-  });
+      isCompany:[false,{validators:Validators.required}],
+      postalCode: [null,{validators:[Validators.required, Validators.pattern(/^[0-9]{2,5}$/)], updateOn:'blur'}],
+      sirenSiret: this.fieldNotRequired,
+      firstname:this.validatorRequiredAndPattern,
+      lastName: this.validatorRequiredAndPattern,
+      email: this.validatorRequiredAndEmail,
+      confirmEmail: this.validatorRequiredAndEmail,
+      address: [null,{validators:Validators.required}],
+      city: this.validatorRequiredAndPattern,
+      country: this.validatorRequiredAndPattern,
+      raisonSociale : this.fieldNotRequired,
+      formeJuridique: this.fieldNotRequired,
+    }),
+    
+  },{validators:emailMatchValidator('paymentForm.personalInfoFormGroup')})
+
+  // this.paymentForm = this.fb.group({
+  //   donationFormGroup: this.fb.group({
+  //     amount:[null, Validators.required],
+  //         amountOptions:[null, Validators.required],
+  //         // type: [TypePaymentContantes.LIBELLE.ONE_TIME, Validators.required],
+  //   }),
+  //   summaryFormGroup: this.fb.group({
+  //     cgu: [null],
+  //   }),
+  //   personalInfoFormGroup: this.fb.group({
+  //     isCompany: [false],
+  //     postalCode: [null],
+  //     sirenSiret: [null],
+  //     firstname: [null],
+  //     lastName: [null],
+  //     email: [null],
+  //     confirmEmail: [null],
+  //     address: [null],
+  //     city: [null],
+  //     country: [null],
+  //     raisonSociale: [null],
+  //     formeJuridique: [null],
+  //   })
+  // });
   
 }
 
  ngOnInit(){
 
-  this.activatedRoute.queryParams.pipe(
-    filter(params=> params['subscription']),
-    delay(100),
-    take(1),
-  ).subscribe(param => {
-    const subscription = param['subscription'];
-    this.paymentForm.get('donationFormGroup.type')?.setValue({id:1,type: TypePaymentContantes.TYPE_PAYMENT.SUBSCRIPTION, libelle: TypePaymentContantes.LIBELLE.EVERY_MONTH});
-    this.paymentForm.get('donationFormGroup.type')?.updateValueAndValidity()
-  })
+  // QUAND ABONNEMENT REACTIVER , recuperation du params apres subscription
+  // this.activatedRoute.queryParams.pipe(
+  //   filter(params=> params['subscription']),
+  //   delay(100),
+  //   take(1),
+  // ).subscribe(param => {
+  //   const subscription = param['subscription'];
+  //   this.paymentForm.get('donationFormGroup.type')?.setValue({id:1,type: TypePaymentContantes.TYPE_PAYMENT.SUBSCRIPTION, libelle: TypePaymentContantes.LIBELLE.EVERY_MONTH});
+  //   this.paymentForm.get('donationFormGroup.type')?.updateValueAndValidity()
+  // })
  }
 
  initPayment() {

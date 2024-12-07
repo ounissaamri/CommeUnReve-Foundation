@@ -8,6 +8,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatToolbar } from '@angular/material/toolbar';
 import { MatSelectModule } from '@angular/material/select';
 import { DomSanitizer } from '@angular/platform-browser';
+import { EmailService } from '../../core/services/email.service';
 
 @Component({
   selector: 'app-partenaire',
@@ -28,7 +29,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class PartenaireComponent implements OnInit {
   partenaireForm!:FormGroup;
-  options= [{id:0, label:'Alimentaire'}, {id:1, label:'Vêtements'}, {id:2, label:'Autres'}]
+  options= [{id:0, label:'Alimentaire'}, {id:1, label:'Vêtements'},{id:2, label:'Financier'}, {id:3, label:'Autres'}]
   get validatorRequiredAndPattern(){
    return [null,{validators:[Validators.required, Validators.pattern(/^[a-zA-ZÀ-ÖØ-öø-ÿ]+([ '-][a-zA-ZÀ-ÖØ-öø-ÿ]+)*$/)], updateOn:'blur'}]
   }
@@ -43,7 +44,7 @@ export class PartenaireComponent implements OnInit {
     })
   }
 
-constructor(private fb:FormBuilder, private sanitizer:DomSanitizer){
+constructor(private fb:FormBuilder, private sanitizer:DomSanitizer, private emailService:EmailService){
 
   this.partenaireForm= this.fb.group({
     isCompany:[false,{validators:Validators.required}],
@@ -52,16 +53,19 @@ constructor(private fb:FormBuilder, private sanitizer:DomSanitizer){
     firstname:this.validatorRequiredAndPattern,
     lastName: this.validatorRequiredAndPattern,
     email: this.validatorRequiredAndEmail,
-    confirmEmail: this.validatorRequiredAndEmail,
     address: this.validatorRequiredAndPattern,
     city: this.validatorRequiredAndPattern,
     country: this.validatorRequiredAndPattern,
     raisonSociale : [null],
     formeJuridique: [null],
-    typePartenariat: ['',{validators:Validators.required}],
-    comment: [''],
-    }, {validators:emailMatchValidator()})
-    
+    typePartenariat: [null,{validators:Validators.required}],
+    comment: [null],
+    phone: ['',
+      [
+        Validators.pattern(/^(?:\+33|0)[1-9](?:[\s\.]?\d{2}){4}$/)
+      ]
+    ]
+    })
 }
 
 sendForm(event:any){
@@ -70,6 +74,7 @@ sendForm(event:any){
   //map typePartenariat field
   this.partenaireForm.get('typePartenariat')?.patchValue(this.options.find(el=> el.id === this.partenaireForm.get('typePartenariat')?.value))
   console.log('send data', this.partenaireForm.value)
+  this.emailService.sendPartenaireEmail(this.partenaireForm.value).subscribe()
 }
 
 sanitizeInput(content: string): string {
