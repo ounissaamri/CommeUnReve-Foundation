@@ -30,6 +30,6 @@ export const routes: Routes = [
     { path: 'Politique-De-Confidentialite',  loadComponent: ()=> PolitiqueDeConfidentialiteComponent},
     { path: 'devenir-benevole',  loadComponent: ()=> BenevoleComponent },
     {path:'complete',  loadComponent: ()=> CompleteCheckoutComponent},
-    { path: '**', component: NotFoundComponent }
+    { path: '**', component: NotFoundComponent } 
 ];
 
