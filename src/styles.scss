@@ -41,3 +41,39 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   
   html, body { height: 100%; }
   body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+  h1 {
+    font-family: 'Jakarta bold';
+    font-size:64px;
+    color:black;
+  }
+
+  h2 {
+    font-family:'Jakarta bold';
+    font-size:42px;
+    color:black;
+    
+  }
+
+  h3 {
+    font-family: 'Jakarta bold';
+    color:black;
+    font-size:28px;
+  }
+
+  a {
+    text-decoration: none;
+    color:unset;
+  }
+
+  .mat-display-large, .mat-typography .mat-display-large, .mat-typography h1 {
+    font-family: 'Jakarta bold';
+    color:black;
+    font-size:64px;
+  }
+
+  .mat-display-small, .mat-typography .mat-display-small, .mat-typography h3 {
+    font-family: 'Jakarta bold';
+    color:black;
+    font-size:28px;
+  }
