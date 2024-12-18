@@ -1,0 +1,71 @@
+<section id="page_form">
+<h1>Rejoignez notre équipe bénévole ! Contactez-nous !</h1>
+
+<div class="container">
+
+    <img src="./../../../assets/img/image_acceuil.png" class="image_home"/>
+
+    <div class="container_form">
+    
+        <form [formGroup]="benevoleForm" (ngSubmit)="sendForm($event)">
+            <div class="first_field">
+
+                
+                <mat-form-field appearance="outline" class="field">
+                    <mat-label for="prenom">Prénom </mat-label>
+                    <input id="prenom" formControlName="firstname" matInput type="text">
+                    @if(benevoleForm.get('firstname')?.errors && benevoleForm.get('firstname')?.errors?.['required']){
+                    <mat-error> Ce champ est obligatoire </mat-error>
+                    }@else {
+                    <mat-error class="error">Le format est incorrect</mat-error>
+                    }
+                  </mat-form-field>
+
+
+                
+                <mat-form-field appearance="outline">
+                    <mat-label for="nom">Nom </mat-label>
+                    <input id="nom" matInput formControlName="lastName" type="text">
+                    @if(benevoleForm.get('lastName')?.errors && benevoleForm.get('lastName')?.errors?.['required']){
+                    <mat-error> Ce champ est obligatoire </mat-error>
+                    }@else {
+                    <mat-error class="error">Le format est incorrect</mat-error>
+                    }
+                  </mat-form-field>
+            </div>
+            <mat-form-field appearance="outline">
+                <mat-label for="email"> Email</mat-label>
+                <input id="email" matInput formControlName="email" type="email">
+    
+                @if(benevoleForm.get('email')?.errors && benevoleForm.get('email')?.errors?.['required']){
+                <mat-error> Ce champ est obligatoire </mat-error>
+                }@else if(benevoleForm.get('email')?.errors && benevoleForm.get('email')?.errors?.['email']) {
+                <mat-error class="error">Le format est incorrect</mat-error>
+    
+                }
+              </mat-form-field>
+    
+              <mat-form-field appearance="outline">
+                <mat-label for="phone">Téléphone</mat-label>
+                <input id="phone" matInput formControlName="phone" type="text">
+               @if(benevoleForm.get('phone')?.errors && benevoleForm.get('phone')?.errors?.['pattern']) {
+                <mat-error class="error">Le format est incorrect</mat-error>
+                }
+              </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Commentaire</mat-label>
+                <textarea
+                  matInput
+                  formControlName="comment"
+                  placeholder="Écrivez ici votre commentaire">
+                </textarea>
+              </mat-form-field>
+
+              <div class="container_btn">
+                <button type="submit" mat-button class="btn" >Soumettre</button>
+              </div>
+        </form>
+    </div>
+</div>
+</section>

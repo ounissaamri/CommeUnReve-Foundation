@@ -1,0 +1,20 @@
+
+<form [formGroup]="paymentForm">
+    <div class="container_forms">
+        <div class="container_form">
+            <app-donation-form></app-donation-form>
+        </div>    
+            
+             
+        <div class="container_form">
+            <app-personal-info-form></app-personal-info-form>     
+        </div> 
+
+        <div class="container_form">
+            <app-summary-form (initPayment)="initPayment()"></app-summary-form>
+        </div>
+        
+
+    </div>
+</form>
+

@@ -1,0 +1,19 @@
+<div class="blog-section">
+  
+<h2 >ARTICLES DE BLOG</h2>
+    <div class="articles-container">
+      <!-- les 4blog  -->
+      @for (article of articles; track article.title) {
+        <mat-card class="article-card" (click)="navigate(article._id)">
+          <img mat-card-image src="{{back_url + article.image}}" alt="Veuves">
+          <mat-card-content>
+      
+            <h3>{{article.titre}}</h3>
+          </mat-card-content>
+        </mat-card>
+      }
+     
+     
+    </div>
+  </div>
+  

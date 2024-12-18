@@ -1,0 +1,122 @@
+<div>
+  <mat-toolbar > ❤ Mes coordonées </mat-toolbar>
+</div>
+
+<div class="containerForm" formGroupName="personalInfoFormGroup">
+
+  <mat-checkbox formControlName="isCompany">
+    Je suis une entreprise
+  </mat-checkbox> 
+  <br>
+
+      @if (isCompany){
+         <mat-form-field appearance="outline">
+          <mat-label for="raisonSociale" >Raison sociale </mat-label>
+        <input id="raisonSociale" matInput formControlName="raisonSociale" type="text">
+        @if(formDirective.form.get('personalInfoFormGroup.raisonSociale')?.errors && formDirective.form.get('personalInfoFormGroup.raisonSociale')?.errors?.['required']){
+          <mat-error> Ce champ est obligatoire </mat-error>
+          }@else {
+          <mat-error class="error">Le format est incorrect</mat-error>
+         }
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" style="display: flex; flex-direction: column;">
+          <mat-label for="sirenSiret" >Siren/Siret</mat-label>
+        <input id="sirenSiret" matInput formControlName="sirenSiret" type="text">
+          @let errorRequired = (formDirective.form.get('personalInfoFormGroup.sirenSiret')?.errors && formDirective.form.get('personalInfoFormGroup.sirenSiret')?.errors?.['required']);
+          @if(errorRequired){
+          <mat-error> Ce champ est obligatoire </mat-error>
+          }@else {
+          <mat-error class="error">Numero de Siret doit contenir entre 9 et 14 chiffres</mat-error>
+         }
+
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label for="formeJuridique" >Forme juridique</mat-label>
+        <input id="formeJuridique" matInput formControlName="formeJuridique" type="text">
+        @if(formDirective.form.get('personalInfoFormGroup.formeJuridique')?.errors && formDirective.form.get('personalInfoFormGroup.formeJuridique')?.errors?.['required']){
+          <mat-error> Ce champ est obligatoire </mat-error>
+          }@else {
+          <mat-error class="error">Le format est incorrect</mat-error>
+         }
+        </mat-form-field>
+      } 
+
+
+    <div class="first_field">
+       <mat-form-field appearance="outline" class="field">
+      <mat-label  for="prenom">{{ isCompany ? 'Prenom du contact': 'Prenom' }}</mat-label>
+      <input id="prenom" formControlName="firstname" matInput type="text">
+      <mat-error> Ce champ est obligatoire </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label for="nom">{{ isCompany ? 'Nom du contact': 'Nom' }}</mat-label>
+      <input id="nom" matInput formControlName="lastName" type="text">
+      <mat-error> Ce champ est obligatoire </mat-error>
+      </mat-form-field>
+    </div>
+   
+
+      <mat-form-field appearance="outline">
+        <mat-label for="email"> Email</mat-label>
+        <input id="email" matInput formControlName="email" type="email">
+        
+        @if(formDirective.form.get('personalInfoFormGroup.email')?.errors && formDirective.form.get('personalInfoFormGroup.email')?.errors?.['required']){
+          <mat-error> Ce champ est obligatoire </mat-error>
+        }@else if(formDirective.form.get('personalInfoFormGroup.email')?.errors && formDirective.form.get('personalInfoFormGroup.email')?.errors?.['email']) {
+          <mat-error class="error">Le format est incorrect</mat-error>
+        }
+        
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label for="confirmEmail">Confirmation Email</mat-label>
+      <input id="confirmEmail" matInput formControlName="confirmEmail"  type="email">
+      @if(formDirective.form.get('personalInfoFormGroup.confirmEmail')?.errors && formDirective.form.get('personalInfoFormGroup.confirmEmail')?.errors?.['required']){
+        <mat-error> Ce champ est obligatoire </mat-error>
+      }@else {
+        <mat-error class="error">L'email n'est pas identique a celui renseigné précédemment</mat-error>
+        
+      }
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label for="adresse">Adresse</mat-label>
+      <input id="adresse" matInput formControlName="address" type="text" >
+      <mat-error> Ce champ est obligatoire </mat-error>
+
+      </mat-form-field>
+
+    
+    <div class="first_field">
+      <mat-form-field appearance="outline">
+        <mat-label for="codePostal" >Code postal</mat-label>
+      <input id="codePostal" matInput formControlName="postalCode"  type="text">
+      @if(formDirective.form.get('personalInfoFormGroup.postalCode')?.errors && formDirective.form.get('personalInfoFormGroup.postalCode')?.errors?.['required']){
+        <mat-error> Ce champ est obligatoire </mat-error>
+      }@else {
+        <mat-error class="error">Le format est incorrect</mat-error>
+        
+      }
+      </mat-form-field>
+      
+      <mat-form-field appearance="outline">
+        <mat-label for="ville">Ville</mat-label>
+      <input id="ville" matInput formControlName="city"  type="text">
+      <mat-error> Ce champ est obligatoire </mat-error>
+
+      </mat-form-field>
+    </div>
+
+      <mat-form-field appearance="outline">
+        <mat-label for="pays" >Pays</mat-label>
+      <input id="pays" matInput formControlName="country"  type="text" >
+      <mat-error> Ce champ est obligatoire </mat-error>
+
+      </mat-form-field>
+
+  <p>* Champs obligatoires</p>
+
+</div>

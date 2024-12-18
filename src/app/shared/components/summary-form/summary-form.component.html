@@ -1,0 +1,40 @@
+<!-- <div class="summary-form">   -->
+  <mat-toolbar class="headForm"> ❤ Mon Récapitulatif</mat-toolbar>
+
+  
+  
+  
+  
+<div class="bloc" formGroupName="summaryFormGroup">
+
+  <div class="heart-icon">
+  </div>
+  <div class="total_section">Total</div>
+  <div class="total_section">{{totalAmount}} €</div>
+  
+  <mat-icon class="heart"> ❤ </mat-icon>
+      <div class="terms" >
+    <mat-checkbox formControlName="cgu">
+      J'accepte les <a href="#">Conditions Générales d'Utilisation</a> du service et j'ai lu la <a href="#">charte de confidentialité</a>. *
+    </mat-checkbox>
+    <div class="mandatory-fields">
+      * Champs obligatoires
+    </div>
+  </div>
+
+    <div class="buttons">
+      <button mat-button class="payers"  [disabled]="statusForm === 'INVALID'" (click)="makeDonation()">{{ isOneTimePayment === false ?  'Souscrire' :'Donner' }} </button>
+    </div>
+    
+
+    <div class="payment-security">
+      <h2>Plateforme de paiement 100% sécurisée</h2>
+      <p>Toutes les informations bancaires pour traiter ce paiement sont totalement sécurisées. Grâce au cryptage SSL de vos données bancaires, vous êtes assurés de la fiabilité de vos transactions sur HelloAsso.</p>
+      <div class="payment-icons">
+        <img src="assets/img/CB VISA.jpeg" alt="Visa">
+        <img src="assets/img/CB MASTER.jpeg" alt="Mastercard">
+        <img src="assets/img/CB.jpeg" alt="Carte Bancaire">
+      </div>
+    </div>
+</div>
+<!-- </div> -->
