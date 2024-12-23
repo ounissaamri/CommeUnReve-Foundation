@@ -12,7 +12,6 @@
     margin-top: 100px;
   }
   
-  /* Style du titre de la section de don */
   .donation-section h2 {
     font-size:48px; /* Définit la taille de la police à 2rem (relative à la taille de la police de base) */
     font-weight: bold; /* Applique une graisse de police épaisse */

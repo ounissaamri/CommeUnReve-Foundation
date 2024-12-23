@@ -18,6 +18,7 @@ import { MatIconModule } from '@angular/material/icon';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
+  menuOpen: boolean = false
 
   constructor(private router:Router){}
   
@@ -28,10 +29,8 @@ export class HeaderComponent {
     this.router.navigate(['/nosactions'])
   }
 
- menuOpen: boolean = false;
 
 toggleMenu(): void {
   this.menuOpen = !this.menuOpen;
 }
-
 }
