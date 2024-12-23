@@ -41,3 +41,23 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   
   html, body { height: 100%; }
   body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+ .mat-typography h1, .mat-typography h2, .mat-typography h3 {
+
+  color:black;
+  font-weight:bold;
+  font-family: 'jakarta bold';
+
+ } 
+
+ .mat-typography h1 {
+  font-size:64px;
+ }
+
+ .mat-typography h2 {
+  font-size:36px;
+ }
+
+ .mat-typography h3 {
+  font-size:28px;
+ }

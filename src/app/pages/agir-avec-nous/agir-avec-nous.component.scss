@@ -1,14 +1,10 @@
+h1{
+  margin-bottom: 80px;
+}
 .agir-container {
   padding: 90px 130px;
   background-color: #f9f9f9;
   text-align: center;
-
-  h1 {
-    font-size: 64px;
-    font-family: 'Jakarta bold';
-    color: #020101;
-    margin-bottom: 133px;
-  }
 
   .action-block {
     display: flex;  
@@ -20,7 +16,7 @@
     &:nth-child(odd) {
       flex-direction: row-reverse; 
     }
-
+  
     img {
       width: 40%;
       height: auto;
@@ -33,19 +29,6 @@
       padding: 20px;
       text-align: left;
 
-      h3 {
-        font-size: 48px;
-        color: black;
-        margin-bottom: 15px;
-        font-family: 'inter bold';
-      }
-
-      p {
-        font-size: 16px;
-        color: #000;
-        line-height: 1.6;
-        margin-bottom: 20px;
-      }
 
       .btn-action {
         background-color: #2B5896;

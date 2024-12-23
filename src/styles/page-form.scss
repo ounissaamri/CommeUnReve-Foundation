@@ -1,23 +1,27 @@
+$primary-color: #EF20A9; 
+$secondary-color: #2B5896; 
+$background-color: #ffffff; 
+$text-color: #020202; 
+
+h1{
+  text-align: center;
+  
+}
+
+
 #page_form{
-    h1{
-        text-align: center;
-        color:  #2B5896;
-        font-family: 'bold';
-        font-size: 4rem;
-    }
-    .container{
     
-        display: flex;
-        justify-content: space-between;
-        background-color: #ffffff;
-        margin-bottom: 60px;
-    
-     /* Variables for colors to match the design */
-    $primary-color: #EF20A9; 
-    $secondary-color: #2B5896; 
-    $background-color: #ffffff; 
-    $text-color: #020202; 
-    
+  .container{
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    margin:0 auto 60px auto;
+  
+  
+  
     .container_form {
       display: flex;
       flex-direction: column;
@@ -26,56 +30,53 @@
       border-radius: 8px;
       width: 45%;
     }
-    img.image_home{
-    
+      img.image_home{
       
-      width: 35%;
-      border-radius: 100px;
-      padding: 2rem;
+        
+        width: 90%;
+        border-radius: 24px;
+        
+        
+      }
+      
+        .first_field {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 1rem;
+      
+          mat-form-field {
+            width: 48%;
+          }
+        }
       
       
-    }
-    
-      .first_field {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 1rem;
-    
         mat-form-field {
-          width: 48%;
-        }
-      }
-    
-    
-      mat-form-field {
-        width: 100%;
-        margin-bottom: 1rem;
-    
-        mat-label {
-          color: $secondary-color;
-          font-size: 16px;
-          font-family: 'inter semi bold';
-        }
-    
+          width: 100%;
+          margin-bottom: 1rem;
       
-      }
-      .container_btn{
-        display: flex;
-        justify-content: end;
-        .btn{
-          background-color: #2B5896;
-          color: #ffffff;
-          padding: 6px 46px;
-          border-radius: 8px;
+          mat-label {
+            color: $secondary-color;
+            font-size: 16px;
+            font-family: 'inter semi bold';
+          }
+      
+        
         }
-      }
+        .container_btn{
+          display: flex;
+          justify-content: end;
+          .btn{
+            background-color: #2B5896;
+            color: #ffffff;
+            padding: 6px 46px;
+            border-radius: 8px;
+          }
+        }
     }
     }
       
 @media (max-width: 768px) {
-  img.image_home{
-    display :none;        
-  }
+  
   #page_form .container .container_form {
     display: flex;
     flex-direction: column;
@@ -84,16 +85,7 @@
     border-radius: 8px;
     width:90%;
 }
-#page_form h1{
-  text-align: center;
-  color:  #2B5896;
-  font-family: 'bold';
-  font-size: 3rem;
-}
+
 } 
      
-    
-    
-    
-    
     

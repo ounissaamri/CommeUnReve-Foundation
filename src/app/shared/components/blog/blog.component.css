@@ -5,22 +5,19 @@
   padding: 0 15px;
 }
 
-.blog-section h2 {
+h2{
   text-align: center;
-  font-size: 32px;
-  font-family: 'inter bold';
-  color: #000000;
+  margin-bottom: 40px;
 }
 
-/* Grille des articles avec flexbox */
+
 .articles-container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 20px; /* Ajoute un espace uniforme entre les cartes */
+  gap: 20px; 
 }
 
-/* Carte de chaque article */
 .article-card {
   width: 23%;
   background-color: #fff;
@@ -30,7 +27,7 @@
 }
 
 .article-card:hover {
-  transform: translateY(-10px); /* Animation légère au survol */
+  transform: translateY(-10px);  /* Animation légère au survol */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Accentuer l'ombre au survol */
 }
 
@@ -40,11 +37,6 @@ mat-card img {
   border-radius: 10px 10px 10px 10px;
 }
 
-mat-card-content h3 {
-  font-size: 16px;
-  font-family: 'inter semi bold';
-  color: #000000;
-}
 
 mat-card-content {
   padding: 0px 0px;
@@ -75,8 +67,4 @@ mat-card-content {
     border-radius: 12px 12px 0 0;
   }
 
-  mat-card-content h3 {
-    font-size: 18px;
-    text-align: center;
-  }
 }

@@ -1,24 +1,28 @@
 <mat-toolbar>
+  <!-- Logo -->
   <a routerLink="/">
-    <div class="logo"> 
-    <img src="assets/img/logo.png" alt="Logo" />
+    <div class="logo">
+      <img src="assets/img/logo.jpeg" alt="Logo" />
     </div>
   </a>
 
-  
+  <!-- Menu Hamburger -->
+    <button mat-icon-button class="menu-button" (click)="toggleMenu()">
+      <mat-icon>{{ menuOpen ? 'close' : 'menu' }}</mat-icon>
+    </button>
+
   <span class="spacer"></span>
 
-  <nav class="links">
+  <!-- Liens de navigation -->
+  <nav class="links" [class.open]="menuOpen">
     <a mat-button routerLink="/qui-sommes-nous">Qui sommes-nous?</a>
-    <!-- <a mat-button (click)="naviguer()">Qui sommes-nous?</a> -->
     <a mat-button routerLink="/nos-actions">Nos actions</a>
     <a mat-button routerLink="/agir-avec-nous">Agir avec nous</a>
+    <button mat-button class="button don-button" routerLink="/donation-forms">Faire un Don</button>
+    <button mat-button class="button don-button-alt" routerLink="/devenir-benevole">Devenir bénévole</button>
+    <button mat-button class="button don-button-alts" routerLink="/partenaire">Devenir Partenaire</button>
   </nav>
 
-  <div class="buttons">
-    <button mat-button class="don-button" routerLink="/donation-forms">Faire un Don</button>
-    <button mat-button class="don-button-alt" routerLink="/devenir-benevole">Devenir bénévole</button>
-    <button mat-button class="don-button-alts" routerLink="/partenaire">Devenir Partenaire</button>
-
-  </div>
+  <!-- Boutons (en desktop uniquement) -->
+  
 </mat-toolbar>
