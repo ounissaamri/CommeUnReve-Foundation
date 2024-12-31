@@ -12,7 +12,7 @@ export class EmailService {
   private apiUrl = environment.apiUrl; // Remplacez par l'URL réelle de l'API
 
   constructor(private http: HttpClient) {}
-  
+
   // Méthode pour envoyer un email
   sendPartenaireEmail(emailData: { to: string; subject: string; body: string }): Observable<any> {
     const mappedData = new FormMapper(emailData);
@@ -22,10 +22,10 @@ export class EmailService {
       name: mappedData.name,
       lastName: mappedData.lastName,
       message: mappedData.message,
-      info: mappedData.info
+      info: mappedData.info,
     };
-    console.log(emailPayload)
-    
+    console.log(emailPayload);
+
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
     });
@@ -41,9 +41,9 @@ export class EmailService {
       name: mappedData.name,
       lastName: mappedData.lastName,
       message: mappedData.message,
-      info: mappedData.info
+      info: mappedData.info,
     };
-    
+
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
     });

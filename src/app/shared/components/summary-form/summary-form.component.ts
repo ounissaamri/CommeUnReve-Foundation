@@ -10,7 +10,7 @@ import { MatTableModule } from '@angular/material/table';
 import { ControlContainer, FormGroupDirective, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { distinctUntilChanged, filter, map, tap } from 'rxjs';
 import { toggleButtonOption } from '../../models/toggle-button-options';
-import { TypePaymentContantes } from "../../models/constantes/toggle-button-option";
+import { TypePaymentContantes } from '../../models/constantes/toggle-button-option';
 
 @Component({
   selector: 'app-summary-form',
@@ -25,59 +25,54 @@ import { TypePaymentContantes } from "../../models/constantes/toggle-button-opti
     MatToolbar,
     MatTableModule,
     ReactiveFormsModule,
-    FormsModule
-
-    
+    FormsModule,
   ],
   templateUrl: './summary-form.component.html',
   styleUrl: './summary-form.component.scss',
-  viewProviders: [{ provide: ControlContainer, useExisting: FormGroupDirective }]
+  viewProviders: [{ provide: ControlContainer, useExisting: FormGroupDirective }],
 })
 export class SummaryFormComponent implements OnInit {
-  formDirective =  inject(FormGroupDirective)
-  totalAmount: number = 0;
-  statusForm: any =  'INVALID';
-  initPayment = output<boolean>()
+  formDirective = inject(FormGroupDirective);
+  totalAmount = 0;
+  statusForm: any = 'INVALID';
+  initPayment = output<boolean>();
   isOneTimePayment!: boolean;
-  constructor(){}
+  constructor() {}
 
   ngOnInit(): void {
-
     const amount = this.formDirective.form.controls?.['donationFormGroup']?.get('amount');
     const amountOptions = this.formDirective.form.controls?.['donationFormGroup']?.get('amountOptions');
     const type = this.formDirective.form.get('donationFormGroup.type');
 
+    type?.valueChanges.subscribe((value) => {
+      value.type === TypePaymentContantes.TYPE_PAYMENT.SUBSCRIPTION
+        ? (this.isOneTimePayment = false)
+        : (this.isOneTimePayment = true);
+    });
 
-    type?.valueChanges.subscribe(value => {
-      value.type === TypePaymentContantes.TYPE_PAYMENT.SUBSCRIPTION ? this.isOneTimePayment = false :  this.isOneTimePayment = true;
-    })
-
-    this.formDirective.form.statusChanges.pipe(
-      tap(console.log),
-      distinctUntilChanged()
-    ).subscribe((status)=> {
+    this.formDirective.form.statusChanges.pipe(tap(console.log), distinctUntilChanged()).subscribe((status) => {
       this.statusForm = status;
-    })
+    });
 
     // from togglebutton
     amountOptions?.valueChanges
-    .pipe(
-      filter((value:toggleButtonOption)=> value !== null),
-      map(value => value.libelle),
-      distinctUntilChanged()
-    )
-    .subscribe((libelle)=> {
-      this.updateTotalAmount(Number(libelle))
-    });
+      .pipe(
+        filter((value: toggleButtonOption) => value !== null),
+        map((value) => value.libelle),
+        distinctUntilChanged()
+      )
+      .subscribe((libelle) => {
+        this.updateTotalAmount(Number(libelle));
+      });
 
     amount?.valueChanges
-    .pipe(
-      filter((value)=> value !== null),
-      distinctUntilChanged()
-    )
-    .subscribe((amount:number)=> {
-      this.updateTotalAmount(amount)
-    });
+      .pipe(
+        filter((value) => value !== null),
+        distinctUntilChanged()
+      )
+      .subscribe((amount: number) => {
+        this.updateTotalAmount(amount);
+      });
   }
 
   updateTotalAmount(amount: number) {
@@ -85,8 +80,6 @@ export class SummaryFormComponent implements OnInit {
   }
 
   makeDonation() {
-    this.initPayment.emit(true)
+    this.initPayment.emit(true);
   }
-
-  
 }

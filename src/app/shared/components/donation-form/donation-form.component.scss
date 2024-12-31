@@ -3,8 +3,8 @@ mat-form-field {
 }
 
 .label {
-  color: #2B5896;
-  font-size:16px;
+  color: #2b5896;
+  font-size: 16px;
   font-family: 'inter semi bold';
 }
 
@@ -16,32 +16,27 @@ mat-form-field {
   // padding-left: 20px;
 }
 
-
-
 /* Pour Firefox */
-input[type="number"] {
+input[type='number'] {
   -moz-appearance: textfield;
   /* Pour Chrome et Safari */
-&::-webkit-inner-spin-button, 
-&::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
 }
-}
-
 
 mat-form-field {
-  --mdc-outlined-text-field-outline-color: #2B5896;; /* Bordure par défaut */
-  --mdc-outlined-text-field-hover-outline-color: #2B5896; /* Bordure en survol */
+  --mdc-outlined-text-field-outline-color: #2b5896; /* Bordure par défaut */
+  --mdc-outlined-text-field-hover-outline-color: #2b5896; /* Bordure en survol */
   --mdc-outlined-text-field-focused-outline-color: #0044cc; /* Bordure en focus */
 }
 
 @media (max-width: 768px) {
   .label {
-    color: #2B5896;
-    font-size:13px;
+    color: #2b5896;
+    font-size: 13px;
     font-family: 'inter semi bold';
   }
-
 }
- 

@@ -1,23 +1,22 @@
-
 mat-toolbar {
-    border-radius: 8px 8px 8px 8px;
-    border: 1px solid #EF20A9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color:#ffffff;
-    width: 30rem;
-    color:  #EF20A9;
-    font-family: 'inter bold';
-    padding: 1.7rem;
-    margin: 0px 20px;
-  }
+  border-radius: 8px 8px 8px 8px;
+  border: 1px solid #ef20a9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  width: 30rem;
+  color: #ef20a9;
+  font-family: 'inter bold';
+  padding: 1.7rem;
+  margin: 0px 20px;
+}
 
- /* Variables for colors to match the design */
-$primary-color: #EF20A9; 
-$secondary-color: #2B5896; 
-$background-color: #ffffff; 
-$text-color: #2B5896; 
+/* Variables for colors to match the design */
+$primary-color: #ef20a9;
+$secondary-color: #2b5896;
+$background-color: #ffffff;
+$text-color: #2b5896;
 
 .containerForm {
   display: flex;
@@ -60,46 +59,42 @@ $text-color: #2B5896;
   }
 }
 mat-form-field {
-  --mdc-outlined-text-field-outline-color:#2B5896;; /* Bordure par défaut */
-  --mdc-outlined-text-field-hover-outline-color:#2B5896; /* Bordure en survol */
-  --mdc-outlined-text-field-focused-outline-color:#2B5896; /* Bordure en focus */
-  --mdc-outlined-text-field-input-text-color:#2B5896;
+  --mdc-outlined-text-field-outline-color: #2b5896; /* Bordure par défaut */
+  --mdc-outlined-text-field-hover-outline-color: #2b5896; /* Bordure en survol */
+  --mdc-outlined-text-field-focused-outline-color: #2b5896; /* Bordure en focus */
+  --mdc-outlined-text-field-input-text-color: #2b5896;
 }
-.mat-mdc-checkbox{
-  --mat-checkbox-label-text-color:#2B5896 ;
-  --mat-checkbox-label-text-font:'inter semi bold' ;
-  --mat-checkbox-label-text-size:19px;
+.mat-mdc-checkbox {
+  --mat-checkbox-label-text-color: #2b5896;
+  --mat-checkbox-label-text-font: 'inter semi bold';
+  --mat-checkbox-label-text-size: 19px;
 }
-
 
 /* Pour Firefox */
-input[type="number"] {
+input[type='number'] {
   -moz-appearance: textfield;
   /* Pour Chrome et Safari */
-&::-webkit-inner-spin-button, 
-&::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
 }
 @media (max-width: 768px) {
   mat-toolbar {
     border-radius: 8px 8px 8px 8px;
-    border: 1px solid #EF20A9;
+    border: 1px solid #ef20a9;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color:#ffffff;
+    background-color: #ffffff;
     width: 20rem;
-    color:  #EF20A9;
+    color: #ef20a9;
     font-family: 'inter bold';
     margin: 0px;
-    
   }
   .first_field {
     flex-direction: row;
     align-items: center;
-   
   }
-  
 }

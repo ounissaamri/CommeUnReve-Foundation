@@ -6,14 +6,8 @@ import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-missions',
   standalone: true,
-  imports: [
-    MatCardModule,
-    UpperCasePipe,
-    RouterLink
-  ],
+  imports: [MatCardModule, UpperCasePipe, RouterLink],
   templateUrl: './missions.component.html',
-  styleUrl: './missions.component.scss'
+  styleUrl: './missions.component.scss',
 })
-export class MissionsComponent {
-
-}
+export class MissionsComponent {}

@@ -1,12 +1,16 @@
-.button{
-    background-color: white;
-    color : #2B5896;
-    &-1{width: 40%;}
-    &-2{width: 60%;}
-    &.active {
-        background-color: #2B5896;
-        color : white ;  
-    }
+.button {
+  background-color: white;
+  color: #2b5896;
+  &-1 {
+    width: 40%;
+  }
+  &-2 {
+    width: 60%;
+  }
+  &.active {
+    background-color: #2b5896;
+    color: white;
+  }
 }
 // .button{
 //     background-color: 'white';

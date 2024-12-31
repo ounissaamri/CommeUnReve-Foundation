@@ -8,14 +8,14 @@ h1{
   text-align: center;
 
   .action-block {
-    display: flex;  
+    display: flex;
     justify-content: space-between;
     margin-bottom: 80px;
     padding: 20px;
     background-color: #fff;
 
     &:nth-child(odd) {
-      flex-direction: row-reverse; 
+      flex-direction: row-reverse;
     }
   
     img {
@@ -42,7 +42,7 @@ h1{
       }
 
       .btn-action {
-        background-color: #2B5896;
+        background-color: #2b5896;
         color: #fff;
         padding: 10px 20px;
         font-size: 1rem;
@@ -59,13 +59,12 @@ h1{
   }
 }
 
-
 @media (max-width: 768px) {
   .agir-container {
     padding: 20px;
 
     .action-block {
-      display: block;  // Désactiver flex pour les petit ecran
+      display: block; // Désactiver flex pour les petit ecran
       flex-direction: column;
 
       img {

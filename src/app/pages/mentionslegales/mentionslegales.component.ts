@@ -4,12 +4,8 @@ import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-mentionslegales',
   standalone: true,
-  imports: [
-    RouterLink
-  ],
+  imports: [RouterLink],
   templateUrl: './mentionslegales.component.html',
-  styleUrl: './mentionslegales.component.scss'
+  styleUrl: './mentionslegales.component.scss',
 })
-export class MentionslegalesComponent {
-
-}
+export class MentionslegalesComponent {}

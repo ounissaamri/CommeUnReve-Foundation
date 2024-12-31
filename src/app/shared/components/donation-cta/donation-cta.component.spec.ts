@@ -8,9 +8,8 @@ describe('DonationCTAComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [DonationCTAComponent]
-    })
-    .compileComponents();
+      imports: [DonationCTAComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(DonationCTAComponent);
     component = fixture.componentInstance;

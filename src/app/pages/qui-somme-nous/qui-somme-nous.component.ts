@@ -4,15 +4,8 @@ import { MatCard, MatCardContent, MatCardHeader, MatCardTitle } from '@angular/m
 @Component({
   selector: 'app-qui-somme-nous',
   standalone: true,
-  imports: [
-    MatCardContent,
-    MatCard,
-    MatCardHeader,
-    MatCardTitle
-  ],
+  imports: [MatCardContent, MatCard, MatCardHeader, MatCardTitle],
   templateUrl: './qui-somme-nous.component.html',
-  styleUrl: './qui-somme-nous.component.scss'
+  styleUrl: './qui-somme-nous.component.scss',
 })
-export class QuiSommeNousComponent {
-
-}
+export class QuiSommeNousComponent {}

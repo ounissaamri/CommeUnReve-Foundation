@@ -4,12 +4,8 @@ import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-choice-partenaire',
   standalone: true,
-  imports: [
-    RouterModule
-  ],
+  imports: [RouterModule],
   templateUrl: './choice-partenaire.component.html',
-  styleUrl: './choice-partenaire.component.scss'
+  styleUrl: './choice-partenaire.component.scss',
 })
-export class ChoicePartenaireComponent {
-
-}
+export class ChoicePartenaireComponent {}

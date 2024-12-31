@@ -5,15 +5,12 @@ import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-donation-cta',
   standalone: true,
-  imports: [
-    MatButtonModule,
-    RouterLink
-  ],
+  imports: [MatButtonModule, RouterLink],
   templateUrl: './donation-cta.component.html',
-  styleUrl: './donation-cta.component.css'
+  styleUrl: './donation-cta.component.css',
 })
 export class DonationCTAComponent {
-  @Input() titre! : string
-  @Input() text! : string
-  @Input() button!: string
+  @Input() titre!: string;
+  @Input() text!: string;
+  @Input() button!: string;
 }

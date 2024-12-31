@@ -8,9 +8,8 @@ describe('CancelCheckoutComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CancelCheckoutComponent]
-    })
-    .compileComponents();
+      imports: [CancelCheckoutComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(CancelCheckoutComponent);
     component = fixture.componentInstance;

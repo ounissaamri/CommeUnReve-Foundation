@@ -1,123 +1,122 @@
- .toolbar {
-    border-radius: 12px 12px 12px 12px ;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #EF20A9;
-    width: 29rem;
-    color: white;
-    font-family: 'inter bold';
-    padding: 1.7rem;
-    margin: 20px 20px;
-    color: #f4f6f9; 
-    font-size:31px ;
-  }
-  .total_section{
-    border: 1px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding:15px 0;
-    border-color: #2B5896;
-
-  }
-
+.toolbar {
+  border-radius: 12px 12px 12px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ef20a9;
+  width: 29rem;
+  color: white;
+  font-family: 'inter bold';
+  padding: 1.7rem;
+  margin: 20px 20px;
+  color: #f4f6f9;
+  font-size: 31px;
+}
+.total_section {
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+  border-color: #2b5896;
+}
 
 .summary-form {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 16px;
-    width: 29%;
-    justify-content: center;
-  }
-  .heart {
-    font-size: 40px;
-    color: #ffffff; 
-    text-align: center;
-    background-color:#2B5896 ;
-    border-radius: 25px;
-    height: 50px;
-    width: 50px;
-    position: relative;
-    top: 10px;
-    left: 50%;
-    margin: 10px 0px;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 16px;
+  width: 29%;
+  justify-content: center;
+}
+.heart {
+  font-size: 40px;
+  color: #ffffff;
+  text-align: center;
+  background-color: #2b5896;
+  border-radius: 25px;
+  height: 50px;
+  width: 50px;
+  position: relative;
+  top: 10px;
+  left: 50%;
+  margin: 10px 0px;
 }
 
-.payment-security{
+.payment-security {
   padding: 3rem 1rem;
 }
-   
-  .terms {
-    margin: 10px 0;
-    font-family: 'inter semi bold';
-    font-size: 1.5 rem  ;
-    color: #003479;
-  }
-  
-  .mandatory-fields {
-    margin-top: 10px;
-    color: red;
-    font-size: 12px;
-    margin-bottom: 35px;
-  }
-  
-  .buttons {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  }
-  .payers {
-    background-color: #2B5896;
-    color: #ffffff;
-    font-family: 'inter bold';
-    font-size: 18px;
-    width: 100%;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    padding: 30px 0px;
-  }
 
-  .payment-icons img {
-    width: 3rem;
-    margin-right: 10px;
-  }
+.terms {
+  margin: 10px 0;
+  font-family: 'inter semi bold';
+  font-size: 1.5 rem;
+  color: #003479;
+}
 
-  h2{
-    color: #2B5896;
-    font-family: 'inter bold';
-    font-size: 25px ;
-  }
+.mandatory-fields {
+  margin-top: 10px;
+  color: red;
+  font-size: 12px;
+  margin-bottom: 35px;
+}
 
-  p{
-    font-family:'inter semi bold' ;
-    font-size:10px ;
-    color: #817E7E;
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.payers {
+  background-color: #2b5896;
+  color: #ffffff;
+  font-family: 'inter bold';
+  font-size: 18px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+  padding: 30px 0px;
+}
 
-  }
+.payment-icons img {
+  width: 3rem;
+  margin-right: 10px;
+}
 
-  table {
-    width: 10%;
-    margin-bottom: 16px;
-  }
-  
-  th.mat-header-cell, td.mat-cell {
-    border: 1px solid #e0e0e0;
-    padding: 8px;
-    text-align: center;
-  }
-  
-  .total-row {
-    display: flex;
-    justify-content: space-between;
-    padding: 8px;
-    border-top: 1px solid #5b0606;
-    font-weight: bold;
-    
-  }
-  
- button.mat-mdc-button-disabled{
+h2 {
+  color: #2b5896;
+  font-family: 'inter bold';
+  font-size: 25px;
+}
+
+p {
+  font-family: 'inter semi bold';
+  font-size: 10px;
+  color: #817e7e;
+}
+
+table {
+  width: 10%;
+  margin-bottom: 16px;
+}
+
+th.mat-header-cell,
+td.mat-cell {
+  border: 1px solid #e0e0e0;
+  padding: 8px;
+  text-align: center;
+}
+
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  border-top: 1px solid #5b0606;
+  font-weight: bold;
+}
+
+button.mat-mdc-button-disabled {
   background-color: lightslategray;
- }
+}
