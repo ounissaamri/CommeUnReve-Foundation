@@ -51,6 +51,7 @@ nav.links a:hover {
   padding: 6px 35px ;  /* taille du bouton */
   border-radius: 10px;  /* arrondi du bouton */
   font-weight: 300px;
+  min-width: 180px;
   
 }
 
