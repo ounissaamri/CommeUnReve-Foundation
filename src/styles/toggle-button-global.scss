@@ -1,4 +1,5 @@
 .container_group {
+
   margin-bottom: 10px;
   mat-button-toggle-group {
     display: flex;
@@ -26,10 +27,7 @@
   .mat-button-toggle-standalone:not([class*=mat-elevation-z]), .mat-button-toggle-group:not([class*=mat-elevation-z]){
     box-shadow: none !important;
   }
-  .mat-pseudo-checkbox{
-    //style pour check
-    //  display: none !important;
-  }
+
   .mat-button-toggle .mat-pseudo-checkbox{
     margin-right: 5px;
   }

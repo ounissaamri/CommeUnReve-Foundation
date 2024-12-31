@@ -2,18 +2,13 @@
    .all {
     margin-top: 50px;
   padding: 50px;
-  background-color: #f9f9f9;
   
   
-  
-  h2 {
-    font-size: 42px;
-    color: #333;
-    font-family: 'inter bold';
-    letter-spacing: 2px;
-    margin-bottom: 40px;
+  h2{
     text-align: center;
-    }
+    margin-bottom: 40px;
+  }
+
   
 
   .section {
@@ -36,15 +31,7 @@
       align-items: center;
       transition: transform 0.3s ease;
 
-     
-      h3 {
-        font-size: 32px;
-        font-family: 'inter bold';
-        color: #000000;
-        margin-bottom: 20px;
-        text-align: center;
-      }
-
+      
       .image_home {
         max-width: 200%;
         height: auto;

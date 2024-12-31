@@ -25,11 +25,14 @@ export class BlogComponent implements OnInit ,OnChanges {
 
   @Input() articles: any[] = [];
 
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router) {}
 
   ngOnInit(): void {
 
-    console.log(this.articles);
+    
+
+
   }
 
   ngOnChanges(changes: SimpleChanges): void {

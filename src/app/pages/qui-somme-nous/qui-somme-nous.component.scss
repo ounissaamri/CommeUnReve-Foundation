@@ -9,13 +9,6 @@
 }
 .section{ padding-top: 48px; }
 
-h1{
-  font-size: 64px;
-  padding-top: 40px;
-  color: black;
-  font-family:'Jakarta bold';
-
-}
 .espace{
   
   margin-bottom: 50px;
@@ -23,12 +16,12 @@ h1{
     margin-bottom: 10rem;
   }
 }
+
 h3{
   color: black;
   font-family: 'inter bold';
   text-align: left;
   font-size: 32px;
-  
 }
 p{
   
@@ -38,7 +31,4 @@ p{
 }
 @media (max-width: 480px) {
   .all { padding: 10px; }
-  h1 { font-size: 28px; }
-  h3 { font-size: 20px; }
-  p, ul li { font-size: 10px; }
 }
