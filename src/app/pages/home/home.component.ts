@@ -24,11 +24,7 @@ export class HomeComponent implements OnInit{
   
 
    titre='Je fais un don '
-<<<<<<< HEAD
    text='Soutenez notre cause : chaque don compte pour faire une réelle différence.'
-=======
-   text='Faire un don pour soutenir notre cause'
->>>>>>> 5278904 (update la mise en forme des pages)
    button='Faire un don'
    titreImage='Comme un rêve' 
    descriptionImage='Le coeur de notre mission'
