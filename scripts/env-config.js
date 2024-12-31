@@ -10,4 +10,3 @@ export const environment = {
 };
 `;
 fs.writeFileSync(targetPath, envConfigFile);
-

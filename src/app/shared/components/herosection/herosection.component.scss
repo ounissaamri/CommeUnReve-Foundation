@@ -43,19 +43,16 @@
   }
 }
 
-
 @media only screen and (max-width: 768px) {
-  
-    .container[_ngcontent-ng-c3487270872] .text_home[_ngcontent-ng-c3487270872] #title[_ngcontent-ng-c3487270872] {
-      font-size: 28px;
-      font-family: "Jakarta bold";
+  .container[_ngcontent-ng-c3487270872] .text_home[_ngcontent-ng-c3487270872] #title[_ngcontent-ng-c3487270872] {
+    font-size: 28px;
+    font-family: 'Jakarta bold';
   }
-
 
   .container[_ngcontent-ng-c3487270872] .text_home[_ngcontent-ng-c3487270872] #description[_ngcontent-ng-c3487270872] {
     font-size: 10px;
-    font-family: "Jakarta regular";
-}
+    font-family: 'Jakarta regular';
+  }
 
   .image_home {
     border-radius: 30px 25px 25px 25px;
@@ -63,5 +60,5 @@
   .container[_ngcontent-ng-c3487270872] {
     position: relative;
     padding: 10px;
-}
+  }
 }

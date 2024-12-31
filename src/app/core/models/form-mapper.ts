@@ -1,5 +1,3 @@
-import { Validators } from '@angular/forms';
-
 export class FormMapper {
   // Propriétés de la classe qui correspondent à l'objet de destination
   name: string;
@@ -27,7 +25,7 @@ export class FormMapper {
     this.lastName = formData.lastName || null;
     this.emailto = formData.email || null;
     this.message = formData.comment || null;
-    
+
     // Structure de l'info avec ses sous-objets
     this.info = {
       phone: formData.phone || null,
@@ -44,5 +42,4 @@ export class FormMapper {
       },
     };
   }
-
 }

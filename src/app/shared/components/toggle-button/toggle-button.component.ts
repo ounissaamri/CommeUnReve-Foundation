@@ -1,4 +1,4 @@
-import { CurrencyPipe, NgClass, NgFor, NgStyle } from '@angular/common';
+import { CurrencyPipe, NgClass, NgStyle } from '@angular/common';
 import { Component, Input, forwardRef, inject } from '@angular/core';
 import { FormGroupDirective, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
@@ -7,28 +7,28 @@ import { toggleButtonOption } from '../../models/toggle-button-options';
 @Component({
   selector: 'app-toggle-button',
   standalone: true,
-  imports: [ MatButtonToggleModule, NgStyle,NgClass, CurrencyPipe],
+  imports: [MatButtonToggleModule, NgStyle, NgClass, CurrencyPipe],
   templateUrl: './toggle-button.component.html',
   styleUrl: './toggle-button.component.scss',
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,
       useExisting: forwardRef(() => ToggleButtonComponent),
-      multi: true
-    }
-  ]
+      multi: true,
+    },
+  ],
 })
-export class ToggleButtonComponent{
-
-  formDirective =  inject(FormGroupDirective)
+export class ToggleButtonComponent {
+  formDirective = inject(FormGroupDirective);
   @Input() options!: toggleButtonOption[];
-  value!: any;  
+  value!: any;
 
-  elementActive: number|null = null
+  elementActive: number | null = null;
 
-  
   // Les fonctions qui seront appelées par Angular
+  //@typescript-eslint/no-empty-function
   onChange = (value: any) => {};
+  //@typescript-eslint/no-empty-function
   onTouched = () => {};
 
   // Méthode appelée par Angular pour écrire une nouvelle valeur
@@ -52,6 +52,4 @@ export class ToggleButtonComponent{
     this.onChange(option);
     this.onTouched();
   }
-
-
 }

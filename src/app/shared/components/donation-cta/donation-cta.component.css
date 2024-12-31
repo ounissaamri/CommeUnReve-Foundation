@@ -1,65 +1,62 @@
 /* Style de la section de don */
 .donation-section {
-   
-    text-align: center; /* Centre le texte horizontalement */
-    padding: 40px; /* Ajoute un espacement intérieur à la section */
+  text-align: center; /* Centre le texte horizontalement */
+  padding: 40px; /* Ajoute un espacement intérieur à la section */
 
-    background-color: rgba(234, 224, 233, 0.848); /* Définit la couleur de fond en blanc */
-    border-radius: 10px; /* Arrondit les coins de la section */
-    width: 100%; /* Définit la largeur à 100% du parent */
-    max-width: 800px; /* Limite la largeur maximale à 800px */
-    margin: 50px auto; /* Centre la section horizontalement dans la page */
-    margin-top: 100px;
-  }
-  
-  /* Style du titre de la section de don */
-  .donation-section h2 {
-    font-size:48px; /* Définit la taille de la police à 2rem (relative à la taille de la police de base) */
-    font-weight: bold; /* Applique une graisse de police épaisse */
-    color: black; /* Définit la couleur du texte en noir */
-    margin-bottom: 20px; /* Ajoute un espacement en dessous du titre */
-    background: linear-gradient(90deg, #EFC71D, #EF20A9 59.99%);
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    
-  }
-  
-  /* Style du paragraphe */
-  .donation-section p {
-    font-size: 1rem; /* Définit la taille de la police à 1rem */
-    color: #666; /* Applique une couleur gris clair au texte */
-    margin-bottom: 30px; /* Ajoute un espacement sous le paragraphe */
-    max-width: 600px; /* Limite la largeur maximale du texte à 600px */
-    margin-left: auto; /* Centre horizontalement le paragraphe */
-    margin-right: auto; /* Centre horizontalement le paragraphe */
-  }
-  
-  /* Conteneur pour centrer le bouton */
-  .buttons {
-    display: flex; /* Utilise Flexbox pour gérer l'agencement des éléments internes */
-    justify-content: center; /* Centre le bouton horizontalement */
-    margin-top: 20px; /* Ajoute un espacement au-dessus du conteneur de bouton */
-  }
-  
-  /* Style du bouton de don */
-  .don-button {
-    padding: 6px 45px;  /* Ajoute un espacement intérieur (6px en haut et bas, 45px à gauche et à droite) */
-    border-radius: 10px;  /* Arrondit les coins du bouton */
-    font-weight: 300px; /* Applique une graisse de police fine */
-    background-color: #EF20A9; /* Définit une couleur de fond rose vif */
-    color: white; /* Définit la couleur du texte en blanc */
-    text-transform: none; /* Empêche le texte du bouton de passer automatiquement en majuscules */
-  }
-  
-  /* Effet de survol (hover) sur le bouton */
-  .don-button:hover  {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);  /* Applique une ombre légère lors du survol */
-    transform: translateY(-2px);  /* Légère élévation du bouton (le bouton semble "s'élever" lors du survol) */
-  }
-  
-  /* Style spécifique pour les boutons Angular Material lorsqu'ils ne sont pas désactivés */
-  .don-button.mat-mdc-button:not(:disabled) {
-    color: #ffffff; /* Assure que le texte reste blanc même si le bouton est en état actif */
-  }
-  
+  background-color: rgba(234, 224, 233, 0.848); /* Définit la couleur de fond en blanc */
+  border-radius: 10px; /* Arrondit les coins de la section */
+  width: 100%; /* Définit la largeur à 100% du parent */
+  max-width: 800px; /* Limite la largeur maximale à 800px */
+  margin: 50px auto; /* Centre la section horizontalement dans la page */
+  margin-top: 100px;
+}
+
+/* Style du titre de la section de don */
+.donation-section h2 {
+  font-size: 48px; /* Définit la taille de la police à 2rem (relative à la taille de la police de base) */
+  font-weight: bold; /* Applique une graisse de police épaisse */
+  color: black; /* Définit la couleur du texte en noir */
+  margin-bottom: 20px; /* Ajoute un espacement en dessous du titre */
+  background: linear-gradient(90deg, #efc71d, #ef20a9 59.99%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Style du paragraphe */
+.donation-section p {
+  font-size: 1rem; /* Définit la taille de la police à 1rem */
+  color: #666; /* Applique une couleur gris clair au texte */
+  margin-bottom: 30px; /* Ajoute un espacement sous le paragraphe */
+  max-width: 600px; /* Limite la largeur maximale du texte à 600px */
+  margin-left: auto; /* Centre horizontalement le paragraphe */
+  margin-right: auto; /* Centre horizontalement le paragraphe */
+}
+
+/* Conteneur pour centrer le bouton */
+.buttons {
+  display: flex; /* Utilise Flexbox pour gérer l'agencement des éléments internes */
+  justify-content: center; /* Centre le bouton horizontalement */
+  margin-top: 20px; /* Ajoute un espacement au-dessus du conteneur de bouton */
+}
+
+/* Style du bouton de don */
+.don-button {
+  padding: 6px 45px; /* Ajoute un espacement intérieur (6px en haut et bas, 45px à gauche et à droite) */
+  border-radius: 10px; /* Arrondit les coins du bouton */
+  font-weight: 300px; /* Applique une graisse de police fine */
+  background-color: #ef20a9; /* Définit une couleur de fond rose vif */
+  color: white; /* Définit la couleur du texte en blanc */
+  text-transform: none; /* Empêche le texte du bouton de passer automatiquement en majuscules */
+}
+
+/* Effet de survol (hover) sur le bouton */
+.don-button:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Applique une ombre légère lors du survol */
+  transform: translateY(-2px); /* Légère élévation du bouton (le bouton semble "s'élever" lors du survol) */
+}
+
+/* Style spécifique pour les boutons Angular Material lorsqu'ils ne sont pas désactivés */
+.don-button.mat-mdc-button:not(:disabled) {
+  color: #ffffff; /* Assure que le texte reste blanc même si le bouton est en état actif */
+}

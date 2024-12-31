@@ -1,23 +1,17 @@
-
 <mat-toolbar class="headForm"> ❤ Mon Don</mat-toolbar>
- <section class="form_content">
+<section class="form_content">
+  <div class="containerAmount" formGroupName="donationFormGroup">
+    <!-- Permet de le choix d'abonnement -->
+    <!-- <app-toggle-button [options]="listTypeDonation" formControlName="type"></app-toggle-button> -->
+    <div class="section_amount">
+      <app-toggle-button [options]="listAmount" formControlName="amountOptions"></app-toggle-button>
+    </div>
+    <label class="label">Montant libre</label>
+    <mat-form-field id="inputField" appearance="outline">
+      <input formControlName="amount" id="amount" #inputRef matInput type="number" placeholder="" />
+      <mat-error> Ce champ est obligatoire </mat-error>
+    </mat-form-field>
 
-<div class="containerAmount" formGroupName="donationFormGroup">
-  
-  <!-- Permet de le choix d'abonnement -->
-<!-- <app-toggle-button [options]="listTypeDonation" formControlName="type"></app-toggle-button> -->
-<div class="section_amount">
-  <app-toggle-button [options]="listAmount" formControlName="amountOptions"></app-toggle-button>
-</div> 
-  <label class="label">Montant libre</label>
-  <mat-form-field id="inputField" appearance="outline">
-    <input  formControlName="amount" id="amount" #inputRef  matInput type="number"  placeholder="">
-    <mat-error> Ce champ est obligatoire </mat-error>
-  </mat-form-field>
-
-
-  <span style="color: #2B5896; font-size:22px ;font-family: 'inter semi bold';">€</span>  
-</div>
-  </section> 
-
-
+    <span style="color: #2b5896; font-size: 22px; font-family: 'inter semi bold'">€</span>
+  </div>
+</section>

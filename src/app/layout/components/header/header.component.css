@@ -2,21 +2,20 @@ mat-toolbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #ffffff;  
+  background-color: #ffffff;
   margin-bottom: 5rem;
   padding-top: 2rem;
 }
 
 .logo img {
-   
   height: 100px !important;
   margin-top: 25px;
-  width: 191px; 
+  width: 191px;
   line-height: 45px;
 }
 
 .spacer {
-  flex: 1;  
+  flex: 1;
 }
 
 nav.links {
@@ -25,54 +24,56 @@ nav.links {
 }
 
 nav.links a {
-  margin: 0 1px;  /* espace entre lien */
+  margin: 0 1px; /* espace entre lien */
   font-family: 'jakarta medium';
-  font-size: 16px;  
-  text-decoration: none;  /* supprimer soulignement */
+  font-size: 16px;
+  text-decoration: none; /* supprimer soulignement */
   align-items: center;
 }
 
 nav.links a:hover {
-  color: #EF20A9;  /* couleur au survol */
+  color: #ef20a9; /* couleur au survol */
 }
 
 .buttons {
   display: flex;
-  
-  gap: 10px;  /* espace entre boutons */
+
+  gap: 10px; /* espace entre boutons */
 }
 
-.don-button, .don-button-alt , .don-button-alts{
-  padding: 6px 35px ;  /* taille du bouton */
-  border-radius: 10px;  /* arrondi du bouton */
+.don-button,
+.don-button-alt,
+.don-button-alts {
+  padding: 6px 35px; /* taille du bouton */
+  border-radius: 10px; /* arrondi du bouton */
   font-weight: 300px;
-  
 }
 
-.don-button:hover, .don-button-alt:hover, .don-button-alts:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);  /* ombre légère au survol */
-  transform: translateY(-2px);  /* légère élévation au survol */
+.don-button:hover,
+.don-button-alt:hover,
+.don-button-alts:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* ombre légère au survol */
+  transform: translateY(-2px); /* légère élévation au survol */
 }
 
 .don-button {
-  background-color: #EF20A9;  
+  background-color: #ef20a9;
 }
 .don-button-alt {
-  background-color:#EFC71D;  
+  background-color: #efc71d;
 }
 .don-button-alts {
-  background-color:#2B5896;  
+  background-color: #2b5896;
 }
-.don-button.mat-mdc-button:not(:disabled){
+.don-button.mat-mdc-button:not(:disabled) {
   color: #ffffff;
 }
-.don-button-alt.mat-mdc-button:not(:disabled){
-  color: #2B5896;
+.don-button-alt.mat-mdc-button:not(:disabled) {
+  color: #2b5896;
 }
-.don-button-alts.mat-mdc-button:not(:disabled){
-  color:  #ffffff;
+.don-button-alts.mat-mdc-button:not(:disabled) {
+  color: #ffffff;
 }
-
 
 @media (max-width: 768px) {
   .logo img {
@@ -83,43 +84,43 @@ nav.links a:hover {
     display: none;
   }
   .buttons {
-    flex-direction: row; 
+    flex-direction: row;
     font-size: small;
   }
-  .don-button, .don-button-alt, .don-button-alts {
-    padding: 6px 10px; 
+  .don-button,
+  .don-button-alt,
+  .don-button-alts {
+    padding: 6px 10px;
   }
   mat-toolbar .buttons button[mat-button] {
-    font-size: 8px; 
-    
+    font-size: 8px;
   }
 }
 @media (min-width: 768px) {
   .logo img {
-    height: 80px; 
+    height: 80px;
     width: auto;
   }
   nav.links {
     display: flex;
   }
   .buttons {
-    flex-direction: row; 
+    flex-direction: row;
     font-size: small;
   }
-  .don-button, .don-button-alt, .don-button-alts {
+  .don-button,
+  .don-button-alt,
+  .don-button-alts {
     padding: 6px 10px;
   }
   mat-toolbar .buttons button[mat-button] {
-    font-size: 8px; 
-    
+    font-size: 8px;
   }
   nav.links a {
-    margin: 0 1px;  
+    margin: 0 1px;
     font-family: 'jakarta medium';
-    font-size: 10px;  
-    text-decoration: none;  /* supprimer soulignement */
+    font-size: 10px;
+    text-decoration: none; /* supprimer soulignement */
     align-items: center;
   }
 }
-
-

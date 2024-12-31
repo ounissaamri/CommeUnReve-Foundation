@@ -1,13 +1,13 @@
 /* payment-confirmation.component.scss */
-$primary-color: #EFC71D;
-$secondary-color:  #EF20A9;
+$primary-color: #efc71d;
+$secondary-color: #ef20a9;
 $background-color: #f3f4f6;
 
 .confirmation-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height:50vh;
+  min-height: 50vh;
   //background: linear-gradient(to right, $primary-color, $secondary-color);
 }
 
@@ -18,8 +18,6 @@ $background-color: #f3f4f6;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
-
 
 h1 {
   margin-bottom: 1rem;

@@ -6,38 +6,50 @@
 @import 'styles/form-section.scss';
 @import 'styles/page-form.scss';
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
 
-  @font-face {
-    font-family: 'Jakarta bold';
-    src: url('assets/fonts/jakarta/PlusJakartaSans-Bold.ttf');
-  }
+@font-face {
+  font-family: 'Jakarta bold';
+  src: url('assets/fonts/jakarta/PlusJakartaSans-Bold.ttf');
+}
 
-  @font-face {
-    font-family: 'Jakarta regular';
-    src: url('assets/fonts/jakarta/PlusJakartaSans-Regular.ttf');
-  }
-  @font-face {
-    font-family: 'jakarta medium';
-    src: url('assets/fonts/jakarta/PlusJakartaSans-Medium.ttf');
-  }
-  @font-face {
-    font-family: 'inter bold';
-    src: url('assets/fonts/inter/Inter_18pt-Bold.ttf');
-  }
+@font-face {
+  font-family: 'Jakarta regular';
+  src: url('assets/fonts/jakarta/PlusJakartaSans-Regular.ttf');
+}
+@font-face {
+  font-family: 'jakarta medium';
+  src: url('assets/fonts/jakarta/PlusJakartaSans-Medium.ttf');
+}
+@font-face {
+  font-family: 'inter bold';
+  src: url('assets/fonts/inter/Inter_18pt-Bold.ttf');
+}
 
-  @font-face {
-    font-family: 'inter semi bold';
-    src: url('assets/fonts/inter/Inter_28pt-SemiBold.ttf');
-  }
+@font-face {
+  font-family: 'inter semi bold';
+  src: url('assets/fonts/inter/Inter_28pt-SemiBold.ttf');
+}
 
-  @font-face {
-    font-family: 'inter regular';
-    src: url('assets/fonts/inter/Inter_18pt-Regular.ttf');
-  }
-  @import '@fortawesome/fontawesome-free/css/all.css';
-  @import 'mdb-angular-ui-kit/assets/scss/mdb.scss';
-  
-  html, body { height: 100%; }
-  body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@font-face {
+  font-family: 'inter regular';
+  src: url('assets/fonts/inter/Inter_18pt-Regular.ttf');
+}
+@import '@fortawesome/fontawesome-free/css/all.css';
+@import 'mdb-angular-ui-kit/assets/scss/mdb.scss';
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}

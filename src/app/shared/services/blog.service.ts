@@ -13,7 +13,7 @@ export interface BlogArticle {
 }
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class BlogService {
   getBlogService(BlogService: BlogService) {
@@ -25,18 +25,12 @@ export class BlogService {
 
   // Récupérer tous les articles de blog
   getArticles(): Observable<BlogArticle[]> {
-    return this.http.get<BlogArticle[]>(`${this.apiUrl}api/blog/blogs`)
-      .pipe(
-        catchError(this.handleError)
-      );
+    return this.http.get<BlogArticle[]>(`${this.apiUrl}api/blog/blogs`).pipe(catchError(this.handleError));
   }
 
   // Récupérer un article spécifique par son ID
   getArticleById(id: number): Observable<BlogArticle> {
-    return this.http.get<BlogArticle>(`${this.apiUrl}api/blog/blog/${id}`)
-      .pipe(
-        catchError(this.handleError)
-      );
+    return this.http.get<BlogArticle>(`${this.apiUrl}api/blog/blog/${id}`).pipe(catchError(this.handleError));
   }
 
   //Gestion des erreurs

@@ -1,41 +1,40 @@
-import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { Observable, throwError } from 'rxjs';
+import { Injectable } from '@angular/core';
 import { Stripe, loadStripe } from '@stripe/stripe-js';
+import { Observable, throwError } from 'rxjs';
 import { environment } from '../../../environments/environment';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class PaymentDonationService {
-  private apiUrl = environment.apiUrl; 
-  private hostUrl = environment.hostUrl; 
+  private apiUrl = environment.apiUrl;
+  private hostUrl = environment.hostUrl;
 
   private stripe: Stripe | null = null;
-  
+
   constructor(private http: HttpClient) {
     this.loadStripe();
   }
 
-
-  async loadStripe(){
-    this.stripe = await loadStripe(environment.stripePubKey)
+  async loadStripe() {
+    this.stripe = await loadStripe(environment.stripePubKey);
   }
-                      
+
   createCheckoutSession(lineItems: any) {
     return this.http.post<{ sessionId: string }>(`${this.apiUrl}api/create-checkout-session`, {
       lineItems: lineItems,
-      successUrl:`${this.hostUrl}complete`,
-      cancelUrl:`${this.hostUrl}cancel`
+      successUrl: `${this.hostUrl}complete`,
+      cancelUrl: `${this.hostUrl}cancel`,
     });
-  }  
-          
+  }
+
   createSubscriptionSession(customerEmail: string, priceId: string) {
     return this.http.post<{ sessionId: string }>(`${this.apiUrl}/create-subscription-session`, {
       customerEmail: customerEmail,
       priceId: 'priceId', // celui renseigner dans la backend
-      successUrl:`${this.hostUrl}/complete`,
-      cancelUrl:`${this.hostUrl}/cancel`
+      successUrl: `${this.hostUrl}/complete`,
+      cancelUrl: `${this.hostUrl}/cancel`,
     });
   }
 
@@ -49,9 +48,6 @@ export class PaymentDonationService {
     }
   }
 
-  
-
-
   private handleError(error: HttpErrorResponse): Observable<never> {
     let errorMessage = 'An error occurred';
     if (error.error instanceof ErrorEvent) {
@@ -62,7 +58,4 @@ export class PaymentDonationService {
     console.error(errorMessage);
     return throwError(() => new Error(errorMessage));
   }
-
-
-
 }

@@ -26,7 +26,9 @@
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .article-card:hover {
@@ -49,7 +51,6 @@ mat-card-content h3 {
 mat-card-content {
   padding: 0px 0px;
 }
-
 
 @media only screen and (max-width: 768px) {
   .blog-section {

@@ -1,11 +1,10 @@
 <h1>Quelles type de partenariat souhaitez-vous faire ?</h1>
 <div class="container">
+  <a routerLink="/donation-forms" [queryParams]="{ subscription: true }" routerLinkActive="router-link-active">
+    <h1 class="redirection">Financier</h1>
+  </a>
 
-        <a routerLink="/donation-forms" [queryParams]="{subscription:true}" routerLinkActive="router-link-active" >
-            <h1 class="redirection">Financier</h1>
-        </a> 
-
-        <a  routerLink="/partenaire" class="autre" routerLinkActive="router-link-active" >
-            <h1 class="redirection other">Autres.. </h1>
-        </a>
+  <a routerLink="/partenaire" class="autre" routerLinkActive="router-link-active">
+    <h1 class="redirection other">Autres..</h1>
+  </a>
 </div>
