@@ -23,8 +23,8 @@ import { MissionsComponent } from '../../shared/components/missions/missions.com
 export class HomeComponent implements OnInit{
   
 
-   titre='Je fait un don '
-   text='Faire un don pour soutenir notre cause'
+   titre='Je fais un don '
+   text='Soutenez notre cause : chaque don compte pour faire une réelle différence.'
    button='Faire un don'
    titreImage='Comme un rêve' 
    descriptionImage='Le coeur de notre mission'

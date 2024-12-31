@@ -1,5 +1,6 @@
 .agir-container {
-  padding: 90px 130px;
+  margin : 130px auto;
+  max-width: 1200px;
   background-color: #f9f9f9;
   text-align: center;
 
@@ -34,10 +35,7 @@
       text-align: left;
 
       h3 {
-        font-size: 48px;
-        color: black;
         margin-bottom: 15px;
-        font-family: 'inter bold';
       }
 
       p {

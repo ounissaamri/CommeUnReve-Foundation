@@ -18,7 +18,7 @@
         color: #333;
       }
   
-      .image_home {
+      .espace-image {
         width: 100%;
         height: auto;
         border-radius: 8px;
@@ -41,6 +41,15 @@
   
   /* Responsive Design */
   @media (max-width: 768px) {
+
+    .espace-image {
+      display: block;
+    }
+
+    h1 {
+      color:black;
+    }
+
     .all {
       padding: 20px;
   
