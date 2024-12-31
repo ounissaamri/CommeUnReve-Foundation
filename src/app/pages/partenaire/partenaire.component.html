@@ -1,10 +1,10 @@
 <section id="page_form">
-  <h1>Devenons partenaire !</h1>
+  <h1>Devenons partenaires!</h1>
   <div class="container">
     <img src="./../../../assets/img/image_acceuil.png" class="image_home" />
 
     <div class="container_form">
-      <form [formGroup]="partenaireForm" (ngSubmit)="sendForm($event)">
+      <form [formGroup]="partenaireForm" (ngSubmit)="sendForm()">
         <mat-checkbox formControlName="isCompany"> Je suis une entreprise </mat-checkbox>
 
         <br />

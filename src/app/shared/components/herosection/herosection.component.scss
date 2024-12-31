@@ -1,64 +1,66 @@
 .container {
   position: relative;
   padding: 20px;
+  color:black;
+  background-image: url("/assets/img/image_acceuil.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  height:400px;
+  display: flex;
+  flex-direction: column;
+  color:white;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 
-  .image_home {
-    width: 100%;
-    border-radius: 58px 50px 50px 50px;
+  #title {
+    color:white;
   }
 
-  .text_home {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    color: white;
-    transform: translate(-50%, -50%);
-    text-align: center;
 
-    #title {
-      font-size: 64px;
-      font-family: 'Jakarta bold';
-    }
-
-    #description {
-      font-size: 24px;
-      font-family: 'Jakarta regular';
-    }
+  #description {
+    font-size: 24px;
+    font-family: 'Jakarta regular';
+    margin:0;
   }
+
 }
 
+
+
 @media only screen and (max-width: 768px) {
-  .text_home {
+
+  .container {
+    width:90%;
+    height:300px;
+
+
     #title {
-      font-size: 32px;
-    }
-
-    #description {
-      font-size: 18px;
-    }
+      font-size: 28px;
+      font-family: "Jakarta bold";
   }
 
-  .image_home {
-    border-radius: 30px 25px 25px 25px;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .container[_ngcontent-ng-c3487270872] .text_home[_ngcontent-ng-c3487270872] #title[_ngcontent-ng-c3487270872] {
-    font-size: 28px;
-    font-family: 'Jakarta bold';
-  }
-
-  .container[_ngcontent-ng-c3487270872] .text_home[_ngcontent-ng-c3487270872] #description[_ngcontent-ng-c3487270872] {
-    font-size: 10px;
+  p#description {
+    font-size: 24px;
     font-family: 'Jakarta regular';
   }
 
-  .image_home {
-    border-radius: 30px 25px 25px 25px;
+
   }
+
+  
+  
+
+
+
+  .container[_ngcontent-ng-c3487270872] .text_home[_ngcontent-ng-c3487270872] #description[_ngcontent-ng-c3487270872] {
+    font-family: "Jakarta regular";
+}
+
+  
   .container[_ngcontent-ng-c3487270872] {
     position: relative;
     padding: 10px;
-  }
+}
 }

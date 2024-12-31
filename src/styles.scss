@@ -6,50 +6,74 @@
 @import 'styles/form-section.scss';
 @import 'styles/page-form.scss';
 
-html,
-body {
-  height: 100%;
-}
-body {
-  margin: 0;
-  font-family: Roboto, 'Helvetica Neue', sans-serif;
-}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-@font-face {
-  font-family: 'Jakarta bold';
-  src: url('assets/fonts/jakarta/PlusJakartaSans-Bold.ttf');
-}
+  @font-face {
+    font-family: 'Jakarta bold';
+    src: url('assets/fonts/jakarta/PlusJakartaSans-Bold.ttf');
+  }
 
-@font-face {
-  font-family: 'Jakarta regular';
-  src: url('assets/fonts/jakarta/PlusJakartaSans-Regular.ttf');
-}
-@font-face {
-  font-family: 'jakarta medium';
-  src: url('assets/fonts/jakarta/PlusJakartaSans-Medium.ttf');
-}
-@font-face {
-  font-family: 'inter bold';
-  src: url('assets/fonts/inter/Inter_18pt-Bold.ttf');
-}
+  @font-face {
+    font-family: 'Jakarta regular';
+    src: url('assets/fonts/jakarta/PlusJakartaSans-Regular.ttf');
+  }
+  @font-face {
+    font-family: 'jakarta medium';
+    src: url('assets/fonts/jakarta/PlusJakartaSans-Medium.ttf');
+  }
+  @font-face {
+    font-family: 'inter bold';
+    src: url('assets/fonts/inter/Inter_18pt-Bold.ttf');
+  }
 
-@font-face {
-  font-family: 'inter semi bold';
-  src: url('assets/fonts/inter/Inter_28pt-SemiBold.ttf');
-}
+  @font-face {
+    font-family: 'inter semi bold';
+    src: url('assets/fonts/inter/Inter_28pt-SemiBold.ttf');
+  }
 
-@font-face {
-  font-family: 'inter regular';
-  src: url('assets/fonts/inter/Inter_18pt-Regular.ttf');
-}
-@import '@fortawesome/fontawesome-free/css/all.css';
-@import 'mdb-angular-ui-kit/assets/scss/mdb.scss';
+  @font-face {
+    font-family: 'inter regular';
+    src: url('assets/fonts/inter/Inter_18pt-Regular.ttf');
+  }
+  @import '@fortawesome/fontawesome-free/css/all.css';
+  @import 'mdb-angular-ui-kit/assets/scss/mdb.scss';
+  
+  html, body { height: 100%; }
+  body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-html,
-body {
-  height: 100%;
-}
-body {
-  margin: 0;
-  font-family: Roboto, 'Helvetica Neue', sans-serif;
-}
+  h1 {
+    font-family: 'Jakarta bold';
+    font-size:64px;
+    color:black;
+  }
+
+  h2 {
+    font-family:'Jakarta bold';
+    font-size:42px;
+    color:black;
+    
+  }
+
+  h3 {
+    font-family: 'Jakarta bold';
+    color:black;
+    font-size:28px;
+  }
+
+  a {
+    text-decoration: none;
+    color:unset;
+  }
+
+  .mat-display-large, .mat-typography .mat-display-large, .mat-typography h1 {
+    font-family: 'Jakarta bold';
+    color:black;
+    font-size:64px;
+  }
+
+  .mat-display-small, .mat-typography .mat-display-small, .mat-typography h3 {
+    font-family: 'Jakarta bold';
+    color:black;
+    font-size:28px;
+  }

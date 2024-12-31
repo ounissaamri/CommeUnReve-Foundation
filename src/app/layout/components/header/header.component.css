@@ -2,125 +2,145 @@ mat-toolbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #ffffff;
+  background-color: #ffffff;  
   margin-bottom: 5rem;
   padding-top: 2rem;
+  font-size: 1.2rem;
 }
 
 .logo img {
-  height: 100px !important;
-  margin-top: 25px;
-  width: 191px;
+   
+  width: 200px; 
   line-height: 45px;
+  background-color: black;
+}
+.menu-button {
+  display: none;
 }
 
 .spacer {
-  flex: 1;
+  flex: 1;  
 }
 
 nav.links {
   display: flex;
   align-items: center;
+  font-size: 16px;
+  margin-top:16px; /* pour mettre liens et logo alignés */
+  gap:0;
 }
 
 nav.links a {
-  margin: 0 1px; /* espace entre lien */
   font-family: 'jakarta medium';
-  font-size: 16px;
-  text-decoration: none; /* supprimer soulignement */
+  font-size: 16px;  
+  text-decoration: none;  /* supprimer soulignement */
   align-items: center;
+  vertical-align: middle;
+  padding:0 4px;
 }
 
 nav.links a:hover {
-  color: #ef20a9; /* couleur au survol */
+  color: #EF20A9;  /* couleur au survol */
 }
 
-.buttons {
-  display: flex;
-
-  gap: 10px; /* espace entre boutons */
+.button {
+  margin:0 5px;
 }
 
-.don-button,
-.don-button-alt,
-.don-button-alts {
-  padding: 6px 35px; /* taille du bouton */
-  border-radius: 10px; /* arrondi du bouton */
+.don-button, .don-button-alt , .don-button-alts{
+  
+  border-radius: 10px;  /* arrondi du bouton */
   font-weight: 300px;
+  min-width: 180px;
+  
 }
 
-.don-button:hover,
-.don-button-alt:hover,
-.don-button-alts:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* ombre légère au survol */
-  transform: translateY(-2px); /* légère élévation au survol */
+.don-button:hover, .don-button-alt:hover, .don-button-alts:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);  /* ombre légère au survol */
+  transform: translateY(-2px);  /* légère élévation au survol */
+  transition: .2s;
 }
 
 .don-button {
-  background-color: #ef20a9;
+  background-color: #EF20A9;  
 }
 .don-button-alt {
-  background-color: #efc71d;
+  background-color:#EFC71D;  
 }
 .don-button-alts {
-  background-color: #2b5896;
+  background-color:#2B5896;  
 }
-.don-button.mat-mdc-button:not(:disabled) {
+.don-button.mat-mdc-button:not(:disabled){
   color: #ffffff;
 }
-.don-button-alt.mat-mdc-button:not(:disabled) {
-  color: #2b5896;
+.don-button-alt.mat-mdc-button:not(:disabled){
+  color: #2B5896;
 }
-.don-button-alts.mat-mdc-button:not(:disabled) {
-  color: #ffffff;
+.don-button-alts.mat-mdc-button:not(:disabled){
+  color:  #ffffff;
 }
 
+
+
+
+@media screen and (max-width:1180px) {
+
+  mat-toolbar {
+    position:relative;
+  }
+
+  nav.links {
+  display: none;
+}
+
+
+.menu-button {
+  display: block; /* Afficher le bouton hamburger */
+  justify-content: right;
+  margin-left:auto; 
+  position:absolute;
+  right:24px;
+}
+nav.links.open {
+  display: flex; /* Afficher le menu lorsque "menuOpen" est vrai */
+
+  button {
+    display:block;
+    min-width: 200px;
+  }
+}
+nav.links {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  padding: 1rem 0;
+  z-index: 10;
+  gap:10px;
+
+  >a {
+    padding:0;
+  }
+}
+
+}
+
+
 @media (max-width: 768px) {
-  .logo img {
-    height: 80px;
-    width: auto;
-  }
-  nav.links {
-    display: none;
-  }
-  .buttons {
-    flex-direction: row;
-    font-size: small;
-  }
-  .don-button,
-  .don-button-alt,
-  .don-button-alts {
-    padding: 6px 10px;
+  
+  .don-button, .don-button-alt, .don-button-alts {
+    padding: 6px 10px; 
   }
   mat-toolbar .buttons button[mat-button] {
-    font-size: 8px;
+    font-size: 8px; 
+    
   }
+  
 }
-@media (min-width: 768px) {
-  .logo img {
-    height: 80px;
-    width: auto;
-  }
-  nav.links {
-    display: flex;
-  }
-  .buttons {
-    flex-direction: row;
-    font-size: small;
-  }
-  .don-button,
-  .don-button-alt,
-  .don-button-alts {
-    padding: 6px 10px;
-  }
-  mat-toolbar .buttons button[mat-button] {
-    font-size: 8px;
-  }
-  nav.links a {
-    margin: 0 1px;
-    font-family: 'jakarta medium';
-    font-size: 10px;
-    text-decoration: none; /* supprimer soulignement */
-    align-items: center;
-  }
-}
+
+
+
