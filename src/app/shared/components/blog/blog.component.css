@@ -5,17 +5,16 @@
   padding: 0 15px;
 }
 
-h2{
+h2 {
   text-align: center;
   margin-bottom: 40px;
 }
-
 
 .articles-container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 20px; 
+  gap: 20px;
 }
 
 .article-card {
@@ -23,13 +22,14 @@ h2{
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
+  cursor: pointer;
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
 }
 
 .article-card:hover {
-  transform: translateY(-10px);  /* Animation légère au survol */
+  transform: translateY(-10px); /* Animation légère au survol */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Accentuer l'ombre au survol */
 }
 
@@ -38,7 +38,6 @@ mat-card img {
   width: 100%;
   border-radius: 10px 10px 10px 10px;
 }
-
 
 mat-card-content {
   padding: 0px 0px;
@@ -67,5 +66,4 @@ mat-card-content {
     height: auto;
     border-radius: 12px 12px 0 0;
   }
-
 }

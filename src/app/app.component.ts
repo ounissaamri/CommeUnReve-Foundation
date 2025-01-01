@@ -9,6 +9,7 @@ import { DonationComponent } from './pages/donation/donation.component';
 import { HomeComponent } from './pages/home/home.component';
 import { NosactionsComponent } from './pages/nosactions/nosactions.component';
 import { QuiSommeNousComponent } from './pages/qui-somme-nous/qui-somme-nous.component';
+import { AnalyticsService } from './shared/services/analytics.service';
 
 @Component({
   selector: 'app-root',
@@ -31,7 +32,7 @@ import { QuiSommeNousComponent } from './pages/qui-somme-nous/qui-somme-nous.com
 })
 export class AppComponent implements OnInit {
   ngOnInit() {}
-  constructor() {
+  constructor(private analyticsService: AnalyticsService) {
     console.log(
       'fhsdiufhsuihfishfihzeighfizesjehfkm efihjeifhizmehifer gfhjekgjsmierjgsijg jseîgrjeir^gerjgîrejgêr gjeri^gijesj^rgijzgfdhfghjgggjghjs'
     );
