@@ -34,7 +34,7 @@ export class AppComponent implements OnInit {
   ngOnInit() {}
   constructor(private analyticsService: AnalyticsService) {
     console.log(
-      'fhsdiufhsuihfishfihzeighfizesjehfkm efihjeifhizmehifer gfhjekgjsmierjgsijg jseîgrjeir^gerjgîrejgêr gjeri^gijesj^rgijzgfdhfghjgggjghjs'
+      ''
     );
   }
 }
