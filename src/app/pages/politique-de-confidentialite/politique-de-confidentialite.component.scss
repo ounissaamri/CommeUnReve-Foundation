@@ -1,0 +1,42 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    max-width: 80rem;
+    margin: 20px auto;
+    padding: 20px 150px;
+    margin-bottom: 6rem;
+
+
+    a {
+        color: #EF20A9;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    strong {
+        color: #00456c;
+    }
+
+    ul {
+        margin-left: 1.5rem;
+        padding-left: 1rem;
+
+        li {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+        margin-bottom: 3rem;
+    }
+}

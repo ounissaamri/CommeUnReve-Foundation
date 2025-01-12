@@ -1,13 +1,15 @@
 import { JsonPipe } from '@angular/common';
-import { Component, OnInit, SecurityContext } from '@angular/core';
+import { Component, OnInit, SecurityContext, inject } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatToolbar } from '@angular/material/toolbar';
 import { DomSanitizer } from '@angular/platform-browser';
 import { EmailService } from '../../core/services/email.service';
+import { DialogEmailComponentComponent } from '../../shared/components/dialog-email-component/dialog-email-component.component';
 
 @Component({
   selector: 'app-partenaire',
@@ -20,18 +22,22 @@ import { EmailService } from '../../core/services/email.service';
     MatCheckboxModule,
     JsonPipe,
     MatSelectModule,
+    MatDialogModule,
   ],
   templateUrl: './partenaire.component.html',
   styleUrl: './partenaire.component.scss',
 })
 export class PartenaireComponent implements OnInit {
   partenaireForm!: FormGroup;
+  readonly dialog = inject(MatDialog);
+
   options = [
     { id: 0, label: 'Alimentaire' },
     { id: 1, label: 'Vêtements' },
     { id: 2, label: 'Financier' },
     { id: 3, label: 'Autres' },
   ];
+  benevoleForm: any;
   get validatorRequiredAndPattern() {
     return [
       null,
@@ -83,11 +89,26 @@ export class PartenaireComponent implements OnInit {
       .get('typePartenariat')
       ?.patchValue(this.options.find((el) => el.id === this.partenaireForm.get('typePartenariat')?.value));
     console.log('send data', this.partenaireForm.value);
-    this.emailService.sendPartenaireEmail(this.partenaireForm.value).subscribe();
+    this.emailService.sendPartenaireEmail(this.partenaireForm.value).subscribe(
+      () => {
+        this.openDialog();
+      },
+      (err) => {
+        this.openDialog();
+      }
+    );
   }
 
   sanitizeInput(content: string): string {
     return this.sanitizer.sanitize(SecurityContext.HTML, content) || '';
+  }
+
+  openDialog() {
+    const dialogRef = this.dialog.open(DialogEmailComponentComponent);
+
+    dialogRef.afterClosed().subscribe(() => {
+      this.benevoleForm.reset();
+    });
   }
 
   addValidatorControl() {

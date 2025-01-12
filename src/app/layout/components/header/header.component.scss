@@ -1,0 +1,146 @@
+mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;  
+  margin-bottom: 5rem;
+  padding-top: 2rem;
+  font-size: 1.2rem;
+}
+
+.logo img {
+   
+  width: 200px; 
+  line-height: 45px;
+  background-color: black;
+}
+.menu-button {
+  display: none;
+}
+
+.spacer {
+  flex: 1;  
+}
+
+nav.links {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  margin-top:16px; /* pour mettre liens et logo alignés */
+  gap:0;
+}
+
+nav.links a {
+  font-family: 'jakarta medium';
+  font-size: 16px;  
+  text-decoration: none;  /* supprimer soulignement */
+  align-items: center;
+  vertical-align: middle;
+  padding:0 4px;
+}
+
+nav.links a:hover {
+  color: #EF20A9;  /* couleur au survol */
+}
+
+.button {
+  margin:0 5px;
+}
+
+.don-button, .don-button-alt , .don-button-alts{
+  
+  border-radius: 10px;  /* arrondi du bouton */
+  font-weight: 300px;
+  min-width: 180px;
+  
+}
+
+.don-button:hover, .don-button-alt:hover, .don-button-alts:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);  /* ombre légère au survol */
+  transform: translateY(-2px);  /* légère élévation au survol */
+  transition: .2s;
+}
+
+.don-button {
+  background-color: #EF20A9;  
+}
+.don-button-alt {
+  background-color:#EFC71D;  
+}
+.don-button-alts {
+  background-color:#2B5896;  
+}
+.don-button.mat-mdc-button:not(:disabled){
+  color: #ffffff;
+}
+.don-button-alt.mat-mdc-button:not(:disabled){
+  color: #2B5896;
+}
+.don-button-alts.mat-mdc-button:not(:disabled){
+  color:  #ffffff;
+}
+
+
+
+
+@media screen and (max-width:1180px) {
+
+  mat-toolbar {
+    position:relative;
+  }
+
+  nav.links {
+  display: none;
+}
+
+
+.menu-button {
+  display: block; /* Afficher le bouton hamburger */
+  justify-content: right;
+  margin-left:auto; 
+  position:absolute;
+  right:24px;
+}
+nav.links.open {
+  display: flex; /* Afficher le menu lorsque "menuOpen" est vrai */
+
+  button {
+    display:block;
+    min-width: 200px;
+  }
+}
+nav.links {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  padding: 1rem 0;
+  z-index: 10;
+  gap:10px;
+
+  >a {
+    padding:0;
+  }
+}
+
+}
+
+
+@media (max-width: 768px) {
+  
+  .don-button, .don-button-alt, .don-button-alts {
+    padding: 6px 10px; 
+  }
+  mat-toolbar .buttons button[mat-button] {
+    font-size: 8px; 
+    
+  }
+  
+}
+
+
+

@@ -1,0 +1,139 @@
+.footer {
+  position: relative; /* Fixe le footer en bas de la fenêtre */
+  left: 0px; /* Aligne le footer à gauche */
+  bottom: 0px; /* Colle le footer en bas */
+  right: 0px; /* Aligne le footer à droite */
+  background-color: #222;
+  color: #fff; /* White text */
+  padding: 30px 0px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+body {
+  padding-bottom: 100vh; /*Ajustez cette valeur en fonction de la hauteur de votre footer*/
+}
+
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Wrap items for smaller screens */
+  padding: 0 0px;
+  gap: 15px;
+}
+
+/* Logo Section */
+.footer .logo img {
+  max-width: 164px;
+  margin-left: -45%;
+}
+
+/* Links Section */
+.footer-liens ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-liens ul li {
+  display: flex;
+  gap: 10px; /* espace entre boutons */
+  flex-direction: column;
+}
+
+.footer-liens ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px; /* espace entre boutons */
+  flex-direction: column;
+}
+
+.don-button,
+.don-button-alt,
+.don-button-alts {
+  padding: 6px 45px; /* taille du bouton */
+  border-radius: 10px; /* arrondi du bouton */
+  font-weight: 300px;
+}
+
+.don-button:hover,
+.don-button-alt:hover,
+.don-button-alts:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* ombre légère au survol */
+  transform: translateY(-2px); /* légère élévation au survol */
+}
+
+.don-button {
+  background-color: #ef20a9;
+}
+
+.don-button-alt {
+  background-color: #efc71d;
+}
+.don-button-alts {
+  background-color: #2b5896;
+}
+.don-button.mat-mdc-button:not(:disabled) {
+  color: #ffffff;
+}
+.don-button-alt.mat-mdc-button:not(:disabled) {
+  color: #2b5896;
+}
+.don-button-alts.mat-mdc-button:not(:disabled) {
+  color: #ffffff;
+}
+
+/* Social Media Section */
+.footer .me-4 {
+  color: #fff;
+  margin-right: 15px;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+/* Copyright Text */
+.footer p {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #bbb;
+}
+@media (max-width: 768px) {
+  .footer .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .footer .logo {
+    max-width: 144px;
+    text-align: center;
+  }
+
+  .footer-liens ul {
+    margin-bottom: 20px; /* Espace sous les liens */
+  }
+
+  .buttons {
+    margin-bottom: 20px; /* Espace sous les boutons */
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; /* Espace entre les boutons */
+  }
+
+  .footer .me-4 {
+    margin: 0 10px; /* Ajuste l'espace autour des icônes de réseaux sociaux */
+  }
+
+  .footer p {
+    margin-top: 20px; /* Ajouter de l'espace au-dessus du texte de copyright */
+  }
+}
