@@ -60,19 +60,28 @@ h1{
       
         
         }
+
         .container_btn{
           display: flex;
           justify-content: end;
           .btn{
-            background-color: #2B5896;
-            color: #ffffff;
-            padding: 6px 46px;
-            border-radius: 8px;
+            background-color: #2B5896 !important;
+            color: #ffffff !important;
+            padding: 10px 46px !important;
+            border-radius: 8px !important;
           }
+          
         }
     }
     }
-      
+    .mat-mdc-card-content>:last-child:not(.mat-mdc-card-footer) {
+      margin-bottom: 0;
+      font-family: "Jakarta bold";
+      color:black;
+      font-size: 16px;
+      margin-left: 1px;
+    }
+    
 @media (max-width: 768px) {
   
   #page_form .container .container_form {

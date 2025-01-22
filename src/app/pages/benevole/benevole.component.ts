@@ -50,7 +50,7 @@ export class BenevoleComponent {
       firstname: this.validatorRequiredAndPattern,
       lastName: this.validatorRequiredAndPattern,
       email: this.validatorRequiredAndEmail,
-      comment: [null],
+      comment: [null, { validators: Validators.required }],
       phone: ['', [Validators.pattern(/^(?:\+33|0)[1-9](?:[\s\.]?\d{2}){4}$/)]],
     });
   }
